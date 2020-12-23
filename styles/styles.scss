@@ -1,0 +1,159 @@
+$font-path: "fonts/";
+$red: #c71a1a;
+$purple: #853285;
+$white: #f0eff4;
+
+$left-right-pad: 10vh;
+
+body{
+    width: 100%;
+    margin: 0;
+    background-color: $red;
+    color: whitesmoke;
+    line-height: 1;
+}
+
+nav{
+    height: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h3{
+    width: 30vw;
+    padding-left: $left-right-pad;
+}
+
+ul{
+    background-color:$purple;
+    display: flex;
+    justify-content: right;
+    width: 60vw;
+    padding: 0;
+    padding-top: 10px;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+}
+
+li{
+    background-color: green;
+    border-right: 10px solid $red;
+}
+  
+li a {
+    display: block;
+    font-size: 1.5em;
+    font-family: VCR;
+
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    color: $purple;
+}
+
+h1{
+    color: $white;
+    font-family: Kenyan Coffee;
+    font-weight: normal;
+    font-size: 10em;
+}
+h2{
+    font-family: Kenyan Coffee;
+    font-weight: normal;
+    font-size: 6em;
+}
+h3{
+    font-family: Kenyan Coffee;
+    font-weight: normal;
+    font-size: 4em;
+}
+h4{
+    font-family: Kenyan Coffee;
+    font-weight: normal;
+    font-size: 3em;
+}
+h5{
+    font-family: Kenyan Coffee;
+    font-weight: normal;
+    font-size: 2em;
+}
+
+#glitchcactus{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 30vh;
+}
+
+#greeting-text{
+    color: $white;
+}
+
+.greeting {
+    padding: $left-right-pad;
+    height: 90vh;
+}
+
+.portfolio-section {
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    z-index: -10;
+}
+
+.portfolio-section-content {
+    padding-left: $left-right-pad;
+    padding-right: $left-right-pad;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.static-background{
+    filter:opacity(30%); 
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+#profile-pic{
+    width: 400px;
+    height: auto;
+}
+
+/* || Font Styles */
+
+@font-face {
+    font-family: 'VCR';
+    src: url($font-path + 'VCR_OSD_MONO.ttf') format('ttf'),
+        url($font-path + 'vcr_osd_mono-webfont.woff2') format('woff2'),
+        url($font-path + 'vcr_osd_mono-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face{
+    font-family: STING;
+    font-weight: normal;
+    src: url($font-path + "Sting.otf") format("otf");
+}
+@font-face{
+    font-family: Kenyan Coffee;
+    font-weight: normal;
+    src: url($font-path + "kenyan\ coffee\ rg.ttf") format("ttf");
+}
+@font-face{
+    font-family: Kenyan Coffee;
+    font-weight: bold;
+    src: url($font-path + "kenyan\ coffee\ bd.ttf") format("ttf");
+}
