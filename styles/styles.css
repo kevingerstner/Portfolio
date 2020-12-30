@@ -1,9 +1,15 @@
+.content {
+  padding-top: 5vh;
+  padding-right: 25vh;
+  padding-left: 25vh;
+}
+
 body {
   width: 100%;
   margin: 0;
-  background-color: #c71a1a;
-  color: whitesmoke;
-  line-height: 1;
+  background-color: #372549;
+  color: #eacdc2;
+  font-family: Public Sans;
 }
 
 nav {
@@ -11,12 +17,10 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -25,105 +29,232 @@ nav {
           align-items: center;
 }
 
-nav h3 {
+nav h5 {
   width: 30vw;
-  padding-left: 10vh;
+  color: #774c60;
+  white-space: nowrap;
+  font-family: Nonsense;
 }
 
 ul {
-  background-color: #853285;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-  width: 60vw;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40vw;
   padding: 0;
-  padding-top: 10px;
   list-style-type: none;
   margin: 0;
   overflow: hidden;
 }
 
 li {
-  background-color: green;
-  border-right: 10px solid #c71a1a;
+  border-right: 1px solid #fff;
+  line-height: 1px;
+}
+
+li:last-child {
+  border-right: none;
 }
 
 li a {
   display: block;
-  font-size: 1.5em;
+  font-size: 1.25em;
   font-family: VCR;
   color: white;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none;
 }
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-  color: #853285;
+  color: #bd4242;
 }
 
 h1 {
-  color: #f0eff4;
-  font-family: Kenyan Coffee;
-  font-weight: normal;
+  font-family: Public Sans;
+  font-weight: 900;
   font-size: 10em;
 }
 
 h2 {
-  font-family: Kenyan Coffee;
-  font-weight: normal;
+  font-family: Public Sans;
+  font-weight: bold;
   font-size: 6em;
 }
 
 h3 {
-  font-family: Kenyan Coffee;
-  font-weight: normal;
+  font-family: Public Sans;
+  font-weight: bold;
   font-size: 4em;
+  line-height: 1;
 }
 
 h4 {
-  font-family: Kenyan Coffee;
+  font-family: Public Sans;
   font-weight: normal;
-  font-size: 3em;
+  font-size: 2.5em;
 }
 
 h5 {
-  font-family: Kenyan Coffee;
+  font-family: Public Sans;
   font-weight: normal;
-  font-size: 2em;
+  font-size: 1.5em;
+}
+
+h6 {
+  font-size: 1.0em;
+}
+
+/* || Greeting */
+#greeting {
+  height: 75vh;
+  padding-top: 50px;
+}
+
+#kevin-portrait {
+  position: relative;
+  float: right;
+  bottom: 60vh;
+  right: -10vw;
+  width: 600px;
+  height: auto;
 }
 
 #glitchcactus {
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: 30;
   max-width: 100%;
   max-height: 30vh;
 }
 
-#greeting-text {
-  color: #f0eff4;
+#heythere {
+  color: #bd4242;
+  padding-bottom: 30px;
 }
 
-.greeting {
-  padding: 10vh;
-  height: 90vh;
+#tagline {
+  color: #eacdc2;
+  width: 50%;
 }
 
+/* || Floating Image */
+.floating-image-left {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.floating-image-left img {
+  position: relative;
+  max-width: 400px;
+  margin-right: 10vw;
+}
+
+.floating-image-left h4 {
+  font-family: VCR;
+}
+
+.floating-image-left p {
+  font-size: 1.5em;
+}
+
+/* || Portfolio */
+#portfolio {
+  position: relative;
+  background-image: url("../images/Film Grain/AU_FG_Texture-1.jpg");
+}
+
+/* || Section */
 .portfolio-section {
-  background-color: black;
   position: relative;
   overflow: hidden;
-  z-index: -10;
+  z-index: 0;
+}
+
+.section-header {
+  font-family: STING;
+  font-weight: normal;
+  color: #bd4242;
+  padding-bottom: 30px;
+}
+
+/* || Project */
+.project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 250px;
+  min-height: 500px;
+}
+
+.visit-project {
+  font-family: Public Sans;
+  font-weight: bold;
+  color: #bd4242;
+}
+
+.visit-project a:hover {
+  color: #eacdc2;
+}
+
+.project-name {
+  font-family: VCR;
+  margin: 0;
+  line-height: 1;
+}
+
+.project p {
+  font-size: 1.25em;
+  margin: 0;
+}
+
+.project hr {
+  margin-top: 2px;
+  margin-bottom: 20px;
+}
+
+.project-cover-img {
+  max-width: 70%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding-right: 2vw;
+}
+
+.project-description-box {
+  width: 30vw;
+  background-color: #372549;
+  padding: 30px 30px 20px 20px;
+}
+
+.description-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.description-row h6:first-child {
+  margin-right: 20px;
 }
 
 .portfolio-section-content {
-  padding-left: 10vh;
-  padding-right: 10vh;
   margin-top: 10px;
   margin-bottom: 50px;
 }
@@ -133,6 +264,8 @@ h5 {
           filter: opacity(30%);
   position: absolute;
   width: 100%;
+  top: 0;
+  left: 0;
   height: auto;
   z-index: -1;
 }
@@ -140,31 +273,10 @@ h5 {
 #profile-pic {
   width: 400px;
   height: auto;
+  background-repeat: repeat-y;
 }
 
-/* || Font Styles */
-@font-face {
-  font-family: 'VCR';
-  src: url("fonts/VCR_OSD_MONO.ttf") format("ttf"), url("fonts/vcr_osd_mono-webfont.woff2") format("woff2"), url("fonts/vcr_osd_mono-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: STING;
-  font-weight: normal;
-  src: url("fonts/Sting.otf") format("otf");
-}
-
-@font-face {
-  font-family: Kenyan Coffee;
-  font-weight: normal;
-  src: url("fonts/kenyan coffee rg.ttf") format("ttf");
-}
-
-@font-face {
-  font-family: Kenyan Coffee;
-  font-weight: bold;
-  src: url("fonts/kenyan coffee bd.ttf") format("ttf");
+#about-me {
+  background-color: #1a1423;
 }
 /*# sourceMappingURL=styles.css.map */

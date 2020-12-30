@@ -1,119 +1,222 @@
-$font-path: "fonts/";
-$red: #c71a1a;
-$purple: #853285;
-$white: #f0eff4;
+$red: #bd4242; // Deep Chestnut
+$lavender: #774c60; // Twilight Lavender
+$purple: #372549;
+$black: #1a1423; // Xiketic
+$pink: #eacdc2; // Champagne Pink
 
-$left-right-pad: 10vh;
+$left-right-pad: 25vh;
+
+.content{
+    padding-top: 5vh;
+    padding-right: $left-right-pad;
+    padding-left: $left-right-pad;
+}
 
 body{
     width: 100%;
     margin: 0;
-    background-color: $red;
-    color: whitesmoke;
-    line-height: 1;
+    background-color: $purple;
+    color: $pink;
+    font-family: Public Sans;
 }
 
 nav{
     height: 10vh;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
 }
 
-nav h3{
+nav h5{
     width: 30vw;
-    padding-left: $left-right-pad;
+    color: $lavender;
+    white-space: nowrap;
+    font-family: Nonsense;
 }
 
 ul{
-    background-color:$purple;
     display: flex;
-    justify-content: right;
-    width: 60vw;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 40vw;
     padding: 0;
-    padding-top: 10px;
     list-style-type: none;
     margin: 0;
     overflow: hidden;
 }
 
 li{
-    background-color: green;
-    border-right: 10px solid $red;
+    border-right: 1px solid #fff;
+    line-height: 1px;
+}
+
+li:last-child{
+    border-right: none;
 }
   
 li a {
     display: block;
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-family: VCR;
 
     color: white;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
 }
   
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-    color: $purple;
+    color: $red;
 }
 
 h1{
-    color: $white;
-    font-family: Kenyan Coffee;
-    font-weight: normal;
+    font-family: Public Sans;
+    font-weight: 900;
     font-size: 10em;
 }
 h2{
-    font-family: Kenyan Coffee;
-    font-weight: normal;
+    font-family: Public Sans;
+    font-weight: bold;
     font-size: 6em;
 }
 h3{
-    font-family: Kenyan Coffee;
-    font-weight: normal;
+    font-family: Public Sans;
+    font-weight: bold;
     font-size: 4em;
+    line-height: 1;
 }
 h4{
-    font-family: Kenyan Coffee;
+    font-family: Public Sans;
     font-weight: normal;
-    font-size: 3em;
+    font-size: 2.5em;
 }
 h5{
-    font-family: Kenyan Coffee;
+    font-family: Public Sans;
     font-weight: normal;
-    font-size: 2em;
+    font-size: 1.5em;
+}
+h6{
+    font-size: 1.0em;
+}
+
+/* || Greeting */
+
+#greeting {
+    height: 75vh;
+    padding-top: 50px;
+}
+
+#kevin-portrait{
+    position: relative;
+    float: right;
+    bottom: 60vh;
+    right: -10vw;
+    width: 600px;
+    height: auto;
 }
 
 #glitchcactus{
     position: absolute;
     bottom: 0;
     right: 0;
+    z-index: 30;
     max-width: 100%;
     max-height: 30vh;
 }
 
-#greeting-text{
-    color: $white;
+#heythere{
+    color: $red;
+    padding-bottom: 30px;
 }
 
-.greeting {
-    padding: $left-right-pad;
-    height: 90vh;
+#tagline{
+    color: $pink;
+    width: 50%;
 }
 
+/* || Floating Image */
+.floating-image-left{
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.floating-image-left img{position: relative; max-width: 400px; margin-right: 10vw;}
+.floating-image-left h4{font-family: VCR;}
+.floating-image-left p{font-size: 1.5em;}
+
+/* || Portfolio */
+#portfolio{
+    position: relative;
+    background-image: url("../images/Film Grain/AU_FG_Texture-1.jpg");
+}
+
+/* || Section */
 .portfolio-section {
-    background-color: black;
     position: relative;
     overflow: hidden;
-    z-index: -10;
+    z-index: 0;
 }
 
+.section-header{
+    font-family: STING;
+    font-weight: normal;
+
+    color: $red;
+    padding-bottom: 30px;
+}
+
+/* || Project */
+.project{
+    display: flex;
+    margin-bottom: 250px;
+    min-height: 500px;
+}
+
+.visit-project{
+    font-family: Public Sans;
+    font-weight: bold;
+    color: $red;
+}
+
+.visit-project a:hover{
+    color: $pink;
+}
+
+.project-name{font-family: VCR; margin: 0; line-height: 1;}
+
+.project p{
+    font-size: 1.25em;
+    margin: 0;
+}
+
+.project hr{margin-top: 2px; margin-bottom: 20px;}
+
+.project-cover-img{
+    max-width: 70%;
+    height: auto;
+    object-fit: contain;
+    padding-right: 2vw;
+}
+
+.project-description-box{
+    width: 30vw;
+    background-color: $purple;
+
+    padding: 30px 30px 20px 20px;
+}
+
+.description-row{
+    display: flex;
+    align-items: baseline;
+}
+
+.description-row h6:first-child{margin-right: 20px;}
+
 .portfolio-section-content {
-    padding-left: $left-right-pad;
-    padding-right: $left-right-pad;
     margin-top: 10px;
     margin-bottom: 50px;
 }
@@ -122,6 +225,8 @@ h5{
     filter:opacity(30%); 
     position: absolute;
     width: 100%;
+    top: 0;
+    left: 0;
     height: auto;
     z-index: -1;
 }
@@ -129,31 +234,9 @@ h5{
 #profile-pic{
     width: 400px;
     height: auto;
+    background-repeat: repeat-y;
 }
 
-/* || Font Styles */
-
-@font-face {
-    font-family: 'VCR';
-    src: url($font-path + 'VCR_OSD_MONO.ttf') format('ttf'),
-        url($font-path + 'vcr_osd_mono-webfont.woff2') format('woff2'),
-        url($font-path + 'vcr_osd_mono-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face{
-    font-family: STING;
-    font-weight: normal;
-    src: url($font-path + "Sting.otf") format("otf");
-}
-@font-face{
-    font-family: Kenyan Coffee;
-    font-weight: normal;
-    src: url($font-path + "kenyan\ coffee\ rg.ttf") format("ttf");
-}
-@font-face{
-    font-family: Kenyan Coffee;
-    font-weight: bold;
-    src: url($font-path + "kenyan\ coffee\ bd.ttf") format("ttf");
+#about-me{
+    background-color: $black;
 }
