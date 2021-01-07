@@ -1,0 +1,202 @@
+@import "styles";
+
+/* || Greeting */
+#greeting {
+    height: 95vh;
+    padding-top: 10vh;
+}
+
+#kevin-portrait{
+    position: absolute;
+    top: 0;
+    right: 2vw;
+    width: 600px;
+    height: auto;
+}
+
+#heythere{
+    color: $yellow;
+    font-family: VCR;
+    padding-bottom: 10px;
+}
+
+#personal-logo{
+    position: absolute; 
+    top: 0; 
+    left: 30px; 
+    width: 120px;
+}
+
+#itsme{
+    color: $red;
+    padding-bottom: 30px;
+    font-family: Barbieri;
+    font-weight: bold;
+    text-shadow: 2px 4px 5px rgba(0,0,0,0.4);
+}
+
+#tagline{
+    font-weight: normal;
+    color: $pink;
+    width: 70%;
+}
+
+/* || Portfolio */
+#portfolio{
+    position: relative;
+    width: 100%;
+    background-image: url("../images/Film Grain/AU_FG_Texture-1.jpg");
+}
+
+/* || Section */
+
+.section-header{
+    font-family: STING;
+    font-weight: normal;
+
+    color: $red;
+    padding-bottom: 30px;
+}
+
+/* || Project */
+.project{
+    display: flex;
+    margin-bottom: 20vh;
+    width: 100%;
+
+    .project-item:first-child{
+        margin-right: 40px;
+    }
+    p{
+        font-size: 1.25em;
+    }
+    hr{
+        margin-top: 2px;
+        margin-bottom: 20px;
+    }
+}
+
+.project-description-box{
+    flex: 1 1 300px;
+    position: relative;
+    min-height: 600px;
+    max-width: 800px;
+    height: fit-content;
+    background-color: $purple;
+    padding: 30px 30px;
+
+    h3{
+        font-family: VCR; 
+        line-height: 1;
+    }
+}
+
+.description-row{
+    display: flex;
+    align-items: baseline;
+
+    :first-child{
+        margin-right: 20px;
+    }
+}
+
+.visit-project{
+    font-family: Public Sans;
+    font-weight: bold;
+    color: $red;
+
+    a:hover{
+        color: $pink;
+    }
+}
+
+.link-span{
+    position:absolute; 
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+    z-index: 1;
+}
+
+.project-cover-img{
+    flex: 3 1 500px;
+    height: fit-content;
+    position: relative;
+    object-fit: contain;
+
+    img{
+        max-width: 100%;
+        vertical-align: top;
+    }
+}
+
+.project-cover-img::after, .project-cover-img::before {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.project-cover-img::after {
+    content: '\A';
+    width: 100%; height:100%;
+    top: 0; left:0;
+    background:rgba(0,0,0,0.4);
+}
+
+.project-cover-img::before {
+    content: "View Project >>";
+    @extend h3;
+    text-decoration: underline;
+    color: white;
+    z-index: 1;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 10px;
+    text-align: center;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+}
+
+.project-cover-img:hover:after, .project-cover-img:hover:before {
+    opacity: 1;
+}
+
+.portfolio-section-content {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+#profile-pic{
+    width: 400px;
+    height: auto;
+    background-repeat: repeat-y;
+}
+
+#about-me{
+    position: relative;
+    width: 100%;
+    background-color: $red;
+    overflow: hidden;
+}
+
+#glitchcactus{
+    position: relative;
+    margin-top: 50px;
+    z-index: 30;
+    max-width: 100%;
+    max-height: 30vh;
+}
+
+.static-background{
+    filter:opacity(10%);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: auto;
+    z-index: 0;
+}

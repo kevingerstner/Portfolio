@@ -1,0 +1,564 @@
+/* || Font Styles */
+@font-face {
+  font-family: 'VCR';
+  src: url("fonts/VCR_OSD_MONO.ttf") format("ttf"), url("fonts/vcr_osd_mono-webfont.woff2") format("woff2"), url("fonts/vcr_osd_mono-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: STING;
+  font-weight: normal;
+  src: url("fonts/Sting.otf") format("otf");
+}
+
+@font-face {
+  font-family: Kenyan Coffee;
+  font-weight: normal;
+  src: url("fonts/kenyan coffee rg.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: Kenyan Coffee;
+  font-weight: bold;
+  src: url("fonts/kenyan coffee bd.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: Tondu;
+  font-weight: normal;
+  src: url("fonts/Tondu_Beta.ttf");
+}
+
+@font-face {
+  font-family: Public Sans;
+  font-weight: 400;
+  src: url("fonts/public-sans-v1.008/binaries/webfonts/PublicSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: Public Sans;
+  font-weight: 900;
+  src: url("fonts/public-sans-v1.008/binaries/webfonts/PublicSans-Black.ttf");
+}
+
+@font-face {
+  font-family: Public Sans;
+  font-weight: 700;
+  src: url("fonts/public-sans-v1.008/binaries/webfonts/PublicSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: Public Sans;
+  font-weight: 500;
+  src: url("fonts/public-sans-v1.008/binaries/webfonts/PublicSans-Medium.ttf");
+}
+
+@font-face {
+  font-family: Nonsense;
+  font-weight: normal;
+  src: url("fonts/Nonsense.ttf");
+}
+
+.content-area, .content-area-narrow, .content-area-wide, .content-area-with-background {
+  margin-right: 20vh;
+  margin-left: 20vh;
+  padding: 10vh 10vw;
+}
+
+.content-area-narrow {
+  padding: 10vh 20vw;
+}
+
+.content-area-wide {
+  padding: 10vh 0;
+}
+
+.content-section {
+  margin-bottom: 10vh;
+  width: 100%;
+}
+
+.text-left {
+  padding-right: 40vh;
+}
+
+.content, .content-center, .content-left, .content-right {
+  position: relative;
+  z-index: 1;
+}
+
+.content-center {
+  text-align: center;
+}
+
+.content-left {
+  padding-right: 60vh;
+}
+
+.content-right {
+  padding-left: 60vh;
+}
+
+.floating-image-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.floating-image-left img {
+  position: relative;
+  width: 50%;
+  max-height: 600px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 5vw;
+}
+
+.floating-image-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.floating-image-right img {
+  -ms-flex-preferred-size: 10;
+      flex-basis: 10;
+  width: 50%;
+  max-height: 600px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-left: 5vw;
+}
+
+.grid-thirds {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+}
+
+.grid-thirds-column {
+  -webkit-box-flex: 33%;
+      -ms-flex: 33%;
+          flex: 33%;
+  max-width: 33%;
+  padding: 0 6px;
+}
+
+.grid-thirds-column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.grid-half {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+}
+
+.grid-half :first-child {
+  padding-left: 0;
+}
+
+.grid-half :last-child {
+  padding-right: 0;
+}
+
+.grid-half-column {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  max-width: 50%;
+  padding: 0 6px;
+}
+
+.grid-half-column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.image-caption {
+  text-align: center;
+}
+
+/* || Font Styles */
+@font-face {
+  font-family: 'VCR';
+  src: url("fonts/VCR_OSD_MONO.ttf") format("ttf"), url("fonts/vcr_osd_mono-webfont.woff2") format("woff2"), url("fonts/vcr_osd_mono-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: STING;
+  font-weight: normal;
+  src: url("fonts/Sting.otf") format("otf");
+}
+
+@font-face {
+  font-family: Kenyan Coffee;
+  font-weight: normal;
+  src: url("fonts/kenyan coffee rg.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: Kenyan Coffee;
+  font-weight: bold;
+  src: url("fonts/kenyan coffee bd.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: Tondu;
+  font-weight: normal;
+  src: url("fonts/Tondu_Beta.ttf");
+}
+
+@font-face {
+  font-family: Public Sans;
+  font-weight: 400;
+  src: url("fonts/public-sans-v1.008/binaries/webfonts/PublicSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: Public Sans;
+  font-weight: 900;
+  src: url("fonts/public-sans-v1.008/binaries/webfonts/PublicSans-Black.ttf");
+}
+
+@font-face {
+  font-family: Public Sans;
+  font-weight: 700;
+  src: url("fonts/public-sans-v1.008/binaries/webfonts/PublicSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: Public Sans;
+  font-weight: 500;
+  src: url("fonts/public-sans-v1.008/binaries/webfonts/PublicSans-Medium.ttf");
+}
+
+@font-face {
+  font-family: Nonsense;
+  font-weight: normal;
+  src: url("fonts/Nonsense.ttf");
+}
+
+.content-area, .content-area-narrow, .content-area-wide, .content-area-with-background {
+  margin-right: 20vh;
+  margin-left: 20vh;
+  padding: 10vh 10vw;
+}
+
+.content-area-narrow {
+  padding: 10vh 20vw;
+}
+
+.content-area-wide {
+  padding: 10vh 0;
+}
+
+.content-section {
+  margin-bottom: 10vh;
+  width: 100%;
+}
+
+.text-left {
+  padding-right: 40vh;
+}
+
+.content, .content-center, .content-left, .content-right {
+  position: relative;
+  z-index: 1;
+}
+
+.content-center {
+  text-align: center;
+}
+
+.content-left {
+  padding-right: 60vh;
+}
+
+.content-right {
+  padding-left: 60vh;
+}
+
+.floating-image-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.floating-image-left img {
+  position: relative;
+  width: 50%;
+  max-height: 600px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 5vw;
+}
+
+.floating-image-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.floating-image-right img {
+  -ms-flex-preferred-size: 10;
+      flex-basis: 10;
+  width: 50%;
+  max-height: 600px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-left: 5vw;
+}
+
+.grid-thirds {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+}
+
+.grid-thirds-column {
+  -webkit-box-flex: 33%;
+      -ms-flex: 33%;
+          flex: 33%;
+  max-width: 33%;
+  padding: 0 6px;
+}
+
+.grid-thirds-column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.grid-half {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+}
+
+.grid-half :first-child {
+  padding-left: 0;
+}
+
+.grid-half :last-child {
+  padding-right: 0;
+}
+
+.grid-half-column {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  max-width: 50%;
+  padding: 0 6px;
+}
+
+.grid-half-column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.image-caption {
+  text-align: center;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding-top: 50px;
+  background-color: #372549;
+  color: #eacdc2;
+  font-family: Public Sans;
+}
+
+a {
+  color: #bd4242;
+}
+
+a:hover {
+  color: #f7cb39;
+}
+
+h1 {
+  font-family: VCR;
+  font-size: 6em;
+  line-height: 1;
+}
+
+h2 {
+  font-family: VCR;
+  font-size: 4em;
+  line-height: 1;
+}
+
+h3 {
+  font-family: VCR;
+  font-size: 2.5em;
+  line-height: 1;
+}
+
+h4 {
+  font-family: Public Sans;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+h5 {
+  font-family: Public Sans;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+h6 {
+  font-size: 1.0em;
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: auto;
+}
+
+nav {
+  width: 100%;
+  height: 8vh;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #bd4242;
+  z-index: 10;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+}
+
+.navbar-nav > li {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.navbar-nav > li a {
+  font-size: 1em;
+  font-family: VCR;
+  color: #eacdc2;
+  text-align: center;
+  padding: 14px 16px;
+}
+
+.navbar-nav > li a span {
+  color: #f7cb39;
+}
+
+.navbar-nav > li a:hover {
+  color: #f7cb39;
+}
+
+p {
+  margin-bottom: 20px;
+  font-family: Public Sans;
+  font-weight: normal;
+  font-size: 1.2em;
+}
+
+p b {
+  color: #eacdc2;
+}
+
+.icon-row a {
+  color: #eacdc2;
+  margin: 8px;
+}
+
+.icon-row :first-child {
+  margin-left: 0;
+}
+
+.icon-row :last-child {
+  margin-right: 0;
+}
+
+.content-area-with-background {
+  background-color: #1a1423;
+}
+
+.hero-image {
+  height: 400px;
+  max-width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../projects/frontier/Mockups.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../projects/frontier/Mockups.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+}
+
+.full-screen-demo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.responsive-iframe {
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=project.css.map */

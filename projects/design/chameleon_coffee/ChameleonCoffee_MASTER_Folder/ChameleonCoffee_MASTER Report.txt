@@ -1,0 +1,69 @@
+Package Report
+
+-----------------------------------------------------------------------------
+Document:
+Name: ChameleonCoffee_MASTER.pdf
+Color Mode: RGB color
+Color Profile: sRGB IEC61966-2.1
+Ruler Units: pixels
+Artboard Dimensions: 3456 px x 1008 px
+Show Images in Outline Mode: OFF
+Highlight Substituted Fonts: OFF
+Highlight Substituted Glyphs: OFF
+Preserve Text Editability
+Simulate Colored Paper: OFF
+
+-----------------------------------------------------------------------------
+Spot Color Objects:
+
+-----------------------------------------------------------------------------
+Missing Fonts:NONE
+
+-----------------------------------------------------------------------------
+Protected Fonts that were not packaged:
+Barricada Pro (Adobe Fonts)
+
+-----------------------------------------------------------------------------
+Fonts:
+NONE
+
+-----------------------------------------------------------------------------
+Embedded Fonts:
+BarricadaPro
+BarricadaPro
+Balboa ExtraBlack
+Balboa ExtraBlack
+
+-----------------------------------------------------------------------------
+Missing Links:
+NONE
+
+-----------------------------------------------------------------------------
+Linked Images:
+
+/Users/sirkevinicus/Desktop/College/DigitalIllustration/8_ChameleonCoffee/ChameleonCoffee_MASTER_Folder/Links/ChameletonWebAd2.ai
+Type: PDF
+
+/Users/sirkevinicus/Desktop/College/DigitalIllustration/8_ChameleonCoffee/ChameleonCoffee_MASTER_Folder/Links/ChameleonWebAd1.ai
+Type: PDF
+
+/Users/sirkevinicus/Desktop/College/DigitalIllustration/8_ChameleonCoffee/ChameleonCoffee_MASTER_Folder/Links/ChameleonCoffee_LOGO.ai
+Type: PDF
+
+/Users/sirkevinicus/Desktop/College/DigitalIllustration/8_ChameleonCoffee/ChameleonCoffee_MASTER_Folder/Links/ChameleonIcon.psd
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 3906K, 1000 by 1000 pixels
+Dimensions: 1000 by 1000 points 
+Resolution: 72 by 72 pixels per inch
+
+
+/Users/sirkevinicus/Desktop/College/DigitalIllustration/8_ChameleonCoffee/ChameleonCoffee_MASTER_Folder/Links/ChameleonCoffee.ai
+Type: PDF
+
+/Users/sirkevinicus/Desktop/College/DigitalIllustration/8_ChameleonCoffee/ChameleonCoffee_MASTER_Folder/Links/ChameleonCoffee_MAGZ.pdf
+Type: PDF
+
+/Users/sirkevinicus/Desktop/College/DigitalIllustration/8_ChameleonCoffee/ChameleonCoffee_MASTER_Folder/Links/ChameleonBillboard.ai
+Type: PDF

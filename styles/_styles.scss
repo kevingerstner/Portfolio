@@ -1,0 +1,125 @@
+@import "colors";
+@import "fonts";
+@import "format";
+
+body{
+    width: 100%;
+    margin: 0;
+    padding-top: 50px; // to offset the navbar
+    background-color: $purple;
+    color: $pink;
+    font-family: Public Sans;
+}
+
+a{
+    color: $red;
+}
+
+a:hover{
+    color: $yellow;
+}
+
+h1{
+    font-family: VCR;
+    font-size: 6em;
+    line-height: 1;
+}
+h2{
+    font-family: VCR;
+    font-size: 4em;
+    line-height: 1;
+}
+h3{
+    font-family: VCR;
+    font-size: 2.5em;
+    line-height: 1;
+}
+h4{
+    font-family: Public Sans;
+    font-weight: bold;
+    font-size: 2em;
+}
+h5{
+    font-family: Public Sans;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+h6{
+    font-size: 1.0em;
+    font-weight: bold;
+}
+img{
+    max-width: 100%;
+    object-fit: contain;
+    height: auto;
+}
+
+nav{
+    width: 100%;
+    height: 8vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    display: flex;
+    background-color: $red;
+    z-index: 10;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+ul{
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+}
+
+.navbar-nav > li{
+
+    margin-left:25px;
+    margin-right:25px;
+
+    a{
+        font-size: 1em;
+        font-family: VCR;
+    
+        color: $pink;
+        text-align: center;
+        padding: 14px 16px;
+
+        span{
+            color: $yellow;
+        }
+    }
+    a:hover{
+        color: $yellow;
+    }
+}
+
+p{
+    margin-bottom: 20px;
+    font: {
+        family: Public Sans;
+        weight: normal;
+        size: 1.2em;
+    }
+    b{
+        color: $pink;
+    }
+}
+
+.icon-row{
+    a{
+        color: $pink;
+        margin: 8px;
+    }
+    :first-child{
+        margin-left: 0;
+    }
+    :last-child{
+        margin-right: 0;
+    }
+}
+
+.content-area-with-background{
+    @extend .content-area;
+    background-color: $black;
+}
