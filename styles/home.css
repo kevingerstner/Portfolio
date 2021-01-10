@@ -222,7 +222,7 @@ p b {
 
 #kevin-portrait {
   position: absolute;
-  top: 0;
+  top: 100px;
   right: 2vw;
   width: 600px;
   height: auto;
