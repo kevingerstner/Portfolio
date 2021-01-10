@@ -1,80 +1,107 @@
 <!DOCTYPE html>
 <html>
     <head lang = "en-US">
-        <title>Frontier - Kevin Gerstner</title>
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" type="text/css" href="styles/project.css">
         <meta charset="UTF-8">
+        <title>Frontier - Kevin Gerstner</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="styles/project.css">
+        <link rel="stylesheet" href="https://use.typekit.net/xuj1ggj.css">
+        <script src="https://kit.fontawesome.com/46262caf73.js" crossorigin="anonymous"></script>
         <meta name="description" content="Kevin Gerstner's Portfolio">
         <meta name="author" content="Kevin Gerstner">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div class="hero-image">
+        <nav id="navbar" class="navbar fixed-top navbar-expand-sm">
+            <div class="navbar-brand">
+                <img class="personal-logo" src="images/personal-logo-7-01.png" alt="Personal Logo">
+            </div>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="back-button nav-link active" href="index.html#song-pong-anchor"><span><</span> Back</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="hero-image" style="background-image: url(projects/frontier/Mockups.png)">
+            <div class="overlay"></div>
             <div class="hero-text">
                 <h2>Frontier</h2>
                 <h5>A Fun-Discovery Platform</h5>
             </div>
         </div>
-        <div class="content-area-with-background">
-            <div class="content-section">
-                <div class="text-left">
-                    <h4>About the Project</h4>
-                    <img style="max-width: 500px" src="projects/frontier/Frontier_WHITE-01.png">
-                    <p>If you're looking for fun things to do on “Maps”, “Yelp”, etc. you can see individual results for "Shopping", "Entertainment", or "Resturaunts".
-                        But these results are individualistic and based on businesses and locations, not experiences.
+
+        <div class="container-sm black-background pt-5 px-5">
+            <section>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4 class="section-header">About the Project</h4>
+                        <p>
+                            <b>Frontier</b> is a platform that crowd-sources fun through user-created Journies. 
+                            Journies are collections of places or activities to do, which can help you plan a fun day out on the town or a date night.
+                        </p>
+                        <p>
+                            I created this project for my Interaction Design class at my college. During development, we performed User Stories and Scenarios, made Low-Fidelity and High-Fidelity prototypes
+                            UI and UX principles, and performed User Tests with feedback.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h4 class="section-header">Interactive Demo</h4>
+                <div class="row">
+                    <div class="col col-sm-6">
+                        <p>Check it out! This is an interactive demo of my design in Figma. Is demonstrates many of the big-idea concepts for the UI and UX.</p>
+                        <iframe style="width: 100%; height: 720px;" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FQUZ43AuetRfLS5JbnQ7CQ1ik%2FFrontier%3Fnode-id%3D0%253A304%26scaling%3Dmin-zoom" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="row">
+                    <div class="col col-sm-3">
+                        <img src="projects/frontier/Launch.png" alt="Frontier Launch Screen">
+                    </div>
+                    <div class="col col-sm-3">
+                        <img src="projects/frontier/Login.png" alt="Frontier Login Screen 1">
+                    </div>
+                    <div class="col col-sm-3">
+                        <img src="projects/frontier/Login 2.png" alt="Frontier Login Screen 2">
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="col col-sm-9 image-caption">
+                        Renderings of three login screens, showing the user experience of a sample area.
                     </p>
-                    <p>
-                        <b>Frontier</b> is a platform that promises to crowdsource fun through user-created Journies. Users make Journies, which are like iteneraries with
-                        commentary. Then you can search through these Journies wherever you are to find great activities and fun, and even post your own! Frontier would
-                        be ideal for anyone on a vacation or looking for something fun to do with your friends.
+                </div>
+            </section>
+
+            <section>
+                <h4 class="section-header">Development Process</h4>
+
+                <div class="row pb-5">
+                    <div class="col col-sm-8">
+                        <p>My group started by creating some low-fidelity mockups using Balsamiq, which is a free-to-use mockup platform.</p>
+
+                        <img src="projects/frontier/Screen Shot 2019-02-17 at 7.52.18 PM.png" alt="Low-Fi Mockup 1">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-sm-4">
+                        <img src="projects/frontier/Screen Shot 2019-02-24 at 10.59.00 PM.png" alt="Low-Fi Mockup 2">
+                    </div>
+                    <div class="col col-sm-4">
+                        <img src="projects/frontier/Screen Shot 2019-02-24 at 11.27.18 PM.png" alt="Low-Fi Mockup 3">
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="col col-sm-8 paragraph">These mockups gave us a great starting place to do user tests. From there, we performed three user studies and asked them to perform several
+                        tasks such as "Create a New Journey" or "Find a Journey to do" and observed their actions. This process helped us improve on the user
+                        experience. Once we finished performing these tests, the high-fidelity prototype was created using Figma, which you can demo above.
                     </p>
-                    <p>
-                        I created this project for my Interaction Design class at my college. During development, we performed User Stories and Scenarios, made Low-Fidelity and High-Fidelity prototypes
-                        UI and UX principles, and performed User Tests with feedback.
-                    </p>
                 </div>
-            </div>
-            <div class="content-section">
-                <h4>Interactive Demo</h4>
-                <p>Check it out! This is an interactive demo of my design in Figma. Is demonstrates many of the big-idea concepts for the UI and UX.</p>
-                <div class="full-screen-demo">
-                    <iframe class="responsive-iframe" style="width: 100%; height: 720px;" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FQUZ43AuetRfLS5JbnQ7CQ1ik%2FFrontier%3Fnode-id%3D0%253A304%26scaling%3Dmin-zoom" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="content-section">
-                <div class="grid-thirds">
-                    <div class="grid-thirds-column">
-                        <img src="projects/frontier/Launch.png">
-                    </div>
-                    <div class="grid-thirds-column">
-                        <img src="projects/frontier/Login.png">
-                    </div>
-                    <div class="grid-thirds-column">
-                        <img src="projects/frontier/Login 2.png">
-                    </div>
-                </div>
-                <p class="image-caption">
-                    Renderings of three login screens, showing the user experience of a sample area.
-                </p>
-            </div>
-            <div class="content-section">
-                <h4>Development Process</h4>
-                <p>My group started by creating some low-fidelity mockups using Balsamiq, which is a free-to-use mockup platform.</p>
-                <img src="projects/frontier/Screen Shot 2019-02-17 at 7.52.18 PM.png">
-                <div class="grid-half">
-                    <div class="grid-half-column">
-                        <img src="projects/frontier/Screen Shot 2019-02-24 at 10.59.00 PM.png">
-                    </div>
-                    <div class="grid-half-column">
-                        <img src="projects/frontier/Screen Shot 2019-02-24 at 11.27.18 PM.png">
-                    </div>
-                </div>
-                <p>These mockups gave us a great starting place to do user tests. From there, we performed three user studies and asked them to perform several
-                    tasks such as "Create a New Journey" or "Find a Journey to do" and observed their actions. This process helped us improve on the user
-                    experience. Once we finished performing these tests, the high-fidelity prototype was created using Figma, which you can demo above.
-                </p>
-            </div>
+            </section>
             <div class="skills">
                 
             </div>

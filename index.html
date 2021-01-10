@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head lang = "en-US">
+        <meta charset="UTF-8">
         <title>Kevin Gerstner</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="styles/home.css">
         <link rel="stylesheet" href="https://use.typekit.net/xuj1ggj.css">
         <script src="https://kit.fontawesome.com/46262caf73.js" crossorigin="anonymous"></script>
-        <meta charset="UTF-8">
+        <meta name="keywords" content="Portfolio, Computer Science, Design, HTML, CSS, JavaScript">
         <meta name="description" content="Kevin Gerstner's Portfolio">
         <meta name="author" content="Kevin Gerstner">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,264 +16,359 @@
     <body>
         <nav id="navbar" class="navbar fixed-top navbar-expand-sm">
             <div class="navbar-brand">
-                <img id="personal-logo" src="images/personal-logo-7-01.png">
+                <img class="personal-logo" src="images/personal-logo-7-01.png" alt="kevin-gerstner-logo">
             </div>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="underconstruction.html"><span>01.</span>Video Games</a>
+                    <a class="nav-link active" href="#games-anchor"><span>01.</span>Games</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="underconstruction.html"><span>02.</span>UI/UX</a>
+                    <a class="nav-link" href="#ui-ux-anchor"><span>02.</span>UI/UX</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="underconstruction.html"><span>03.</span>Art & Design</a>
+                    <a class="nav-link" href="#art-design-anchor"><span>03.</span>Art & Design</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><span>04.</span>Web Developer</a>
+                    <a class="nav-link" href="#programming-anchor"><span>04.</span>Web Developer</a>
                 </li>
             </ul>
         </nav>
 
         <div id="greeting">
-            <img id="kevin-portrait" src="images/kevin-portrait-2 copy.png">
-            <div class="content-area">
-                <h5 id="heythere">Hey there! My name is</h5>
-                <h1 id="itsme">Kevin Gerstner.</h1>
-                <p id="tagline">I'm a designer and developer. I create indie games, websites, board games, and occasionally brew soda. I’m passionate about technology and beautiful design, so I would love to work for you! </p>
-                <div style="margin-top: 60px;" class="icon-row">
-                    <a href="https://www.linkedin.com/in/kevin-gerstner/"><i class="fab fa-linkedin fa-2x"></i></a>
-                    <a href="mailto:sirkevinicus@gmail.com"><i class="far fa-envelope fa-2x"></i></a>
-                    <a href="https://nullvalu.itch.io/"><i class="fab fa-itch-io fa-2x"></i></a>
-                    <a href="https://github.com/SirKevinicus"><i class="fab fa-github fa-2x"></i></a>
-                </div>
+            <div id="vertical-bar"></div>
+            <div id="header-icons" style="margin-top: 60px;" >
+                <a href="https://www.linkedin.com/in/kevin-gerstner/"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="mailto:sirkevinicus@gmail.com"><i class="far fa-envelope fa-2x"></i></a>
+                <a href="https://nullvalu.itch.io/"><i class="fab fa-itch-io fa-2x"></i></a>
+                <a href="https://github.com/SirKevinicus"><i class="fab fa-github fa-2x"></i></a>
             </div>
+            <img id="kevin-portrait" src="images/kevin-portrait-2 copy.png" alt="portrait-photo">
+            <div class="container-md" style="padding-top: 50px;">
+                <div class="row">
+                    <div class="col-sm-8 offset-md-2">
+                        <h5 id="heythere">Hey there! My name is</h5>
+                        <h1 id="itsme">Kevin Gerstner.</h1>
+                        <p id="tagline">I'm a designer and developer. I create indie games, websites, board games, and occasionally brew soda. I’m passionate about technology and beautiful design, so I would love to work for you! </p>
+                        <button type="button" class="email-link-btn-red"><a href="mailto:sirkevinicus@gmail.com">Let's Get in Touch</a></button>
+                    </div>
+                </div>
+                </div>
         </div>
+
         <div id="portfolio">
-            <div class="content-area-wide">
-                <h1 class="section-header">Video Games</h1>
+            <div class="container pt-5">
 
-                <div class="project">
-                    <div class="project-description-box project-item">
-                        <h3 class="project-name">Song Pong</h3>
-                        <div class="description-row">
-                            <h6>2020</h6>
-                            <h6 class="visit-project"><a href="underconstruction.html">View Project >></a></h6>
+                <!-- GAMES SECTION -->
+
+                <section>
+                    <a class="anchor" id="games-anchor"></a>
+                    <h1 class="section-header">Games</h1>
+
+                    <div id="song-pong" class="project row">
+                        <a class="anchor" id="song-pong-anchor"></a>
+                        <div class="col col-sm-4 project-description-box">
+                            <h3 class="project-name">Song Pong</h3>
+                            <div class="description-row">
+                                <h6>2020</h6>
+                                <h6 class="visit-project"><a href="songpong.html">View Project &gt&gt</a></h6>
+                            </div>
+                            <hr>
+                            <p>
+                                Song Pong is an inventive rhythm game where you catch balls with a paddle along to a song. I created Song Pong
+                                with my collaborator and friend, Sean Hruz, over the course of three months.
+                            </p>
+                            <p>
+                                We developed it using the <strong>Unity</strong> engine and 
+                                used <strong>C#</strong> to program. I learned about creating editor tools, graphics, physics, and 3D modeling.
+                            </p>
                         </div>
-                        <hr>
-                        <p>
-                            Song Pong is an inventive rhythm game where you catch balls with a paddle along to a song. I created Song Pong
-                            with my collaborator and friend, Sean Hruz, over the course of three months.
-                        </p>
-                        <p>
-                            We developed it using the <strong>Unity</strong> engine and 
-                            used <strong>C#</strong> to program. I learned about creating editor tools, graphics, physics, and 3D modeling.
-                        </p>
+                        <div style="top: 70px" class="col col-sm-7 offset-md-1 project-cover-img">
+                            <img src="projects/songpong/songpong.gif" alt="Song Pong">
+                            <a href="songpong.html"><span class="link-span"></span></a>
+                        </div>
                     </div>
-                    <div style="top: 70px" class="project-cover-img project-item">
-                        <img src="projects/songpong/songpong.gif">
-                        <a href="underconstruction.html"><span class="link-span"></span></a>
+        
+                    <div class="project row">
+                        <div class="col col-sm-4 project-description-box">
+                            <h3 class="project-name">Tomb of Khaibit</h3>
+                            <div class="description-row">
+                                <h6>Work In Progress</h6>
+                                <h6 class="visit-project"><a href="underconstruction.html">View Project &gt&gt</a></h6>
+                            </div>
+                            <hr>
+                            <p>
+                                For my Senior Software project, my group, Blu3 J3ll0, is creating a co-op horror game where you play as archaelogists trying to
+                                escape a deadly Egyptian tomb.
+                            </p>
+                            <p>
+                                The project will be completed by May 2021, and will feature procedurally generated tombs, puzzles, and a deep magic system.
+                            </p>
+                        </div>
+                        <div style="top: 50px" class=" col col-sm-7 offset-md-1 project-cover-img">
+                            <img src="projects/Tomb of Khaibit/tombofkhaibit.gif" alt="Tomb of Khaibit">
+                            <a href="underconstruction.html"><span class="link-span"></span></a>
+                        </div>
                     </div>
-                </div>
     
-                <div class="project">
-                    <div class="project-description-box project-item">
-                        <h3 class="project-name">Tomb of Khaibit</h3>
-                        <div class="description-row">
-                            <h6>Work In Progress</h6>
-                            <h6 class="visit-project"><a href="underconstruction.html">View Project >></a></h6>
+                    <div class="project row">
+                        <div class="col col-sm-4 project-description-box project-item"> 
+                            <h3>Knock-Out! Global Smackdown</h3>
+                            <div class="description-row">
+                                <h6>2017</h6>
+                                <h6 class="visit-project"><a href="underconstruction.html">Visit Project >></a></h6>
+                            </div>
+                            <hr>
+                            <p>One of my most ambitious projects was when a few friends and I created an board game in high school. 
+                                In Knock-Out!, your goal is to become the crowd's favorite Fighter in a ruthless underground fighting ring.
+                                I was the project's <b>Card Artist</b> where I created over 150 unique cards, a <b>Gameplay Designer</b>, and <b>Marketing Lead</b> for our Kickstarter project.
+                            </p>
                         </div>
-                        <hr>
-                        <p>
-                            For my Senior Software project, my group, Blu3 J3ll0, is creating a co-op horror game where you play as archaelogists trying to
-                            escape a deadly Egyptian tomb.
-                        </p>
-                        <p>
-                            The project will be completed by May 2021, and will feature procedurally generated tombs, puzzles, and a deep magic system.
-                        </p>
-                    </div>
-                    <div style="top: 50px" class="project-cover-img project-item">
-                        <img src="projects/Tomb of Khaibit/tombofkhaibit.gif">
-                        <a href="underconstruction.html"><span class="link-span"></span></a>
-                    </div>
-                </div>
-
-                <h1 class="section-header">Design</h1>
-
-                <div class="project">
-                    <div class="project-description-box project-item">
-                        <h3 class="project-name">Graphic Design Internship with Arch City Defenders</h3>
-                        <div class="description-row">
-                            <h6>2019</h6>
-                            <h6 class="visit-project"><a href="underconstruction.html">View Project >></a></h6>
-                        </div>
-                        <hr>
-                        <p>In the summer of 2019 I had an Internship with ArchCity Defenders, a legal non-profit that provides holistic legal advocacy 
-                            and represents people who are targeted by the criminal-legal system. This collection is a digital painting series 
-                            of several ArchCity clients that will be used in future print and digital publications.</p>
-                    </div>
-                    <div class="project-cover-img project-item">
-                        <img src="projects/archcity/Inez.png">
-                        <a href="underconstruction.html"><span class="link-span"></span></a>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <div class="floating-image-left">
-                        <img style="left: 60px;" src="projects/design/androids/ANDROIDS_illustration.png">
-                        <div style="position: relative; top: 50px;">
-                            <h3><b>BOOK COVERS</b></h3>
-                            <p>Two book cover designs I made for Philip K. Dick's "Do Androids Dream of Electric Sheep".</p>
+                        <div style="top: 50px;" class="col col-sm-7 offset-md-1 project-cover-img project-item">
+                            <img src="projects/knock-out/ko-preview.gif" alt="Knock-Out Global Smackdown Board Game">
+                            <a href="underconstruction.html"><span class="link-span"></span></a>
                         </div>
                     </div>
-                </div>
+                </section>
+                
+                <!-- UI /UX SECTION -->
 
-                <div class="project">
-                    <div class="project-cover-img project-item">
-                        <img src="projects/frontier/Mockups.png">
-                        <a href="frontier.html"><span class="link-span"></span></a>
-                    </div>
-                    <div class="project-description-box project-item">
-                        <h3 class="project-name">Frontier</h3>
-                        <div class="description-row">
-                            <h6>2019</h6>
-                            <h6 class="visit-project"><a href="frontier.html">Visit Project >></a></h6>
+                <section>
+                    <h1 class="section-header">UI/UX</h1>
+                    <a class="anchor" id="ui-ux-anchor"></a>
+                    <div class="project row">
+                        <div class="col col-sm-8 project-cover-img project-item">
+                            <img src="projects/frontier/Mockups.png" alt="Frontier">
+                            <a href="frontier.html"><span class="link-span"></span></a>
                         </div>
-                        <hr>
-                        <p>I designed the UI/UX for a fun-discovery platform called Frontier. I used Figma, a free design platform for the implementation. 
-                            The platform helps people find fun things to do around their area by crowd-sourcing ideas from other users. This project was for my Interaction Design class at my college.</p>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <div class="project-cover-img project-item">
-                        <img src="projects/design/citymuseum/transformation.jpg">
-                        <a href="underconstruction.html"><span class="link-span"></span></a>
-                    </div>
-                    <div class="project-description-box proejct-item">
-                        <h3 class="project-name">City Museum Brand Redesign</h3>
-                        <div class="description-row">
-                            <h6>2019</h6>
-                            <h6 class="visit-project"><a href="underconstruction.html">Visit Project >></a></h6>
+                        <div class="col col-sm-3 offset-md-1 project-description-box project-item">
+                            <h3 class="project-name">Frontier</h3>
+                            <div class="description-row">
+                                <h6>2019</h6>
+                                <h6 class="visit-project"><a href="frontier.html">Visit Project >></a></h6>
+                            </div>
+                            <hr>
+                            <p>I designed the UI and did UX research for a cross-platform app called Frontier. The platform helps people find fun things to do around 
+                                their area by crowd-sourcing ideas from other users. This project was for my Interaction Design class at my college and 
+                                I used Figma, a free design platform, for the implementation.</p>
                         </div>
-                        <hr>
-                        <p>One of my favorite projects was creating an unofficial brand redesign for the City Museum, which is my favorite attraction
-                            in St. Louis. I created several brand elements and logo variations, and followed principles of design to create this fun, modern redesign.
-                        </p>
                     </div>
-                </div>
-
-                <div class="project">
-                    <div class="project-description-box project-item"> 
-                        <h3>Knock-Out! Global Smackdown</h3>
-                        <div class="description-row">
-                            <h6>2017</h6>
-                            <h6 class="visit-project"><a href="underconstruction.html">Visit Project >></a></h6>
+    
+                    <div class="project row">
+                        <div class="col col-sm-5 project-description-box">
+                            <h3 class="project-name">Co-Author for VL/HCC 2019 Submission</h3>
+                            <div class="description-row">
+                                <h6>2019</h6>
+                                <h6 class="visit-project"><a href="http://sandeepkuttal.ens.utulsa.edu/Publications/Gender.pdf">Visit Project >></a></h6>
+                            </div>
+                            <hr>
+                            <p>
+                                I co-authored a paper entitled "Remote Pair Programming in Online CS Education: Investigating through a Gender Lens" that was
+                                submitted to the IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC). I analyzed and interpreted data and wrote
+                                and edited the paper. I was granted this opportunity by my professor, Sandeep Kuttal at the University of Tulsa.
+                            </p>
                         </div>
-                        <hr>
-                        <p>One of my most ambitious projects was when a few friends and I created an board game in high school. 
-                            In Knock-Out!, your goal is to become the crowd's favorite Fighter in a ruthless underground fighting ring.
-                            I was the project's <b>Card Artist</b> where I created over 150 unique cards, a <b>Gameplay Designer</b>, and <b>Marketing Lead</b> for our Kickstarter project.
-                        </p>
-                    </div>
-                    <div class="project-cover-img project-item">
-                        <img src="projects/knock-out/kickstarter_screenshot.png">
-                        <a href="underconstruction.html"><span class="link-span"></span></a>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <div class="project-cover-img project-item">
-                        <img src="projects/design/yikes/Business Card/yikes_card.jpg">
-                        <a href="underconstruction.html"><span class="link-span"></span></a>
-                    </div>
-                    <div class="project-description-box project-item">
-                        <h3>YIKES! Logo and Brand Design</h3>
-                        <div class="description-row">
-                            <h6>2018</h6>
-                            <h6 class="visit-project"><a href="underconstruction.html">Visit Project >></a></h6>
+                        <div class="col col-sm-6 offset-md-1 project-cover-img">
+                            <img src="projects/ui:ux/VL:HCC Paper/Gender_Page_01.jpg" alt="VLHCC Paper">
+                            <a href="http://sandeepkuttal.ens.utulsa.edu/Publications/Gender.pdf"><span class="link-span"></span></a>
                         </div>
-                        <hr>
-                        <p>
-                            I created a logo and brand design for a made-up streetwear brand called "yikes" for my Graphics Communication class at college.
-                            This included merchandise mockups, logo creation, business cards, and a style guide.
-                        </p>
                     </div>
-                </div>
+                </section>
 
-                <div class="project">
-                    <div class="floating-image-left">
-                        <img src="projects/design/chameleon_coffee/OLD/ChameleonCoffee-01.jpg">
-                        <div class="description" style="position: relative; top: 50px;">
+                <!-- ART & DESIGN SECTION -->
+
+                <section>
+                    <a class="anchor" id="art-design-anchor"></a>
+                    <h1 class="section-header">Art & Design</h1>
+                    <div class="project row">
+                        <div class="col col-sm-4 project-description-box">
+                            <h3 class="project-name">Graphic Design Internship with Arch City Defenders</h3>
+                            <div class="description-row">
+                                <h6>2019</h6>
+                                <h6 class="visit-project"><a href="underconstruction.html">View Project >></a></h6>
+                            </div>
+                            <hr>
+                            <p>In the summer of 2019 I had an Internship with ArchCity Defenders, a legal non-profit that provides holistic legal advocacy 
+                                and represents people who are targeted by the criminal-legal system. This collection is a digital painting series 
+                                of several ArchCity clients that will be used in future print and digital publications.</p>
+                        </div>
+                        <div class="col col-sm-7 offset-md-1 project-cover-img">
+                            <img src="projects/archcity/Inez.png" alt="ArchCity Defenders">
+                            <a href="underconstruction.html"><span class="link-span"></span></a>
+                        </div>
+                    </div>
+                    <div class="project row">
+                        <div class="col col-sm-5">
+                            <div id="androids-slides" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                                <!-- The Slideshow -->
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="projects/design/androids/ANDROIDS_illustration.png" alt="Androids Cover 1 Front">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="projects/design/androids/BOOK1_BACK.jpg" alt="Androids Cover 1 Back">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="projects/design/androids/BOOK2_FRONT.jpg" alt="Androids Cover 2 Front">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="projects/design/androids/BOOK2_BACK.jpg" alt="Androids Cover 2 Back">
+                                    </div>
+                                </div>
+                                <!-- Controls -->
+                                <a class="carousel-control-prev" href="#androids-slides" role="button" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                    </a>
+                                <a class="carousel-control-next" href="#androids-slides" role="button" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </a>
+                                <!-- Indicators-->
+                                <ol class="carousel-indicators">
+                                    <li data-bs-target="#androids-slides" data-bs-slide-to="0" class="active"></li>
+                                    <li data-bs-target="#androids-slides" data-bs-slide-to="1"></li>
+                                    <li data-bs-target="#androids-slides" data-bs-slide-to="2"></li>
+                                    <li data-bs-target="#androids-slides" data-bs-slide-to="3"></li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="col offset-md-1">
+                            <div class="ml-4" style="position: relative; top: 50px;">
+                                <h3><b>BOOK COVERS</b></h3>
+                                <p>Two book cover designs I made for Philip K. Dick's "Do Androids Dream of Electric Sheep". The black-and-green book is a 
+                                    bold recontextulization of the authors' vision of the future in modern terms. The blue book is a surreal photo depicting one
+                                    of the most memorable moments of the book: the Voight-Kampf test.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="project row">
+                        <div class="col col-sm-7 project-cover-img project-item">
+                            <img src="projects/design/citymuseum/transformation.jpg" alt="City Museum Logo Redesign">
+                            <a href="underconstruction.html"><span class="link-span"></span></a>
+                        </div>
+                        <div class="col col-sm-4 offset-md-1 project-description-box proejct-item">
+                            <h3 class="project-name">City Museum Brand Redesign</h3>
+                            <div class="description-row">
+                                <h6>2019</h6>
+                                <h6 class="visit-project"><a href="underconstruction.html">Visit Project >></a></h6>
+                            </div>
+                            <hr>
+                            <p>For a design class, I created an unofficial brand redesign for the City Museum, which is my favorite attraction
+                                in St. Louis. I created several brand elements and logo variations, and followed principles of design to create this fun, modern redesign.
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="project row">
+                        <div class="col col-sm-7 project-cover-img project-item">
+                            <img src="projects/design/yikes/Business Card/yikes_card.jpg" alt="Yikes Streetwear">
+                            <a href="underconstruction.html"><span class="link-span"></span></a>
+                        </div>
+                        <div class="col col-sm-4 offset-md-1 project-description-box project-item">
+                            <h3>YIKES! Logo and Brand Design</h3>
+                            <div class="description-row">
+                                <h6>2018</h6>
+                                <h6 class="visit-project"><a href="underconstruction.html">Visit Project >></a></h6>
+                            </div>
+                            <hr>
+                            <p>
+                                I created a logo and brand design for a made-up streetwear brand called "yikes" for my Graphics Communication class at college.
+                                This included merchandise mockups, logo creation, business cards, and a style guide.
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="project row">
+                        <div class="col col-sm-7">
+                            <img src="projects/design/chameleon_coffee/OLD/ChameleonCoffee-01.jpg" alt="Chameleon Coffee">
+                        </div>
+                        <div class="col col-sm-4 offset-md-1 description" style="position: relative; top: 50px;">
                             <h3><b>CHAMELEON COFFEE</b></h3>
-                            <p>A logo I created for a fictitious coffee shop. I also created advertisements for print and web.</p>
+                            <p>A logo I created for a coffee shop. I also created advertisements for print and web.</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="project">
-                    <div class="project-cover-img project-item">
-                        <img src="projects/robotics/TURMCSponsorBooklet_Spread.jpg">
-                        <a href="underconstruction.html"><span class="link-span"></span></a>
-                    </div>
-                    <div class="project-description-box project-iteem">
-                        <h3>University of Tulsa Robotics Sponsorship Packet</h3>
-                        <div class="description-row">
-                            <h6>2019</h6>
-                            <h6 class="visit-project"><a href="underconstruction.html">Visit Project >></a></h6>
+    
+                    <div class="project row">
+                        <div class="col col-sm-7 project-cover-img">
+                            <img src="projects/robotics/TURMCSponsorBooklet_Spread.jpg" alt="University of Tulsa Robotics Sponsorship Packet">
+                            <a href="underconstruction.html"><span class="link-span"></span></a>
                         </div>
-                        <hr>
-                        <p>At the University of Tulsa, I created a 14-page Sponsorship Packet to help raise money for the Robotics Program. 
-                        </p>
+                        <div class="col offset-md-1 project-description-box">
+                            <h3>University of Tulsa Robotics Sponsorship Packet</h3>
+                            <div class="description-row">
+                                <h6>2019</h6>
+                                <h6 class="visit-project"><a href="underconstruction.html">Visit Project >></a></h6>
+                            </div>
+                            <hr>
+                            <p>At the University of Tulsa, I created a 14-page Sponsorship Packet to help raise money for the Robotics Program. 
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </section>
+                
+                <!-- PROGRAMMING SECTION -->
 
-                <h1 class="section-header">Programming</h1>
-
-                <div class="project">
-                    <div style="left: 50px; padding-right: 10vw;" class="project-description-box project-item">
-                        <h3>This Website</h3>
-                        <hr>
-                        <p>
-                            I designed and coded this website from scratch using HTML, CSS, and JS!
-                        </p>
-                        <img style="margin-top: 10px; margin-bottom: 10px" src="coding website.gif">
-                        <p>
-                            I also used SASS for CSS pre-compiling and cleaner code. I am self-taught for web development and have used resources like w3schools
-                            to learn. Initially, I created my portfolio on Webflow, but since it cost a lot of money to use the service, I decided to recreate the
-                            website on my own to gain experience with these languages.
-                        </p>
+                <section>
+                    <a class="anchor" id="programming-anchor"></a>
+                    <h1 class="section-header">Programming</h1>
+                    <div class="project row">
+                        <div style="left: 50px; padding-right: 10vw;" class="project-description-box project-item">
+                            <h3>This Website</h3>
+                            <hr>
+                            <p>
+                                I designed and coded this website from scratch using HTML, CSS, and JS!
+                            </p>
+                            <img style="margin-top: 10px; margin-bottom: 10px" src="coding website.gif" alt="Coding This Website">
+                            <p>
+                                I also used SASS for CSS pre-compiling, and Bootstrap 5 for responsive layout. I am self-taught for web development and have used resources like w3schools
+                                to learn. Initially, I created my portfolio on Webflow, but since it cost a lot of money to use the service, I decided to recreate the
+                                website on my own to gain experience with these languages.
+                            </p>
+                        </div>
                     </div>
-                </div>
-
-                <h1 class="section-header">Skills</h1>
-
-
+                </section>
             </div>
         </div>
 
-        <div id="about-me">
-            <div class="content-area-narrow">
-                <div class="content-center">
-                    <h3>Next Step? Let's Talk!</h3>
-                    <hr>
-                    <p style="font-weight: bold;">Check out my LinkedIn or send me an email for a job inquiry! I'm looking for work right now, so if you think we'd be a good fit, let's get in touch!</p>
-
-                    <div style="margin-top: 60px;" class="icon-row">
-                        <a href="https://www.linkedin.com/in/kevin-gerstner/"><i class="fab fa-linkedin fa-2x"></i></a>
-                        <a href="mailto:sirkevinicus@gmail.com"><i class="far fa-envelope fa-2x"></i></a>
-                        <a href="https://www.instagram.com/kevin.gerstner/"><i class="fab fa-instagram fa-2x"></i></a>
-                        <a href="https://github.com/SirKevinicus"><i class="fab fa-github fa-2x"></i></a>
+        <footer>
+            <div id="about-me">
+                <div class='container' style="text-align: center;">
+                    <div class="slim-container">
+                        <div class="row">
+                            <h3>Next Step? Let's Talk!</h3>
+                            <hr>
+                        </div>
+                        <div class="row">
+                            <p style="font-weight: bold;">
+                                I'm currently looking for work, so if you think we'd be a good fit, send me an email or check out my LinkedIn profile.</p>
+                        </div>
+                        <div class="row pt-5">
+                            <button type="button" class="email-link-btn-white"><a href="mailto:sirkevinicus@gmail.com">Say Hello</a></button>
+                        </div>
+                        <div class="row">
+                            <div id="footer-icon-row" style="margin-top: 60px;">
+                                <a href="https://www.linkedin.com/in/kevin-gerstner/"><i class="fab fa-linkedin fa-2x"></i></a>
+                                <a href="mailto:sirkevinicus@gmail.com"><i class="far fa-envelope fa-2x"></i></a>
+                                <a href="https://www.instagram.com/kevin.gerstner/"><i class="fab fa-instagram fa-2x"></i></a>
+                                <a href="https://github.com/SirKevinicus"><i class="fab fa-github fa-2x"></i></a>
+                            </div>
+                        </div>
+                        <div>
+                            <img id="glitchcactus" src="images/cactus-2.gif" alt="Glitch Cactus">
+                        </div>
+                        <div>
+                            <h6>Website Designed and Built by Kevin Gerstner</h6>
+                        </div>
                     </div>
-
-                    <img id="glitchcactus" src="images/cactus-2.gif">
-
                 </div>
+                <video class="static-background" autoplay muted loop>
+                    <source src="images/glitch.mp4" type="video/mp4">
+                    <source src="images/glitch.webm" type="video/webm">
+                </video>
             </div>
-            <video class="static-background" autoplay muted loop>
-                <source src="images/glitch.mp4" type="video/mp4">
-                <source src="images/glitch.webm" type="video/webm">
-            </video>
-        </div>
+        </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     </body>
 
