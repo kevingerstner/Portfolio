@@ -52,7 +52,7 @@
 .section-header{
     font-family: Barbieri;
     font-weight: normal;
-
+    text-align: center;
     color: $red;
     padding-bottom: 30px;
     text-shadow: 5px 5px $purple;
@@ -272,6 +272,9 @@
     }
     #portfolio{
         background-image: url("../images/Film Grain/AU_FG_Texture-1.jpg");
+    }
+    .section-header{
+        text-align: left;
     }
     .project{
         flex-direction: row;

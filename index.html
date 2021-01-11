@@ -19,7 +19,11 @@
         <nav id="navbar" class="navbar navbar-expand-md fixed-top" style="max-width: 100%;">
             <!-- Brand -->
             <div class="navbar-brand">
-                <img class="personal-logo" src="images/personal-logo-7-01.png" alt="kevin-gerstner-logo">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="images/personal-logo-3.png">
+                    <source media="(min-width: 768px)" srcset="images/personal-logo.png">
+                    <img class="personal-logo" src="images/personal-logo.png" alt="kevin-gerstner-logo">
+                </picture>
             </div>
 
               <!-- Toggler/collapsible Button -->
@@ -62,7 +66,7 @@
                 <div class="row">
                     <div class="col-sm-8 offset-md-2">
                         <h5 id="heythere">Hey there! My name is</h5>
-                        <h1 id="itsme">Kevin Gerstner.</h1>
+                        <h2 id="itsme">Kevin Gerstner.</h2>
                         <p id="tagline">I'm a designer and developer. I create indie games, websites, board games, and occasionally brew soda. I’m passionate about technology and beautiful design, so I would love to work for you! </p>
                         <button style="margin-top: 30px" type="button" class="email-link-btn-red"><a href="mailto:sirkevinicus@gmail.com">Let's Talk!</a></button>
                     </div>
@@ -149,6 +153,8 @@
 
                 <section>
                     <h1 class="section-header">UI/UX</h1>
+                    <hr class="section-hr">
+
                     <a class="anchor" id="ui-ux-anchor"></a>
                     <div class="project-2 row">
                         <div class="col col-sm-8 project-cover-img project-item">
