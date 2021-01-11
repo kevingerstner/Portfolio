@@ -197,6 +197,11 @@ ul {
   width: 120px;
 }
 
+.caption {
+  margin-top: 30px;
+  padding: 25px;
+}
+
 /*----------------------
   RESPONSIVE STYLES
 ------------------------*/
@@ -279,6 +284,7 @@ ul {
 #greeting {
   position: relative;
   height: 95vh;
+  padding: 25px;
 }
 
 #greeting-content {
@@ -318,11 +324,12 @@ ul {
   position: relative;
   width: 100%;
   padding-bottom: 50px;
+  background-color: #1a1423;
 }
 
 /* || Section */
 .section-header {
-  font-family: STING;
+  font-family: Barbieri;
   font-weight: normal;
   color: #bd4242;
   padding-bottom: 30px;
@@ -330,28 +337,39 @@ ul {
 }
 
 /* || Project */
-.project {
-  margin-bottom: 20vh;
+.project, .project-1, .project-2 {
+  margin-bottom: 10vh;
 }
 
-.project p {
+.project p, .project-1 p, .project-2 p {
   font-size: 1.25em;
 }
 
-.project hr {
+.project hr, .project-1 hr, .project-2 hr {
   margin-top: 2px;
   margin-bottom: 20px;
 }
 
+.project-1 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.project-2 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .project-description-box {
   position: relative;
-  min-height: 600px;
-  max-width: 800px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background-color: #372549;
-  padding: 30px 30px;
+  padding: 25px;
 }
 
 .project-description-box h3, .project-description-box .project-cover-img::before {
@@ -537,10 +555,6 @@ ul {
   #tagline {
     width: 100%;
   }
-  body {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
 }
 
 /* SMALL & MEDIUM */
@@ -555,6 +569,19 @@ ul {
   }
   #portfolio {
     background-image: url("../images/Film Grain/AU_FG_Texture-1.jpg");
+  }
+  .project, .project-1, .project-2 {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 20vh;
+  }
+  .project-description-box {
+    background-color: #372549;
+    padding: 30px 30px;
+    min-height: 600px;
+    max-width: 800px;
   }
 }
 /*# sourceMappingURL=home.css.map */

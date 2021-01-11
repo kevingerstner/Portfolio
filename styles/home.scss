@@ -4,6 +4,7 @@
 #greeting {
     position: relative;
     height: 95vh;
+    padding: 25px;
 }
 
 #greeting-content{
@@ -43,12 +44,13 @@
     position: relative;
     width: 100%;
     padding-bottom: 50px;
+    background-color: $black;
 }
 
 /* || Section */
 
 .section-header{
-    font-family: STING;
+    font-family: Barbieri;
     font-weight: normal;
 
     color: $red;
@@ -58,8 +60,7 @@
 
 /* || Project */
 .project{
-    margin-bottom: 20vh;
-
+    margin-bottom: 10vh;
     p{
         font-size: 1.25em;
     }
@@ -69,13 +70,20 @@
     }
 }
 
+.project-1{
+    @extend .project;
+    flex-direction: column-reverse;
+}
+
+.project-2{
+    @extend .project;
+    flex-direction: column;
+}
+
 .project-description-box{
     position: relative;
-    min-height: 600px;
-    max-width: 800px;
     height: fit-content;
-    background-color: $purple;
-    padding: 30px 30px;
+    padding: 25px;
 
     h3{
         font-family: VCR; 
@@ -246,10 +254,6 @@
     #tagline{
         width: 100%;
     }
-    body{
-        padding-left: 25px;
-        padding-right: 25px;
-    }
 }
 
 /* SMALL & MEDIUM */
@@ -268,5 +272,15 @@
     }
     #portfolio{
         background-image: url("../images/Film Grain/AU_FG_Texture-1.jpg");
+    }
+    .project{
+        flex-direction: row;
+        margin-bottom: 20vh;
+    }
+    .project-description-box{
+        background-color: $purple;
+        padding: 30px 30px;
+        min-height: 600px;
+        max-width: 800px;
     }
 }
