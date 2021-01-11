@@ -4,34 +4,44 @@
         <meta charset="UTF-8">
         <title>Kevin Gerstner</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="styles/home.css">
+        <link rel="stylesheet" href="styles/home.css" type="text/css">
         <link rel="stylesheet" href="https://use.typekit.net/xuj1ggj.css">
         <script src="https://kit.fontawesome.com/46262caf73.js" crossorigin="anonymous"></script>
         <meta name="keywords" content="Portfolio, Computer Science, Design, HTML, CSS, JavaScript">
         <meta name="description" content="Kevin Gerstner's Portfolio">
         <meta name="author" content="Kevin Gerstner">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     </head>
     
     <body>
-        <nav id="navbar" class="navbar fixed-top navbar-expand-sm">
+        <nav id="navbar" class="navbar navbar-expand-md fixed-top" style="max-width: 100%;">
+            <!-- Brand -->
             <div class="navbar-brand">
                 <img class="personal-logo" src="images/personal-logo-7-01.png" alt="kevin-gerstner-logo">
             </div>
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#games-anchor"><span>01.</span>Games</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#ui-ux-anchor"><span>02.</span>UI/UX</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#art-design-anchor"><span>03.</span>Art & Design</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#programming-anchor"><span>04.</span>Web Developer</a>
-                </li>
-            </ul>
+
+              <!-- Toggler/collapsible Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-nav">
+                <span><i class="fas fa-toggle-on fa-2x"></i></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="collapsible-nav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#games-anchor"><span>01.</span>Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ui-ux-anchor"><span>02.</span>UI/UX</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#art-design-anchor"><span>03.</span>Art & Design</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#programming-anchor"><span>04.</span>Web Developer</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
 
         <div id="greeting">
@@ -42,14 +52,14 @@
                 <a href="https://nullvalu.itch.io/"><i class="fab fa-itch-io fa-2x"></i></a>
                 <a href="https://github.com/SirKevinicus"><i class="fab fa-github fa-2x"></i></a>
             </div>
-            <img id="kevin-portrait" src="images/kevin-portrait-1x.png" alt="portrait-photo">
-            <div class="container-md" style="padding-top: 50px;">
+            <img id="kevin-portrait" src="images/kevin-portrait@0.3x.png" alt="portrait-photo">
+            <div id="greeting-content" class="container-md">
                 <div class="row">
                     <div class="col-sm-8 offset-md-2">
                         <h5 id="heythere">Hey there! My name is</h5>
                         <h1 id="itsme">Kevin Gerstner.</h1>
                         <p id="tagline">I'm a designer and developer. I create indie games, websites, board games, and occasionally brew soda. I’m passionate about technology and beautiful design, so I would love to work for you! </p>
-                        <button type="button" class="email-link-btn-red"><a href="mailto:sirkevinicus@gmail.com">Let's Get in Touch</a></button>
+                        <button style="margin-top: 30px" type="button" class="email-link-btn-red"><a href="mailto:sirkevinicus@gmail.com">Let's Talk!</a></button>
                     </div>
                 </div>
                 </div>
@@ -66,7 +76,7 @@
 
                     <div id="song-pong" class="project row">
                         <a class="anchor" id="song-pong-anchor"></a>
-                        <div class="col col-sm-4 project-description-box">
+                        <div class="col-md-4 project-description-box">
                             <h3 class="project-name">Song Pong</h3>
                             <div class="description-row">
                                 <h6>2020</h6>
@@ -82,7 +92,7 @@
                                 used <strong>C#</strong> to program. I learned about creating editor tools, graphics, physics, and 3D modeling.
                             </p>
                         </div>
-                        <div style="top: 70px" class="col col-sm-7 offset-md-1 project-cover-img">
+                        <div style="top: 70px" class="col-md-7 offset-md-1 project-cover-img">
                             <img src="projects/songpong/songpong.gif" alt="Song Pong">
                             <a href="songpong.html"><span class="link-span"></span></a>
                         </div>

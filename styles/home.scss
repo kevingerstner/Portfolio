@@ -2,8 +2,12 @@
 
 /* || Greeting */
 #greeting {
+    position: relative;
     height: 95vh;
-    padding-top: 10vh;
+}
+
+#greeting-content{
+    padding-top: 150px;
 }
 
 #kevin-portrait{
@@ -39,7 +43,6 @@
     position: relative;
     width: 100%;
     padding-bottom: 50px;
-    background-image: url("../images/Film Grain/AU_FG_Texture-1.jpg");
 }
 
 /* || Section */
@@ -207,9 +210,10 @@
 
 #header-icons{
     position: absolute;
-    display: flex;
+    left: 75px;
+    top: 50px;
+    display: none; // hide by default on mobile
     flex-direction: column;
-    padding-left: 75px;
     a{
         margin-bottom: 25px;
         color: $red;
@@ -222,62 +226,47 @@
 #vertical-bar{
     background-color: $red; 
     width: 2px; 
-    height: 50vh; 
+    height: 55vh; 
     position: absolute; 
+    display: none;
     left: 90px;
     bottom: 0;
 }
 
-.email-link-btn{
-    margin-top: 50px;
-    background-color: transparent;
-    border: 2px solid grey;
-    border-radius: 5px;
-    padding: 1rem 1.75rem;
-    max-width: 300px;
-    margin: auto;
+/*-----------------------
+  RESPONSIVE LAYOUT
+  -----------------------*/
 
-    a{
-        text-decoration: none;
+/* SMALL */
+@media screen and (max-width: 576px)
+{
+    #kevin-portrait{
+        display: none;
     }
-
-    &:hover{
-        background-color: grey;
-
-        a{
-            color: white;
-        }
+    #tagline{
+        width: 100%;
+    }
+    body{
+        padding-left: 25px;
+        padding-right: 25px;
     }
 }
 
-.email-link-btn-red{
-    @extend .email-link-btn;
-    color: $red;
-    border: 2px solid $red;
+/* SMALL & MEDIUM */
+@media screen and (max-width: 768px)
+{
 
-    a{
-        color: $red;
-    }
-
-    &:hover{
-        background-color: $red;
-        color: $pink;
-    }
 }
 
-.email-link-btn-white{
-    @extend .email-link-btn;
-    color: $pink;
-    border: 2px solid $pink;
-
-    a{
-        color: $pink;
+@media screen and (min-width: 768px)
+{
+    #vertical-bar{
+        display: block;
     }
-    
-    &:hover{
-        background-color: $pink;
-        a{
-            color: $red;
-        }
+    #header-icons{
+        display: flex;
+    }
+    #portfolio{
+        background-image: url("../images/Film Grain/AU_FG_Texture-1.jpg");
     }
 }

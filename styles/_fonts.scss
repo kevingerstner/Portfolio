@@ -14,22 +14,6 @@ $font-path: "fonts/";
     font-weight: normal;
     src: url($font-path + "Sting.otf") format("otf");
 }
-@font-face{
-    font-family: Kenyan Coffee;
-    font-weight: normal;
-    src: url($font-path + "kenyan\ coffee\ rg.ttf") format("ttf");
-}
-@font-face{
-    font-family: Kenyan Coffee;
-    font-weight: bold;
-    src: url($font-path + "kenyan\ coffee\ bd.ttf") format("ttf");
-}
-
-@font-face{
-    font-family: Tondu;
-    font-weight: normal;
-    src: url($font-path + "Tondu_Beta.ttf");
-}
 
 @font-face{
     font-family: Public Sans;
@@ -53,10 +37,4 @@ $font-path: "fonts/";
     font-family: Public Sans;
     font-weight: 500;
     src: url($font-path + "public-sans-v1.008/binaries/webfonts/PublicSans-Medium.ttf");
-}
-
-@font-face{
-    font-family: Nonsense;
-    font-weight: normal;
-    src: url($font-path + "Nonsense.ttf");
 }
