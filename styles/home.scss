@@ -1,5 +1,7 @@
 @import "styles";
 
+$section-pad: 200px;
+
 /*-----------------------
   GREETING
 ------------------------*/
@@ -70,6 +72,26 @@
 }
 
 /*-----------------------
+  ABOUT ME
+------------------------*/
+#aboutme{
+}
+
+.skill-list{
+    list-style-type: none;
+    li i{
+        padding-right: 10px;
+        color: $red;
+    }
+}
+
+.skill-box{
+    border: 2px solid $red;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+/*-----------------------
   PORTFOLIO
 ------------------------*/
 #portfolio{
@@ -80,6 +102,9 @@
 }
 
 /* || Section */
+section{
+    margin-bottom: $section-pad;
+}
 
 .section-header{
     font-family: Barbieri;
@@ -92,10 +117,7 @@
 
 /* || Project */
 .project{
-    margin-bottom: 10vh;
-    p{
-        font-size: 1.25em;
-    }
+    margin-bottom: $section-pad;
     hr{
         margin-top: 2px;
         margin-bottom: 20px;
@@ -268,6 +290,9 @@
     }
     #portfolio{
         background-image: url("../images/Film Grain/AU_FG_Texture-1.jpg");
+    }
+    .container{
+        max-width: 1200px;
     }
     .section-header{
         text-align: left;
