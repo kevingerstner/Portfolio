@@ -255,6 +255,7 @@ ul {
 
 .navbar-nav > li a span {
   color: #f7cb39;
+  padding-right: 10px;
 }
 
 .navbar-toggler {

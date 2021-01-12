@@ -176,6 +176,7 @@ ul {
 
 .navbar-nav > li a span {
   color: #f7cb39;
+  padding-right: 10px;
 }
 
 .navbar-toggler {
@@ -286,10 +287,13 @@ ul {
   color: #bd4242;
 }
 
-/* || Greeting */
+/*-----------------------
+  GREETING
+------------------------*/
 #greeting {
   position: relative;
   height: 95vh;
+  min-height: 800px;
   padding: 25px;
 }
 
@@ -298,6 +302,7 @@ ul {
 }
 
 #kevin-portrait {
+  display: none;
   position: absolute;
   top: 100px;
   right: 2vw;
@@ -322,10 +327,43 @@ ul {
 #tagline {
   font-weight: normal;
   color: #eacdc2;
-  width: 70%;
 }
 
-/* || Portfolio */
+#header-icons {
+  position: absolute;
+  left: 75px;
+  top: 50px;
+  padding-top: 25px;
+  background-color: #372549;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#header-icons a {
+  margin-bottom: 25px;
+  color: #bd4242;
+}
+
+#header-icons a :hover {
+  color: #eacdc2;
+}
+
+#vertical-bar {
+  background-color: #bd4242;
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  display: none;
+  left: 90px;
+  bottom: 0;
+}
+
+/*-----------------------
+  PORTFOLIO
+------------------------*/
 #portfolio {
   position: relative;
   width: 100%;
@@ -472,13 +510,10 @@ ul {
   margin-bottom: 50px;
 }
 
-#profile-pic {
-  width: 400px;
-  height: auto;
-  background-repeat: repeat-y;
-}
-
-#about-me {
+/*-----------------------
+  FOOTER
+------------------------*/
+#footer {
   position: relative;
   width: 100%;
   background-color: #bd4242;
@@ -486,6 +521,7 @@ ul {
 }
 
 #glitchcactus {
+  width: 100px;
   position: relative;
   margin-top: 50px;
   z-index: 30;
@@ -521,51 +557,17 @@ ul {
   margin-right: 0;
 }
 
-#header-icons {
-  position: absolute;
-  left: 75px;
-  top: 50px;
-  display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#header-icons a {
-  margin-bottom: 25px;
-  color: #bd4242;
-}
-
-#header-icons a :hover {
-  color: #eacdc2;
-}
-
-#vertical-bar {
-  background-color: #bd4242;
-  width: 2px;
-  height: 55vh;
-  position: absolute;
-  display: none;
-  left: 90px;
-  bottom: 0;
-}
-
 /*-----------------------
   RESPONSIVE LAYOUT
-  -----------------------*/
-/* SMALL */
-@media screen and (max-width: 576px) {
-  #kevin-portrait {
-    display: none;
-  }
-  #tagline {
-    width: 100%;
-  }
-}
-
-/* SMALL & MEDIUM */
+-------------------------*/
+/* MEDIUM and up LAYOUT */
 @media screen and (min-width: 768px) {
+  #tagline {
+    width: 70%;
+  }
+  #kevin-portrait {
+    display: block;
+  }
   #vertical-bar {
     display: block;
   }
