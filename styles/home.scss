@@ -1,6 +1,6 @@
 @import "styles";
 
-$section-pad: 200px;
+$section-pad: 120px;
 
 /*-----------------------
   GREETING
@@ -56,7 +56,7 @@ $section-pad: 200px;
         margin-bottom: 25px;
         color: $red;
         :hover{
-            color: $pink;
+            color: $yellow;
         }
     }
 }
@@ -86,9 +86,8 @@ $section-pad: 200px;
 }
 
 .skill-box{
-    border: 2px solid $red;
+    border: 5px solid $purple;
     border-radius: 5px;
-    padding: 10px 20px;
 }
 
 /*-----------------------
@@ -97,6 +96,7 @@ $section-pad: 200px;
 #portfolio{
     position: relative;
     width: 100%;
+    padding-top: 50px;
     padding-bottom: 50px;
     background-color: $black;
 }
@@ -117,11 +117,9 @@ section{
 
 /* || Project */
 .project{
-    margin-bottom: $section-pad;
-    hr{
-        margin-top: 2px;
-        margin-bottom: 20px;
-    }
+    margin: 0px 0px $section-pad 0px;
+    padding: 15px 0px;
+    background-color: $purple;
 }
 
 .project-1{
@@ -134,10 +132,18 @@ section{
     flex-direction: column;
 }
 
+.project-info{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+}
+
 .project-description-box{
     position: relative;
     height: fit-content;
-    padding: 25px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    z-index: 2;
 
     h3{
         font-family: VCR; 
@@ -148,20 +154,36 @@ section{
 .description-row{
     display: flex;
     align-items: baseline;
-
-    :first-child{
-        margin-right: 20px;
-    }
+    margin-top: 20px;
 }
 
-.visit-project{
-    font-family: Public Sans;
-    font-weight: bold;
+.project-divider{
+    margin: 10px 50px 5px 0px;
+    border-top: 2px solid $red;
+    opacity: 1;
+}
+
+.visit-link{
     color: $red;
+    margin-left: 10px;
 
     a:hover{
         color: $pink;
     }
+
+    i{
+        margin-left: 5px;
+    }
+}
+
+.skills-row{
+    li{
+        display: inline-block;
+        padding-right: 10px;
+    }
+    font-family: VCR;
+    color: $pink;
+    margin: 10px 0px;
 }
 
 .link-span{
@@ -177,8 +199,10 @@ section{
     height: fit-content;
     position: relative;
     object-fit: contain;
+    z-index: 0;
 
     img{
+        @extend .rounded-img;
         max-width: 100%;
         vertical-align: top;
     }
@@ -221,6 +245,12 @@ section{
 .portfolio-section-content {
     margin-top: 10px;
     margin-bottom: 50px;
+}
+
+.carousel img{
+    width: auto;
+    height: 400px;
+    max-height: 500px;
 }
 
 /*-----------------------
@@ -300,11 +330,51 @@ section{
     .project{
         flex-direction: row;
         margin-bottom: 20vh;
+        background-color: transparent;
+    }
+    .project-2{
+        .project-info{
+            justify-content: end;
+            text-align: right;
+        }
+        .description-row{
+            justify-content: flex-end;
+        }
+        .project-description-box{
+            right: 12vw;
+        }
+    }
+    .project-1{
     }
     .project-description-box{
         background-color: $purple;
+        -webkit-box-shadow: 3px 5px 6px -3px #0000009f; 
+        box-shadow: 3px 5px 6px -3px #0000009f;
+        align-items: center;
+        margin-top: 20px;
         padding: 30px 30px;
-        min-height: 600px;
-        max-width: 800px;
+        min-height: 100px;
+        width: 35vw;
+        z-index: 3;
     }
+    .red{background-color: $red;}
+    .purple{background-color: $purple;}
+    .project-divider{display:none;}
+    .skill-box{padding: 10px 20px;}
+
+    #archcity-cover-img{top: -50px;}
+}
+
+/* LARGE and UP devices */
+@media screen and (min-width: 992px)
+{
+    .project-description-box{
+        width: 600px;
+    }
+    .carousel img{
+        width: auto;
+        height: 500px;
+        max-height: 500px;
+    }
+
 }

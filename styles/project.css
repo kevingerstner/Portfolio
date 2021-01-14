@@ -268,6 +268,10 @@ ul {
   padding-right: 10px;
 }
 
+.navbar-nav > li a:hover {
+  color: #f7cb39;
+}
+
 .navbar-toggler {
   color: #eacdc2;
   border-color: transparent;
@@ -284,9 +288,13 @@ ul {
   width: 120px;
 }
 
+.rounded-img {
+  border-radius: 25px;
+}
+
 .caption {
   margin-top: 30px;
-  padding: 25px;
+  padding: 20px;
 }
 
 /*----------------------

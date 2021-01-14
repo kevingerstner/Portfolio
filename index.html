@@ -76,15 +76,16 @@
                 </div>
         </div>
 
-        <div id="portfolio">
-            <div class="container pt-5">
+        <!-- PORTFOLIO BEGIN -->
 
+        <div id="portfolio">
+            <div class="container-sm">
                 <section>
                     <div id="aboutme">
                         <h2 class="section-header">About Me</h2>
                         <a class="anchor" id="about-me-anchor"></a>
                         <div class="project-1 row">
-                            <div class="col-sm-5">
+                            <div class="project-info col-sm-5">
                                 <p>
                                     <span class="red-text bold">Hello!</span> I'm Kevin, a designer and developer from St. Louis, MO.
                                 </p>
@@ -105,21 +106,22 @@
                                 <div class="skill-box">
                                     <div class="row">
                                         <ul class="skill-list col">
-                                            <li><i class="fas fa-play"></i>HTML</li>
-                                            <li><i class="fas fa-play"></i>SCSS & Bootstrap</li>
-                                            <li><i class="fas fa-play"></i>Illustrator, Photoshop</li>
+                                            <li><i class="fas fa-play"></i>HTML, SCSS</li>
+                                            <li><i class="fas fa-play"></i>Illustrator</li>
+                                            <li><i class="fas fa-play"></i>Photoshop</li>
                                             <li><i class="fas fa-play"></i>OpenGL</li>
                                         </ul>
                                         <ul class="skill-list col">
                                             <li><i class="fas fa-play"></i>Unity (C#)</li>
-                                            <li><i class="fas fa-play"></i>Java & Web API</li>
+                                            <li><i class="fas fa-play"></i>Bootstrap</li>
+                                            <li><i class="fas fa-play"></i>Java</li>
                                             <li><i class="fas fa-play"></i>Figma</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                            <div class="offset-md-1 col-sm-6" style="padding: 10px;">
-                                <img src="images/IMG_0469.jpg" alt="kevin-picture">
+                            <div class="offset-md-1 col-sm-6" style="padding-bottom: 20px;">
+                                <img class="rounded-img" src="images/IMG_0469.jpg" alt="kevin-picture">
                             </div>
                         </div>
                     </div>
@@ -131,66 +133,91 @@
                     <h2 class="section-header">Games</h2>
                     <a class="anchor" id="games-anchor"></a>
 
-                    <div id="song-pong" class="project-1 row">
+                    <div id="song-pong" class="project-1 row align-items-center">
                         <a class="anchor" id="song-pong-anchor"></a>
-                        <div class="col-md-4 project-description-box">
-                            <h3 class="project-name">Song Pong</h3>
+                        <div class="project-info col-md-4">
                             <div class="description-row">
                                 <h6>2020</h6>
-                                <h6 class="visit-project"><a href="songpong.html">View Project &gt&gt</a></h6>
+                                <a class="visit-link" href="songpong.html">View Project<i class="fas fa-external-link-alt"></i></a>
                             </div>
-                            <hr>
-                            <p>
-                                Song Pong is an inventive rhythm game where you catch balls with a paddle along to a song. I created Song Pong
-                                with my collaborator and friend, Sean Hruz, over the course of three months.
-                            </p>
-                            <p>
-                                We developed it using the <strong>Unity</strong> engine and 
-                                used <strong>C#</strong> to program. I learned about creating editor tools, graphics, physics, and 3D modeling.
-                            </p>
+                            <h3 class="project-name">Song Pong</h3>
+                            <hr class="project-divider">
+                            <div class="project-description-box red">
+                                <p>
+                                    A stylistic and addicting vaporwave rhythm game inspired by Pong. Feel the groove and catch as many notes as you can.
+                                    Made in three months with Unity.
+                                </p>
+                            </div>
+                            <ul class="skills-row">
+                                <li>Unity</li>
+                                <li>C#</li>
+                                <li>Blender</li>
+                            </ul>
                         </div>
-                        <div class="col-md-7 offset-md-1 project-cover-img">
+                        <div class="project-cover-img col-md-7 offset-md-1">
                             <img src="projects/songpong/songpong.gif" alt="Song Pong">
                             <a href="songpong.html"><span class="link-span"></span></a>
                         </div>
                     </div>
         
-                    <div class="project-1 row">
-                        <div class="col col-sm-4 project-description-box">
-                            <h3 class="project-name">Tomb of Khaibit</h3>
+                    <div id="tomb-of-khaibit" class="project-1 row align-items-center">
+                        <a class="anchor" id="tomb-of-khaibit-anchor"></a>
+                        <div class="project-info col-md-4">
                             <div class="description-row">
                                 <h6>Work In Progress</h6>
-                                <h6 class="visit-project"><a href="underconstruction.html">View Project &gt&gt</a></h6>
+                                <a class="visit-link" href="underconstruction.html">View Project<i class="fas fa-external-link-alt"></i></a>
                             </div>
-                            <hr>
-                            <p>
-                                For my Senior Software project, my group, Blu3 J3ll0, is creating a co-op horror game where you play as archaelogists trying to
-                                escape a deadly Egyptian tomb.
-                            </p>
-                            <p>
-                                The project will be completed by May 2021, and will feature procedurally generated tombs, puzzles, and a deep magic system.
-                            </p>
+                            <h3 class="project-name">Tomb of Khaibit</h3>
+                            <hr class="project-divider">
+                            <div class="project-description-box">
+                                <p>
+                                    A co-op horror game where you play as archaelogists trying to escape a deadly Egyptian tomb. With procedurally generated
+                                    tombs, a deep spell system, and puzzles, this tomb is easy to get lost in.
+                                </p>
+                                <p>
+                                    This game is being created by Blu3 J3ll0, my Senior Software group. The project will be completed by May 2021.
+                                </p>
+                            </div>
+                            <ul class="skills-row">
+                                <li>Unity</li>
+                                <li>C#</li>
+                                <li>Aseprite</li>
+                                <li>Editor Tools</li>
+                            </ul>
                         </div>
-                        <div class="col col-sm-7 offset-md-1 project-cover-img">
+                        <div class="project-cover-img col-sm-7 offset-md-1">
                             <img src="projects/Tomb of Khaibit/tombofkhaibit.gif" alt="Tomb of Khaibit">
                             <a href="underconstruction.html"><span class="link-span"></span></a>
                         </div>
                     </div>
     
-                    <div class="project-1 row">
-                        <div class="col col-sm-4 project-description-box project-item"> 
-                            <h3>Knock-Out! Global Smackdown</h3>
+                    <div id="knock-out" class="project-1 row">
+                        <a class="anchor" id="knock-out-anchor"></a>
+                        <div class="project-info col-md-5">
                             <div class="description-row">
                                 <h6>2017</h6>
-                                <h6 class="visit-project"><a href="underconstruction.html">Visit Project >></a></h6>
+                                <a class="visit-link" href="underconstruction.html">Visit Project<i class="fas fa-external-link-alt"></i></a>
                             </div>
-                            <hr>
-                            <p>One of my most ambitious projects was when a few friends and I created an board game in high school. 
-                                In Knock-Out!, your goal is to become the crowd's favorite Fighter in a ruthless underground fighting ring.
-                                I was the project's <b>Card Artist</b> where I created over 150 unique cards, a <b>Gameplay Designer</b>, and <b>Marketing Lead</b> for our Kickstarter project.
-                            </p>
+                            <h3 class="project-name">Knock-Out! Global Smackdown</h3>
+                            <hr class="project-divider">
+                            <div class="project-description-box"> 
+                                <p>
+                                    In this board game, your goal is to become the crowd's favorite Fighter in a ruthless underground fighting ring.
+                                    I was the project's <b>Lead Artist</b> where I created over 150 unique cards, a <b>Gameplay Designer</b>, and <b>Marketing Lead</b> for our Kickstarter project.
+                                </p>
+                            </div>
+                            <ul class="skills-row">
+                                <li>Game Design</li>
+                                <li>Illustrator</li>
+                                <li>Photoshop</li>
+                                <li>InDesign</li>
+                                <li>Premiere Pro</li>
+                                <li>Playtesting</li>
+                                <li>Kickstarter</li>
+                            </ul>
                         </div>
-                        <div class="col col-sm-7 offset-md-1 project-cover-img project-item">
+
+                        <div class="project-cover-img col-sm-7">
                             <img src="projects/knock-out/ko-preview.gif" alt="Knock-Out Global Smackdown Board Game">
                             <a href="underconstruction.html"><span class="link-span"></span></a>
                         </div>
@@ -202,40 +229,57 @@
                 <section>
                     <h2 class="section-header">UI/UX</h2>
 
-                    <a class="anchor" id="ui-ux-anchor"></a>
-                    <div class="project-2 row">
-                        <div class="col col-sm-8 project-cover-img project-item">
+                    <div id="frontier" class="project-2 row">
+                        <a class="anchor" id="ui-ux-anchor"></a>
+                        <div class="project-cover-img col-sm-7">
                             <img src="projects/frontier/Mockups.png" alt="Frontier">
                             <a href="frontier.html"><span class="link-span"></span></a>
                         </div>
-                        <div class="col col-sm-3 offset-md-1 project-description-box project-item">
-                            <h3 class="project-name">Frontier</h3>
+
+                        <div class="project-info col-md-4 offset-md-1">
                             <div class="description-row">
                                 <h6>2019</h6>
-                                <h6 class="visit-project"><a href="frontier.html">Visit Project >></a></h6>
+                                <a class="visit-link" href="frontier.html">Visit Project<i class="fas fa-external-link-alt"></i></a>
                             </div>
-                            <hr>
-                            <p>I designed the UI and did UX research for a cross-platform app called Frontier. The platform helps people find fun things to do around 
-                                their area by crowd-sourcing ideas from other users. This project was for my Interaction Design class at my college and 
-                                I used Figma, a free design platform, for the implementation.</p>
+                            <h3 class="project-name">Frontier</h3>
+                            <hr class="project-divider">
+                            <div class="project-description-box red">
+                                <p>I designed the UI and did UX research for a cross-platform app called Frontier. The platform helps people find fun things to do around 
+                                    their area by crowd-sourcing ideas from other users. This project was for my Interaction Design class at my college and 
+                                    I used Figma, a free design platform, for the implementation.</p>
+                            </div>
+                            <ul class="skills-row">
+                                <li>UI Design</li>
+                                <li>User Research</li>
+                                <li>Figma</li>
+                            </ul>
                         </div>
                     </div>
     
-                    <div class="project-1 row">
-                        <div class="col col-sm-5 project-description-box">
-                            <h3 class="project-name">Co-Author for VL/HCC 2019 Submission</h3>
+                    <div id="vlhcc" class="project-1 row">
+                        <a class="anchor" id="vlhcc-anchor"></a>
+                        <div class="project-info col-md-5">
                             <div class="description-row">
                                 <h6>2019</h6>
-                                <h6 class="visit-project"><a href="http://sandeepkuttal.ens.utulsa.edu/Publications/Gender.pdf">Visit Project >></a></h6>
+                                <a class="visit-link" href="http://sandeepkuttal.ens.utulsa.edu/Publications/Gender.pdf">Visit Project<i class="fas fa-external-link-alt"></i></a>
                             </div>
-                            <hr>
-                            <p>
-                                I co-authored a paper entitled "Remote Pair Programming in Online CS Education: Investigating through a Gender Lens" that was
-                                submitted to the IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC). I analyzed and interpreted data and wrote
-                                and edited the paper. I was granted this opportunity by my professor, Sandeep Kuttal at the University of Tulsa.
-                            </p>
+                            <h3 class="project-name">Co-Author for VL/HCC 2019 Submission</h3>
+                            <hr class="project-divider">
+                            <div class="project-description-box">
+                                <p>
+                                    I co-authored a paper entitled "Remote Pair Programming in Online CS Education: Investigating through a Gender Lens" that was
+                                    submitted to the IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC). I analyzed and interpreted data and wrote
+                                    and edited the paper. I was granted this opportunity by my professor, Sandeep Kuttal at the University of Tulsa.
+                                </p>
+                            </div>
+                            <ul class="skills-row">
+                                <li>Research</li>
+                                <li>Data Analysis</li>
+                                <li>HCI</li>
+                            </ul>
                         </div>
-                        <div class="col col-sm-6 offset-md-1 project-cover-img">
+        
+                        <div class="col-sm-6 offset-md-1 project-cover-img">
                             <img src="projects/ui:ux/VL:HCC Paper/Gender_Page_01.jpg" alt="VLHCC Paper">
                             <a href="http://sandeepkuttal.ens.utulsa.edu/Publications/Gender.pdf"><span class="link-span"></span></a>
                         </div>
@@ -249,23 +293,30 @@
                     <a class="anchor" id="art-design-anchor"></a>
 
                     <div class="project-1 row">
-                        <div class="col col-sm-4 project-description-box">
-                            <h3 class="project-name">Graphic Design Internship with Arch City Defenders</h3>
+                        <div class="project-info col-md-5">
                             <div class="description-row">
                                 <h6>2019</h6>
-                                <h6 class="visit-project"><a href="underconstruction.html">View Project >></a></h6>
+                                <a class="visit-link" href="underconstruction.html">View Project<i class="fas fa-external-link-alt"></i></a>
                             </div>
-                            <hr>
-                            <p>In the summer of 2019 I had an Internship with ArchCity Defenders, a legal non-profit that provides holistic legal advocacy 
-                                and represents people who are targeted by the criminal-legal system. This collection is a digital painting series 
-                                of several ArchCity clients that will be used in future print and digital publications.</p>
+                            <h3 class="project-name">Graphic Design Internship with Arch City Defenders</h3>
+                            <hr class="project-divider">
+                            <div class="project-description-box">
+                                <p>In the summer of 2019 I had an Internship with ArchCity Defenders, a legal non-profit that provides holistic legal advocacy 
+                                    and represents people who are targeted by the criminal-legal system. This collection is a digital painting series 
+                                    of several ArchCity clients that will be used in future print and digital publications.</p>
+                            </div>
+                            <ul class="skills-row">
+                                <li>Photoshop</li>
+                            </ul>
                         </div>
-                        <div class="col col-sm-7 offset-md-1 project-cover-img">
+
+                        <div id="archcity-cover-img" class="project-cover-img col-sm-7">
                             <img src="projects/archcity/Inez.png" alt="ArchCity Defenders">
                             <a href="underconstruction.html"><span class="link-span"></span></a>
                         </div>
                     </div>
-                    <div class="project-2 row">
+
+                    <div id="androids" class="project-2 row">
                         <div class="col-sm-5">
                             <div id="androids-slides" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
                                 <!-- The Slideshow -->
@@ -301,78 +352,95 @@
                                 </ol>
                             </div>
                         </div>
-                        <div class="col offset-md-1">
-                            <div class="caption ml-4">
-                                <h3><b>BOOK COVERS</b></h3>
-                                <p>Two book cover designs I made for Philip K. Dick's "Do Androids Dream of Electric Sheep". The black-and-green book is a 
-                                    bold recontextulization of the authors' vision of the future in modern terms. The blue book is a surreal photo depicting one
-                                    of the most memorable moments of the book: the Voight-Kampf test.
-                                </p>
-                            </div>
+                        <div class="caption col offset-md-1">
+                            <h3><b>BOOK COVERS</b></h3>
+                            <p>Two book cover designs I made for Philip K. Dick's "Do Androids Dream of Electric Sheep". The black-and-green book is a 
+                                bold recontextulization of the authors' vision of the future in modern terms. The blue book is a surreal photo depicting one
+                                of the most memorable moments of the book: the Voight-Kampf test.
+                            </p>
+                            <ul class="skills-row">
+                                <li>InDesign</li>
+                                <li>Illustrator</li>
+                            </ul>
                         </div>
                     </div>
     
                     <div class="project-2 row">
-                        <div class="col-sm-7 project-cover-img">
+                        <div class="project-cover-img col-sm-7">
                             <img src="projects/design/citymuseum/transformation.jpg" alt="City Museum Logo Redesign">
                             <a href="underconstruction.html"><span class="link-span"></span></a>
                         </div>
-                        <div class="col-sm-4 offset-md-1 project-description-box">
-                            <h3 class="project-name">City Museum Brand Redesign</h3>
+                        <div class="project-info col-md-4 offset-md-1">
                             <div class="description-row">
                                 <h6>2019</h6>
-                                <h6 class="visit-project"><a href="underconstruction.html">Visit Project >></a></h6>
+                                <a class="visit-link" href="underconstruction.html">View Project<i class="fas fa-external-link-alt"></i></a>
                             </div>
-                            <hr>
-                            <p>For a design class, I created an unofficial brand redesign for the City Museum, which is my favorite attraction
-                                in St. Louis. I created several brand elements and logo variations, and followed principles of design to create this fun, modern redesign.
-                            </p>
+                            <h3 class="project-name">City Museum Brand Redesign</h3>
+                            <hr class="project-divider">
+                            <div class="project-description-box">
+                                <p>For a design class, I created an unofficial brand redesign for the City Museum, which is my favorite attraction
+                                    in St. Louis. I created several brand elements and logo variations, and followed principles of design to create this fun, modern redesign.
+                                </p>
+                            </div>
+                            <ul class="skills-row">
+                                <li>Illustrator</li>
+                            </ul>
                         </div>
                     </div>
     
                     <div class="project-2 row">
-                        <div class="col-sm-7 project-cover-img">
+                        <div class="project-cover-img col-sm-7">
                             <img src="projects/design/yikes/Business Card/yikes_card.jpg" alt="Yikes Streetwear">
                             <a href="underconstruction.html"><span class="link-span"></span></a>
                         </div>
-                        <div class="col-sm-4 offset-md-1 project-description-box">
-                            <h3>YIKES! Logo and Brand Design</h3>
+                        <div class="project-info col-sm-4 offset-md-1">
                             <div class="description-row">
                                 <h6>2018</h6>
-                                <h6 class="visit-project"><a href="underconstruction.html">Visit Project >></a></h6>
+                                <a class="visit-link" href="underconstruction.html">View Project<i class="fas fa-external-link-alt"></i></a>
                             </div>
-                            <hr>
-                            <p>
-                                I created a logo and brand design for a made-up streetwear brand called "yikes" for my Graphics Communication class at college.
-                                This included merchandise mockups, logo creation, business cards, and a style guide.
-                            </p>
+                            <h3 class="project-name">YIKES! Logo and Brand Design</h3>
+                            <hr class="project-divider">
+                            <div class="project-description-box red">
+                                <p>
+                                    I created a logo and brand design for a made-up streetwear brand called "yikes" for my Graphics Communication class at college.
+                                    This included merchandise mockups, logo creation, business cards, and a style guide.
+                                </p>
+                            </div>
+                            <ul class="skills-row">
+                                <li>Illustrator</li>
+                            </ul>
                         </div>
                     </div>
     
                     <div class="project-2 row">
-                        <div class="col-sm-7">
-                            <img src="projects/design/chameleon_coffee/OLD/ChameleonCoffee-01.jpg" alt="Chameleon Coffee">
-                        </div>
                         <div class="col-sm-4 offset-md-1 caption">
                             <h3><b>CHAMELEON COFFEE</b></h3>
                             <p>A logo I created for a coffee shop. I also created advertisements for print and web.</p>
                         </div>
+                        <div class="col-sm-7">
+                            <img class="rounded-img" src="projects/design/chameleon_coffee/OLD/ChameleonCoffee-01.jpg" alt="Chameleon Coffee">
+                        </div>
                     </div>
     
                     <div class="project-2 row">
-                        <div class="col-sm-7 project-cover-img">
+                        <div class="project-cover-img col-sm-7">
                             <img src="projects/robotics/TURMCSponsorBooklet_Spread.jpg" alt="University of Tulsa Robotics Sponsorship Packet">
                             <a href="underconstruction.html"><span class="link-span"></span></a>
                         </div>
-                        <div class="col offset-md-1 project-description-box">
-                            <h3>University of Tulsa Robotics Sponsorship Packet</h3>
+                        <div class="project-info col-sm-4 offset-md-1">
                             <div class="description-row">
                                 <h6>2019</h6>
-                                <h6 class="visit-project"><a href="underconstruction.html">Visit Project >></a></h6>
+                                <a class="visit-link" href="underconstruction.html">View Project<i class="fas fa-external-link-alt"></i></a>
                             </div>
-                            <hr>
-                            <p>At the University of Tulsa, I created a 14-page Sponsorship Packet to help raise money for the Robotics Program. 
-                            </p>
+                            <h3>University of Tulsa Robotics Sponsorship Packet</h3>
+                            <hr class="project-divider">
+                            <div class="project-description-box">
+                                <p>At the University of Tulsa, I created a 14-page Sponsorship Packet to help raise money for the Robotics Program. 
+                                </p>
+                            </div>
+                            <ul class="skills-row">
+                                <li>InDesign</li>
+                            </ul>
                         </div>
                     </div>
                 </section>
@@ -383,16 +451,16 @@
                     <h2 class="section-header">Programming</h2>
                     <a class="anchor" id="programming-anchor"></a>
 
-                    <div class="project row">
-                        <div class="project-description-box project-item">
+                    <div id="website" class="project row">
+                        <div class="project-description-box col-sm-8">
                             <h3>This Website</h3>
-                            <hr>
+                            <hr class="project-divider">
                             <p>
                                 I designed and coded this website from scratch using HTML, CSS, and JS!
                             </p>
                             <img style="margin-top: 10px; margin-bottom: 10px" src="coding website.gif" alt="Coding This Website">
                             <p>
-                                I also used SASS for CSS pre-compiling, and Bootstrap 5 for responsive layout. I am self-taught for web development and have used resources like w3schools
+                                I also used SASS and Bootstrap 5. I am self-taught for web development and have used resources like w3schools
                                 to learn. Initially, I created my portfolio on Webflow, but since it cost a lot of money to use the service, I decided to recreate the
                                 website on my own to gain experience with these languages.
                             </p>

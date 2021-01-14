@@ -105,6 +105,10 @@ ul{
             padding-right: 10px;
         }
     }
+
+    a:hover{
+        color: $yellow;
+    }
 }
 
 .navbar-toggler {
@@ -123,9 +127,13 @@ ul{
     width: 120px;
 }
 
+.rounded-img{
+    border-radius: 25px;
+}
+
 .caption{
     margin-top: 30px;
-    padding: 25px;
+    padding: 20px;
 }
 
 /*----------------------
