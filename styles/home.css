@@ -46,6 +46,10 @@
   z-index: 1;
 }
 
+.content-container {
+  padding: 30px 20px 30px 20px;
+}
+
 .floating-image-left {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,10 +81,16 @@ a.anchor {
   z-index: 2;
 }
 
+@media screen and (min-width: 768px) {
+  .content-container {
+    padding: 50px;
+  }
+}
+
 body {
   max-width: 100%;
   margin: 0;
-  padding-top: 80px;
+  padding-top: 60px;
   background-color: #372549;
   color: #eacdc2;
   font-family: Public Sans;
@@ -151,16 +161,22 @@ img {
   height: auto;
 }
 
-nav {
-  max-width: 100%;
-  background-color: #bd4242;
-}
-
 ul {
-  padding: 0;
   list-style-type: none;
+  padding: 0;
   margin: 0;
   overflow: hidden;
+}
+
+ul li i {
+  padding-right: 10px;
+  color: #bd4242;
+}
+
+hr {
+  margin: 10px 50px 5px 0px;
+  border-top: 2px solid #bd4242;
+  opacity: 1;
 }
 
 .red-text {
@@ -171,9 +187,19 @@ ul {
   font-weight: bold;
 }
 
+/* NAVBAR */
+nav {
+  max-width: 100%;
+  height: 60px;
+  background-color: #bd4242;
+}
+
 .navbar-nav > li {
-  margin-left: 25px;
-  margin-right: 25px;
+  margin: 0px 25px;
+}
+
+.navbar-nav > li i {
+  color: #f7cb39;
 }
 
 .navbar-nav > li a {
@@ -216,40 +242,6 @@ ul {
 .caption {
   margin-top: 30px;
   padding: 20px;
-}
-
-/*----------------------
-  RESPONSIVE STYLES
-------------------------*/
-/* SMALL to MEDIUM screens */
-@media screen and (max-width: 768px) {
-  .navbar-collapse {
-    background-color: #bd4242;
-    width: 60vw;
-    position: absolute;
-    right: 0;
-    top: 80px;
-    padding-bottom: 30px;
-  }
-}
-
-/* MEDIUM to LARGE screens */
-@media screen and (min-width: 768px) {
-  nav {
-    background-color: #bd4242;
-    height: 80px;
-    -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  .personal-logo {
-    top: 0;
-    left: 40px;
-    width: 100px;
-  }
-}
-
-.black-background {
-  background-color: #1a1423;
 }
 
 .email-link-btn, .email-link-btn-red, .email-link-btn-white {
@@ -303,6 +295,47 @@ ul {
 
 .email-link-btn-white:hover a {
   color: #bd4242;
+}
+
+.black-background {
+  background-color: #1a1423;
+}
+
+.purple-background {
+  background-color: #372549;
+}
+
+/*----------------------
+  RESPONSIVE STYLES
+------------------------*/
+/* SMALL to MEDIUM screens */
+@media screen and (max-width: 768px) {
+  .navbar-collapse {
+    background-color: #bd4242;
+    width: 60vw;
+    position: absolute;
+    right: 0;
+    top: 80px;
+    padding-bottom: 30px;
+  }
+}
+
+/* MEDIUM to LARGE screens */
+@media screen and (min-width: 768px) {
+  body {
+    padding-top: 80px;
+  }
+  nav {
+    background-color: #bd4242;
+    height: 80px;
+    -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  .personal-logo {
+    top: 0;
+    left: 40px;
+    width: 100px;
+  }
 }
 
 /*-----------------------
@@ -382,15 +415,6 @@ ul {
 /*-----------------------
   ABOUT ME
 ------------------------*/
-.skill-list {
-  list-style-type: none;
-}
-
-.skill-list li i {
-  padding-right: 10px;
-  color: #bd4242;
-}
-
 .skill-box {
   border: 5px solid #372549;
   border-radius: 5px;
@@ -476,12 +500,6 @@ section {
       -ms-flex-align: baseline;
           align-items: baseline;
   margin-top: 20px;
-}
-
-.project-divider {
-  margin: 10px 50px 5px 0px;
-  border-top: 2px solid #bd4242;
-  opacity: 1;
 }
 
 .visit-link {

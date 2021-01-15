@@ -2,12 +2,13 @@
 @import "fonts";
 @import "format";
 
+$mobile-navbar-height: 60px;
 $navbar-height: 80px;
 
 body{
     max-width: 100%;
     margin: 0;
-    padding-top: $navbar-height; // to offset the navbar
+    padding-top: $mobile-navbar-height; // to offset the navbar
     background-color: $purple;
     color: $pink;
     font-family: Public Sans;
@@ -18,10 +19,7 @@ a{
     color: $red;
     font-weight: bold;
     text-decoration: none;
-}
-
-a:hover{
-    color: $yellow;
+    &:hover{color: $yellow;}
 }
 
 p{
@@ -31,9 +29,7 @@ p{
         weight: normal;
         size: calc(clamp(16px, 1vw, 20px))
     }
-    b{
-        color: $pink;
-    }
+    b{color: $pink;}
 }
 h1{
     font-family: VCR;
@@ -72,25 +68,38 @@ img{
     height: auto;
 }
 
-nav{
-    max-width: 100%;
-    background-color: $red;
-}
-
 ul{
-    padding: 0;
     list-style-type: none;
+    padding: 0;
     margin: 0;
     overflow: hidden;
+    li i{
+        padding-right: 10px;
+        color: $red;
+    }
+}
+
+hr{
+    margin: 10px 50px 5px 0px;
+    border-top: 2px solid $red;
+    opacity: 1;
 }
 
 .red-text{ color: $red;}
 .bold{font-weight: bold;}
 
+/* NAVBAR */
+nav{
+    max-width: 100%;
+    height: $mobile-navbar-height;
+    background-color: $red;
+}
+
 .navbar-nav > li{
 
-    margin-left:25px;
-    margin-right:25px;
+    margin: 0px 25px;
+
+    i{color: $yellow;}
 
     a{
         font-size: 1em;
@@ -104,10 +113,7 @@ ul{
             color: $yellow;
             padding-right: 10px;
         }
-    }
-
-    a:hover{
-        color: $yellow;
+        &:hover{color: $yellow;}
     }
 }
 
@@ -136,43 +142,6 @@ ul{
     padding: 20px;
 }
 
-/*----------------------
-  RESPONSIVE STYLES
-------------------------*/
-
-/* SMALL to MEDIUM screens */
-@media screen and(max-width: 768px)
-{
-    .navbar-collapse{
-        background-color: $red;
-        width: 60vw;
-        position: absolute;
-        right: 0;
-        top: $navbar-height;
-        padding-bottom: 30px;
-    }
-}
-
-/* MEDIUM to LARGE screens */
-@media screen and(min-width:768px)
-{
-    nav{
-        background-color: $red;
-        height: $navbar-height;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .personal-logo{
-        top: 0;
-        left: 40px; 
-        width: 100px;
-    }
-}
-
-.black-background{
-    background-color: $black;
-}
-
 .email-link-btn{
     margin-top: 50px;
     background-color: transparent;
@@ -199,30 +168,58 @@ ul{
     @extend .email-link-btn;
     color: $red;
     border: 2px solid $red;
-
-    a{
-        color: $red;
-    }
-
-    &:hover{
-        background-color: $red;
-        color: $pink;
-    }
+    a{color: $red;}
+    &:hover{background-color: $red; color: $pink;}
 }
 
 .email-link-btn-white{
     @extend .email-link-btn;
     color: $pink;
     border: 2px solid $pink;
+    a{color: $pink;}
+    &:hover{background-color: $pink;a{color: $red;}}
+}
 
-    a{
-        color: $pink;
+.black-background{
+    background-color: $black;
+}
+
+.purple-background{
+    background-color: $purple;
+}
+
+/*----------------------
+  RESPONSIVE STYLES
+------------------------*/
+
+/* SMALL to MEDIUM screens */
+@media screen and(max-width: 768px)
+{
+    .navbar-collapse{
+        background-color: $red;
+        width: 60vw;
+        position: absolute;
+        right: 0;
+        top: $navbar-height;
+        padding-bottom: 30px;
     }
-    
-    &:hover{
-        background-color: $pink;
-        a{
-            color: $red;
-        }
+}
+
+/* MEDIUM to LARGE screens */
+@media screen and(min-width:768px)
+{
+    body{
+        padding-top: $navbar-height;
+    }
+    nav{
+        background-color: $red;
+        height: $navbar-height;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .personal-logo{
+        top: 0;
+        left: 40px; 
+        width: 100px;
     }
 }

@@ -10,6 +10,10 @@
     z-index: 1;
 }
 
+.content-container{
+    padding: 30px 20px 30px 20px;
+}
+
 .floating-image-left{
     display: flex;
 }
@@ -36,4 +40,10 @@ a.anchor {
     max-width: 600px;
     position: relative;
     z-index: 2;
+}
+
+@media screen and (min-width: 768px){
+    .content-container{
+        padding: 50px;
+    }
 }

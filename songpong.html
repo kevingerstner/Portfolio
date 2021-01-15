@@ -3,6 +3,7 @@
     <head lang = "en-US">
         <meta charset="UTF-8">
         <title>Song Pong</title>
+        <link rel="shortcut icon" type="image/png" href="images/cactus-1.gif">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="styles/project.css">
         <link rel="stylesheet" href="https://use.typekit.net/xuj1ggj.css">
@@ -12,10 +13,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <nav id="navbar" class="navbar fixed-top navbar-expand-sm">
+        <nav id="navbar" class="navbar navbar-expand-md fixed-top" style="max-width: 100%;">
+            <!-- Brand -->
             <div class="navbar-brand">
-                <img class="personal-logo" src="images/personal-logo-7-01.png">
+                <a href="index.html#">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="images/personal-logo-3.png">
+                        <source media="(min-width: 768px)" srcset="images/personal-logo.png">
+                        <img class="personal-logo" src="images/personal-logo.png" alt="kevin-gerstner-logo">
+                    </picture>
+                </a>
             </div>
+
+            <!-- Links -->
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <a class="back-button nav-link active" href="index.html#song-pong-anchor"><span><</span> Back</a>
@@ -31,71 +41,71 @@
             </div>
         </div>
 
-        <div class="container-sm black-background pt-5 px-5">
+        <div class="container-sm black-background content-container">
             <section>
-                <h4 class="section-header">About the Project</h4>
-
                 <div class="row">
                     <div class="col-sm-6">
-                        <img style="max-width: 500px" src="projects/frontier/Frontier_WHITE-01.png">
-                        <p>If you're looking for fun things to do on “Maps”, “Yelp”, etc. you can see individual results for "Shopping", "Entertainment", or "Resturaunts".
-                            But these results are individualistic and based on businesses and locations, not experiences.
+                        <h4 class="section-header">About the Project</h4>
+                        <img class="mb-3" src="projects/songpong/songpong.gif">
+                        <p>
+                            <b>Song Pong</b> is a stylistic and addicting vaporwave rhythm game inspired by Pong. 
+                            Feel the groove and catch as many notes as you can. The demo includes four songs: 1999 She by Deaton Chris Anthony / Paradise by Coldplay
+                            / Midnight City by M83 / School by Bill Wurtz.
                         </p>
                         <p>
-                            <b>Frontier</b> is a platform that promises to crowdsource fun through user-created Journies. Users make Journies, which are like iteneraries with
-                            commentary. Then you can search through these Journies wherever you are to find great activities and fun, and even post your own! Frontier would
-                            be ideal for anyone on a vacation or looking for something fun to do with your friends.
+                            I took on this project with my friend and collaborator Sean Hruz. We wanted to challenge
+                            ourselves to make a game in a short time frame, and completed a first version of Song Pong in only 3 months.
                         </p>
+                    </div>
+                    <div class="col offset-md-2">
+                        <div class="content-container purple-background">
+                            <h4 class="section-header">Skills</h4>
+                            <hr class="project-divider">
+                            <p>
+                                I was the <strong>Artist</strong> and a 
+                                <strong> Programmer</strong>, responsible for creating the rhythm logic and many other gameplay mechanics.
+                                I also created 3D graphics, such as the Paddle and the Buildings.
+                            </p>
+                            <ul>
+                                <li><i class="fas fa-play"></i>C#</li>
+                                <li><i class="fas fa-play"></i>Unity</li>
+                                <li><i class="fas fa-play"></i>Blender</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h4 class="section-header">itch.io</h4>
+                <div class="row">
+                    <div class="col-sm-6">
                         <p>
-                            I created this project for my Interaction Design class at my college. During development, we performed User Stories and Scenarios, made Low-Fidelity and High-Fidelity prototypes
-                            UI and UX principles, and performed User Tests with feedback.
+                            I've posted the demo on <a href="https://nullvalu.itch.io/song-pong">itch.io</a> if you would like to try out Song Pong.
+                            There is currently a build for Mac and PC will be added soon.
                         </p>
                     </div>
                 </div>
             </section>
-            <div class="content-section">
-                <h4>Interactive Demo</h4>
-                <p>Check it out! This is an interactive demo of my design in Figma. Is demonstrates many of the big-idea concepts for the UI and UX.</p>
-                <div class="full-screen-demo">
-                    <iframe class="responsive-iframe" style="width: 100%; height: 720px;" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FQUZ43AuetRfLS5JbnQ7CQ1ik%2FFrontier%3Fnode-id%3D0%253A304%26scaling%3Dmin-zoom" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="content-section">
-                <div class="grid-thirds">
-                    <div class="grid-thirds-column">
-                        <img src="projects/frontier/Launch.png">
-                    </div>
-                    <div class="grid-thirds-column">
-                        <img src="projects/frontier/Login.png">
-                    </div>
-                    <div class="grid-thirds-column">
-                        <img src="projects/frontier/Login 2.png">
-                    </div>
-                </div>
-                <p class="image-caption">
-                    Renderings of three login screens, showing the user experience of a sample area.
-                </p>
-            </div>
-            <div class="content-section">
-                <h4>Development Process</h4>
-                <p>My group started by creating some low-fidelity mockups using Balsamiq, which is a free-to-use mockup platform.</p>
-                <img src="projects/frontier/Screen Shot 2019-02-17 at 7.52.18 PM.png">
-                <div class="grid-half">
-                    <div class="grid-half-column">
-                        <img src="projects/frontier/Screen Shot 2019-02-24 at 10.59.00 PM.png">
-                    </div>
-                    <div class="grid-half-column">
-                        <img src="projects/frontier/Screen Shot 2019-02-24 at 11.27.18 PM.png">
+
+            <section>
+                <h4 class="section-header">Future Plans</h4>
+
+                <div class="row pb-5">
+                    <div class="col-sm-6">
+                        <p>
+                            Because it was created in a short time frame, there are many features that did not get completed.
+                            Here are some of things Song Pong has plans for in the future:
+                        </p>
+                        <ul>
+                            <li><i class="fas fa-play"></i>New types of Notes: Split and Slides</li>
+                            <li><i class="fas fa-play"></i>UI Overhaul</li>
+                            <li><i class="fas fa-play"></i>Visual Effects like Fog and reflective surfaces</li>
+                            <li><i class="fas fa-play"></i>Original Soundtrack</li>
+                        </ul>
                     </div>
                 </div>
-                <p>These mockups gave us a great starting place to do user tests. From there, we performed three user studies and asked them to perform several
-                    tasks such as "Create a New Journey" or "Find a Journey to do" and observed their actions. This process helped us improve on the user
-                    experience. Once we finished performing these tests, the high-fidelity prototype was created using Figma, which you can demo above.
-                </p>
-            </div>
-            <div class="skills">
-                
-            </div>
+            </section>
         </div>
     </body>
 </html>

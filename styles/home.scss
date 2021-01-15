@@ -77,14 +77,6 @@ $section-pad: 120px;
 #aboutme{
 }
 
-.skill-list{
-    list-style-type: none;
-    li i{
-        padding-right: 10px;
-        color: $red;
-    }
-}
-
 .skill-box{
     border: 5px solid $purple;
     border-radius: 5px;
@@ -155,12 +147,6 @@ section{
     display: flex;
     align-items: baseline;
     margin-top: 20px;
-}
-
-.project-divider{
-    margin: 10px 50px 5px 0px;
-    border-top: 2px solid $red;
-    opacity: 1;
 }
 
 .visit-link{
