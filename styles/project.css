@@ -487,6 +487,10 @@ section {
   height: 720px;
 }
 
+img {
+  padding: 20px 0px;
+}
+
 /* MEDIUM and up */
 @media screen and (min-width: 768px) {
   .hero-image {
