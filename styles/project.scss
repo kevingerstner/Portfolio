@@ -42,7 +42,7 @@ section{
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;
+    width: 95%;
     transform: translate(-50%, -50%);
     color: white;
     z-index: 2;
@@ -57,7 +57,7 @@ section{
     height: 720px;
 }
 
-img{
+.inline-img{
     padding: 20px 0px;
 }
 
