@@ -444,7 +444,15 @@
     
                     <div class="project-2 row">
                         <div class="project-cover-img col-sm-7">
-                            <img src="projects/design/robotics/TURMCSponsorBooklet_Spread.jpg" alt="University of Tulsa Robotics Sponsorship Packet">
+                            <img
+                                srcset="
+                                  projects/design/robotics/TURMCSponsorBooklet_Spread@1x.jpg 640w,
+                                  projects/design/robotics/TURMCSponsorBooklet_Spread@2x.jpg 1276w,
+                                  projects/design/robotics/TURMCSponsorBooklet_Spread@3x.jpg 2550w
+                                "
+                                src="projects/design/robotics/TURMCSponsorBooklet_Spread@1x.jpg" 
+                                alt="University of Tulsa Robotics Sponsorship Packet"
+                            >
                             <a href="underconstruction.html"><span class="link-span"></span></a>
                         </div>
                         <div class="project-info col-sm-4 offset-md-1">
@@ -526,7 +534,6 @@
                     </div>
                 </div>
                 <video class="static-background" autoplay muted loop>
-                    <source src="images/glitch.mp4" type="video/mp4">
                     <source src="images/glitch.webm" type="video/webm">
                 </video>
             </div>
