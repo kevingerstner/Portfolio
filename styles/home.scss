@@ -187,7 +187,7 @@ section{
     object-fit: contain;
     z-index: 0;
 
-    img{
+    img, video, picture{
         @extend .rounded-img;
         max-width: 100%;
         vertical-align: top;

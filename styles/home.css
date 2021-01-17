@@ -235,7 +235,7 @@ nav {
   width: 120px;
 }
 
-.rounded-img, .project-cover-img img {
+.rounded-img, .project-cover-img img, .project-cover-img video, .project-cover-img picture {
   border-radius: 25px;
 }
 
@@ -244,56 +244,58 @@ nav {
   padding: 20px;
 }
 
-.email-link-btn, .email-link-btn-red, .email-link-btn-white {
-  margin-top: 50px;
+.btn, .btn-slim {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: transparent;
   border: 2px solid grey;
   border-radius: 5px;
-  padding: 1rem 1.75rem;
+  padding: .75rem 1.75rem;
   max-width: 300px;
-  margin: auto;
 }
 
-.email-link-btn a, .email-link-btn-red a, .email-link-btn-white a {
-  text-decoration: none;
+.btn-slim {
+  height: 40px;
+  padding: .75rem 1rem;
 }
 
-.email-link-btn:hover, .email-link-btn-red:hover, .email-link-btn-white:hover {
-  background-color: grey;
-}
-
-.email-link-btn:hover a, .email-link-btn-red:hover a, .email-link-btn-white:hover a {
-  color: white;
-}
-
-.email-link-btn-red {
+.btn-red {
   color: #bd4242;
   border: 2px solid #bd4242;
 }
 
-.email-link-btn-red a {
+.btn-red a {
   color: #bd4242;
 }
 
-.email-link-btn-red:hover {
+.btn-red:hover {
   background-color: #bd4242;
   color: #eacdc2;
 }
 
-.email-link-btn-white {
+.btn-red:hover a {
+  color: #eacdc2;
+}
+
+.btn-white {
   color: #eacdc2;
   border: 2px solid #eacdc2;
 }
 
-.email-link-btn-white a {
+.btn-white a {
   color: #eacdc2;
 }
 
-.email-link-btn-white:hover {
+.btn-white:hover {
   background-color: #eacdc2;
+  color: #bd4242;
 }
 
-.email-link-btn-white:hover a {
+.btn-white:hover a {
   color: #bd4242;
 }
 
@@ -545,7 +547,7 @@ section {
   z-index: 0;
 }
 
-.project-cover-img img {
+.project-cover-img img, .project-cover-img video, .project-cover-img picture {
   max-width: 100%;
   vertical-align: top;
 }

@@ -142,42 +142,34 @@ nav{
     padding: 20px;
 }
 
-.email-link-btn{
-    margin-top: 50px;
+.btn{
+    display: flex;
+    align-items: center;
     background-color: transparent;
     border: 2px solid grey;
     border-radius: 5px;
-    padding: 1rem 1.75rem;
+    padding: .75rem 1.75rem;
     max-width: 300px;
-    margin: auto;
-
-    a{
-        text-decoration: none;
-    }
-
-    &:hover{
-        background-color: grey;
-
-        a{
-            color: white;
-        }
-    }
 }
 
-.email-link-btn-red{
-    @extend .email-link-btn;
+.btn-slim{
+    @extend .btn;
+    height: 40px;
+    padding: .75rem 1rem;
+}
+
+.btn-red{
     color: $red;
     border: 2px solid $red;
     a{color: $red;}
-    &:hover{background-color: $red; color: $pink;}
+    &:hover{background-color: $red; color: $pink; a{color: $pink;}}
 }
 
-.email-link-btn-white{
-    @extend .email-link-btn;
+.btn-white{
     color: $pink;
     border: 2px solid $pink;
     a{color: $pink;}
-    &:hover{background-color: $pink;a{color: $red;}}
+    &:hover{background-color: $pink; color: $red; a{color: $red;}}
 }
 
 .black-background{

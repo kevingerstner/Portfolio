@@ -43,8 +43,8 @@
 
             <!-- Links -->
             <div class="collapse navbar-collapse" id="collapsible-nav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item align-middle">
                         <a class="nav-link active" href="#games-anchor"><span><i class="fas fa-gamepad"></i></span>Games</a>
                     </li>
                     <li class="nav-item">
@@ -55,6 +55,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#programming-anchor"><span><i class="fas fa-keyboard"></i></span>Web Developer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="2021 Portfolio.pdf" target="_blank"><button class="btn-slim btn-white">Resume</button></a>
                     </li>
                 </ul>
             </div>
@@ -75,7 +78,7 @@
                         <h5 id="heythere">Hey there! My name is</h5>
                         <h2 id="itsme">Kevin Gerstner.</h2>
                         <p id="tagline">I'm a designer and developer. I create indie games, websites, board games, and occasionally brew soda. I’m passionate about technology and beautiful design, so I would love to work for you! </p>
-                        <button style="margin-top: 30px" type="button" class="email-link-btn-red"><a href="mailto:sirkevinicus@gmail.com">Let's Talk!</a></button>
+                        <button style="margin-top: 30px" type="button" class="btn btn-red"><a href="mailto:sirkevinicus@gmail.com">Let's Talk!</a></button>
                     </div>
                 </div>
                 </div>
@@ -160,7 +163,10 @@
                             </ul>
                         </div>
                         <div class="project-cover-img col-md-7 offset-md-1">
-                            <img src="projects/songpong/songpong.gif" alt="Song Pong">
+                            <video autoplay muted loop playsinline>
+                                <source src="projects/songpong/song-pong-3.webm" type="video/webm">
+                                <source src="projects/songpong/song-pong-3.mp4" type="video/mp4">
+                            </video>
                             <a href="songpong.html"><span class="link-span"></span></a>
                         </div>
                     </div>
@@ -188,13 +194,16 @@
                             </ul>
                         </div>
                         <div class="project-cover-img col-sm-7 offset-md-1">
-                            <img src="projects/Tomb of Khaibit/tombofkhaibit.gif" alt="Tomb of Khaibit">
+                            <video autoplay loop muted playsinline>
+                                <source src="projects/Tomb of Khaibit/tombofkhaibit.webm" type="video/webm">
+                                <source src="working files/tombofkhaibit.mp4" type="video/mp4">
+                            </video>
                             <a href="tombofkhaibit.html"><span class="link-span"></span></a>
                         </div>
                     </div>
     
                     <div id="knock-out" class="project-1 row">
-                        <a class="anchor" id="knock-out-anchor"></a>
+                        <a class="anchor" id="knockout-anchor"></a>
                         <div class="project-info col-md-5">
                             <div class="description-row">
                                 <h6>2017</h6>
@@ -220,7 +229,11 @@
                         </div>
 
                         <div class="project-cover-img col-sm-7">
-                            <img src="projects/knock-out/ko-preview.gif" alt="Knock-Out Global Smackdown Board Game">
+                            <video autoplay muted loop playsinline>
+                                <source src="projects/knock-out/Knock-Out! Preview.mp4" type="video/mp4">
+                                <source src="projects/knock-out/Knock-Out! Preview.webm" type="video/webm">
+                                <img src="projects/knock-out/ko-preview.gif" alt="Knock-Out Global Smackdown Board Game">
+                            </video>
                             <a href="knockout.html"><span class="link-span"></span></a>
                         </div>
                     </div>
@@ -314,7 +327,11 @@
                         </div>
 
                         <div id="archcity-cover-img" class="project-cover-img col-sm-7">
-                            <img src="projects/archcity/Inez.png" alt="ArchCity Defenders">
+                            <img src="projects/design/archcity/Inez.webp">
+                            <picture alt="ArchCity Defenders">
+                                <source srcset="projects/design/archcity/Inez.webp">
+                                <source srcset="projects/design/archcity/Inez.png">
+                            </picture>
                             <a href="underconstruction.html"><span class="link-span"></span></a>
                         </div>
                     </div>
@@ -427,7 +444,7 @@
     
                     <div class="project-2 row">
                         <div class="project-cover-img col-sm-7">
-                            <img src="projects/robotics/TURMCSponsorBooklet_Spread.jpg" alt="University of Tulsa Robotics Sponsorship Packet">
+                            <img src="projects/design/robotics/TURMCSponsorBooklet_Spread.jpg" alt="University of Tulsa Robotics Sponsorship Packet">
                             <a href="underconstruction.html"><span class="link-span"></span></a>
                         </div>
                         <div class="project-info col-sm-4 offset-md-1">
@@ -485,8 +502,12 @@
                             <p style="font-weight: bold;">
                                 I'm currently looking for work, so if you think we'd be a good fit, send me an email or check out my LinkedIn profile.</p>
                         </div>
-                        <div class="row pt-5">
-                            <button type="button" class="email-link-btn-white"><a href="mailto:sirkevinicus@gmail.com">Say Hello</a></button>
+                        <div class="row pt-3">
+                            <div class="d-flex justify-content-center">
+                                <a href="mailto:sirkevinicus@gmail.com">
+                                    <button type="button" class="btn btn-white">Say Hello</button>
+                                </a>
+                            </div>
                         </div>
                         <div class="row">
                             <div id="footer-icon-row" style="margin-top: 60px;">
