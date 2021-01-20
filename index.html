@@ -5,15 +5,15 @@
         <title>Kevin Gerstner</title>
         <!-- CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-        <link rel="stylesheet" href="styles/home.css" type="text/css">
-        <!-- JQUERY -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script> <!-- jQUERY -->
+        <link rel="stylesheet" href="css/home.css" type="text/css">
+        <!-- JS & JQUERY -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>        
         <script src="js/jquery-functions.js"></script>
         <!-- FONT AND ICON IMPORTS-->
         <link rel="stylesheet" href="https://use.typekit.net/xuj1ggj.css">
         <script src="https://kit.fontawesome.com/46262caf73.js" crossorigin="anonymous"></script>
         <!-- METADATA -->
-        <link rel="shortcut icon" type="image/png" href="images/cactus-1.gif">
+        <link rel="shortcut icon" type="image/png" href="img/logo/cactus-red.png">
         <meta name="keywords" content="Portfolio, Computer Science, Design, HTML, CSS, JavaScript">
         <meta name="description" content="Kevin Gerstner's Portfolio">
         <meta name="author" content="Kevin Gerstner">
@@ -21,57 +21,19 @@
     </head>
     
     <body>
-        <nav id="navbar" class="navbar navbar-expand-md fixed-top" style="max-width: 100%;">
-            <!-- Brand -->
-            <div class="navbar-brand">
-                <a href="/">
-                    <picture>
-                        <source media="(max-width: 768px)" srcset="images/personal-logo-3.png">
-                        <source media="(min-width: 768px)" srcset="images/personal-logo.png">
-                        <img class="personal-logo" src="images/personal-logo.png" alt="kevin-gerstner-logo">
-                    </picture>
-                </a>
-            </div>
-
-              <!-- Toggler/collapsible Button -->
-            <button id="collapse-menu-toggle" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-nav">
-                <span class="tog">
-                    <i class="fas fa-toggle-on fa-2x"></i>
-                    <i class="fas fa-toggle-off fa-2x" style="display: none;"></i>
-                 </span>
-            </button>
-
-            <!-- Links -->
-            <div class="collapse navbar-collapse" id="collapsible-nav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item align-middle">
-                        <a class="nav-link active" href="#games-anchor"><span><i class="fas fa-gamepad"></i></span>Games</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#ui-ux-anchor"><span><i class="fas fa-user-friends"></i></span>UI/UX</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#art-design-anchor"><span><i class="fas fa-palette"></i></span>Art & Design</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#programming-anchor"><span><i class="fas fa-keyboard"></i></span>Web Developer</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="2021 Portfolio.pdf" target="_blank"><button class="btn-slim btn-white">Resume</button></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <div class="nav-container"></div>
 
         <div id="greeting">
             <div id="vertical-bar"></div>
             <div id="header-icons" style="margin-top: 60px;" >
-                <a href="https://www.linkedin.com/in/kevin-gerstner/"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="mailto:sirkevinicus@gmail.com"><i class="far fa-envelope fa-2x"></i></a>
-                <a href="https://nullvalu.itch.io/"><i class="fab fa-itch-io fa-2x"></i></a>
-                <a href="https://github.com/SirKevinicus"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/kevin-gerstner/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="mailto:sirkevinicus@gmail.com" target="_blank"><i class="far fa-envelope fa-2x"></i></a>
+                <a href="https://nullvalu.itch.io/" target="_blank"><i class="fab fa-itch-io fa-2x"></i></a>
+                <a href="https://github.com/SirKevinicus" target="_blank"><i class="fab fa-github fa-2x"></i></a>
             </div>
-            <img id="kevin-portrait" src="images/kevin-portrait@0.3x.png" alt="portrait-photo">
+
+            <img id="kevin-portrait" src="img/home/kevin-portrait@1x.png" alt="portrait-photo">
+
             <div id="greeting-content" class="container-md">
                 <div class="row">
                     <div class="col-sm-8 offset-md-2">
@@ -93,7 +55,7 @@
                         <h2 class="section-header">About Me</h2>
                         <a class="anchor" id="about-me-anchor"></a>
                         <div class="project-1 row">
-                            <div class="project-info col-sm-5">
+                            <div class="content-container col-sm-5">
                                 <p>
                                     <span class="red-text bold">Hello!</span> I'm Kevin, a designer and developer from St. Louis, MO.
                                 </p>
@@ -128,8 +90,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="offset-md-1 col-sm-6" style="padding-bottom: 20px;">
-                                <img class="rounded-img" src="images/IMG_0469.webp" alt="kevin-picture">
+                            <div class="offset-md-1 col-sm-6">
+                                <img class="rounded-img" src="img/home/IMG_0469@1x.jpg" alt="kevin-picture">
                             </div>
                         </div>
                     </div>
@@ -162,11 +124,12 @@
                                 <li>Blender</li>
                             </ul>
                         </div>
-                        <div class="project-cover-img col-md-7 offset-md-1">
+                        <div class="project-cover-video col-md-7 offset-md-1">
                             <video autoplay muted loop playsinline>
-                                <source src="projects/songpong/song-pong-3.webm" type="video/webm">
-                                <source src="projects/songpong/song-pong-3.mp4" type="video/mp4">
+                                <source src="img/songpong/song-pong-3.webm" type="video/webm">
+                                <source src="img/songpong/song-pong-3.mp4" type="video/mp4">
                             </video>
+                            <img src="img/songpong/coverimg.jpg" alt="song pong">
                             <a href="songpong.html"><span class="link-span"></span></a>
                         </div>
                     </div>
@@ -193,11 +156,12 @@
                                 <li>Editor Tools</li>
                             </ul>
                         </div>
-                        <div class="project-cover-img col-sm-7 offset-md-1">
+                        <div class="project-cover-video col-sm-7 offset-md-1">
                             <video autoplay loop muted playsinline>
-                                <source src="projects/Tomb of Khaibit/tombofkhaibit.webm" type="video/webm">
-                                <source src="working files/tombofkhaibit.mp4" type="video/mp4">
+                                <source src="img/Tomb of Khaibit/tombofkhaibit.webm" type="video/webm">
+                                <source src="img/Tomb of Khaibit/tombofkhaibit.mp4" type="video/mp4">
                             </video>
+                            <img src="img/Tomb of Khaibit/coverimg.jpg">
                             <a href="tombofkhaibit.html"><span class="link-span"></span></a>
                         </div>
                     </div>
@@ -228,12 +192,13 @@
                             </ul>
                         </div>
 
-                        <div class="project-cover-img col-sm-7">
+                        <div class="project-cover-video col-sm-7">
                             <video autoplay muted loop playsinline>
-                                <source src="projects/knock-out/Knock-Out! Preview.mp4" type="video/mp4">
-                                <source src="projects/knock-out/Knock-Out! Preview.webm" type="video/webm">
-                                <img src="projects/knock-out/ko-preview.gif" alt="Knock-Out Global Smackdown Board Game">
+                                <source src="img/knock-out/Knock-Out! Preview.mp4" type="video/mp4">
+                                <source src="img/knock-out/Knock-Out! Preview.webm" type="video/webm">
+                                <img src="img/knock-out/ko-preview.gif" alt="Knock-Out Global Smackdown Board Game">
                             </video>
+                            <img src="img/knock-out/BackUsNow-01 (1).png" alt="knock-out global smackdown board game">
                             <a href="knockout.html"><span class="link-span"></span></a>
                         </div>
                     </div>
@@ -247,7 +212,7 @@
                     <div id="frontier" class="project-2 row">
                         <a class="anchor" id="ui-ux-anchor"></a>
                         <div class="project-cover-img col-sm-7">
-                            <img src="projects/design/frontier/Mockups.webp" alt="Frontier">
+                            <img src="img/frontier/Mockups.webp" alt="Frontier">
                             <a href="frontier.html"><span class="link-span"></span></a>
                         </div>
 
@@ -296,7 +261,7 @@
                         </div>
         
                         <div class="col-sm-6 offset-md-1 project-cover-img">
-                            <img src="projects/ui:ux/VL:HCC Paper/Gender_Page_01.jpg" alt="VLHCC Paper">
+                            <img src="img/VL:HCC Paper/Gender_Page_01.jpg" alt="VLHCC Paper">
                             <a href="http://sandeepkuttal.ens.utulsa.edu/Publications/Gender.pdf"><span class="link-span"></span></a>
                         </div>
                     </div>
@@ -327,10 +292,10 @@
                         </div>
 
                         <div id="archcity-cover-img" class="project-cover-img col-sm-7">
-                            <img src="projects/design/archcity/Inez.webp">
-                            <picture alt="ArchCity Defenders">
-                                <source srcset="projects/design/archcity/Inez.webp">
-                                <source srcset="projects/design/archcity/Inez.png">
+                            <picture>
+                                <source srcset="img/archcity/Inez@1x.webp">
+                                <source srcset="img/archcity/Inez@1x.png">
+                                <img src="img/archcity/Inez@1x.png" alt="ArchCityDefenders">
                             </picture>
                             <a href="underconstruction.html"><span class="link-span"></span></a>
                         </div>
@@ -342,16 +307,16 @@
                                 <!-- The Slideshow -->
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img class="d-block w-100" src="projects/design/androids/ANDROIDS_illustration.webp" alt="Androids Cover 1 Front">
+                                        <img class="d-block w-100" src="img/androids/ANDROIDS_illustration.webp" alt="Androids Cover 1 Front">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="projects/design/androids/BOOK1_BACK.webp" alt="Androids Cover 1 Back">
+                                        <img class="d-block w-100" src="img/androids/BOOK1_BACK.webp" alt="Androids Cover 1 Back">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="projects/design/androids/BOOK2_FRONT.webp" alt="Androids Cover 2 Front">
+                                        <img class="d-block w-100" src="img/androids/BOOK2_FRONT.webp" alt="Androids Cover 2 Front">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="projects/design/androids/BOOK2_BACK.jpg" alt="Androids Cover 2 Back">
+                                        <img class="d-block w-100" src="img/androids/BOOK2_BACK.jpg" alt="Androids Cover 2 Back">
                                     </div>
                                 </div>
                                 <!-- Controls -->
@@ -387,7 +352,7 @@
     
                     <div class="project-2 row">
                         <div class="project-cover-img col-sm-7">
-                            <img src="projects/design/citymuseum/transformation.jpg" alt="City Museum Logo Redesign">
+                            <img src="img/citymuseum/transformation.jpg" alt="City Museum Logo Redesign">
                             <a href="underconstruction.html"><span class="link-span"></span></a>
                         </div>
                         <div class="project-info col-md-4 offset-md-1">
@@ -410,7 +375,7 @@
     
                     <div class="project-2 row">
                         <div class="project-cover-img col-sm-7">
-                            <img src="projects/design/yikes/Business Card/yikes_card.jpg" alt="Yikes Streetwear">
+                            <img src="img/yikes/Business Card/yikes_card.jpg" alt="Yikes Streetwear">
                             <a href="underconstruction.html"><span class="link-span"></span></a>
                         </div>
                         <div class="project-info col-sm-4 offset-md-1">
@@ -438,21 +403,13 @@
                             <p>A logo I created for a coffee shop. I also created advertisements for print and web.</p>
                         </div>
                         <div class="col-sm-7">
-                            <img class="rounded-img" src="projects/design/chameleon_coffee/OLD/ChameleonCoffee-01.jpg" alt="Chameleon Coffee">
+                            <img class="rounded-img" src="img/chameleon_coffee/OLD/ChameleonCoffee-01.jpg" alt="Chameleon Coffee">
                         </div>
                     </div>
     
                     <div class="project-2 row">
                         <div class="project-cover-img col-sm-7">
-                            <img
-                                srcset="
-                                  projects/design/robotics/TURMCSponsorBooklet_Spread@1x.jpg 640w,
-                                  projects/design/robotics/TURMCSponsorBooklet_Spread@2x.jpg 1276w,
-                                  projects/design/robotics/TURMCSponsorBooklet_Spread@3x.jpg 2550w
-                                "
-                                src="projects/design/robotics/TURMCSponsorBooklet_Spread@1x.jpg" 
-                                alt="University of Tulsa Robotics Sponsorship Packet"
-                            >
+                            <img src="img/robotics/TURMCSponsorBooklet_Spread_1913x1238.jpg" University of Tulsa Robotics Sponsorship Packet">
                             <a href="underconstruction.html"><span class="link-span"></span></a>
                         </div>
                         <div class="project-info col-sm-4 offset-md-1">
@@ -486,7 +443,7 @@
                             <p>
                                 I designed and coded this website from scratch using HTML, CSS, and JS!
                             </p>
-                            <img style="margin-top: 10px; margin-bottom: 10px" src="coding website.gif" alt="Coding This Website">
+                            <img style="margin-top: 10px; margin-bottom: 10px" src="img/home/coding website.gif" alt="Coding This Website">
                             <p>
                                 I also used SASS and Bootstrap 5. I am self-taught for web development and have used resources like w3schools
                                 to learn. Initially, I created my portfolio on Webflow, but since it cost a lot of money to use the service, I decided to recreate the
@@ -526,7 +483,10 @@
                             </div>
                         </div>
                         <div>
-                            <img id="glitchcactus" src="images/cactus-2.gif" alt="Glitch Cactus">
+                            <video muted autoplay loop playsinline>
+                                <source src="img/home/cactus.webm" type="video/webm">
+                                    <img src="img/home/cactus-2.gif" alt="cactus">
+                            </video>
                         </div>
                         <div>
                             <h6>Website Designed and Built by Kevin Gerstner</h6>
@@ -534,7 +494,7 @@
                     </div>
                 </div>
                 <video class="static-background" autoplay muted loop>
-                    <source src="images/glitch.webm" type="video/webm">
+                    <source src="img/home/glitch.webm" type="video/webm">
                 </video>
             </div>
         </footer>

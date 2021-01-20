@@ -1,0 +1,388 @@
+@import "styles";
+
+$section-pad: 120px;
+
+/*-----------------------
+  GREETING
+------------------------*/
+#greeting {
+    position: relative;
+    height: 95vh;
+    min-height: 800px;
+    padding: 25px;
+}
+
+#greeting-content{
+    padding-top: 150px;
+}
+
+#kevin-portrait{
+    display: none;
+    position: absolute;
+    top: 100px;
+    right: 2vw;
+    width: 600px;
+    height: auto;
+}
+
+#heythere{
+    color: $yellow;
+    font-family: VCR;
+    padding-bottom: 10px;
+}
+
+#itsme{
+    color: $red;
+    padding-bottom: 30px;
+    font-family: Barbieri;
+    font-weight: bold;
+    text-shadow: 2px 4px 5px rgba(0,0,0,0.4);
+}
+
+#tagline{
+    font-weight: normal;
+    color: $pink;
+}
+
+#header-icons{
+    position: absolute;
+    left: 75px;
+    top: 50px;
+    padding-top: 25px; 
+    background-color: $purple;
+    display: none; // hide by default on mobile
+    flex-direction: column;
+    a{
+        margin-bottom: 25px;
+        color: $red;
+        :hover{
+            color: $yellow;
+        }
+    }
+}
+
+#vertical-bar{
+    background-color: $red; 
+    width: 2px; 
+    height: 100%;
+    position: absolute; 
+    display: none;
+    left: 90px;
+    bottom: 0;
+}
+
+/*-----------------------
+  ABOUT ME
+------------------------*/
+#aboutme{
+}
+
+.skill-box{
+    border: 5px solid $purple;
+    border-radius: 5px;
+}
+
+/*-----------------------
+  PORTFOLIO
+------------------------*/
+#portfolio{
+    position: relative;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: $black;
+}
+
+/* || Section */
+section{
+    margin-bottom: $section-pad;
+}
+
+.section-header{
+    font-family: Barbieri;
+    font-weight: normal;
+    text-align: center;
+    color: $red;
+    padding-bottom: 30px;
+    text-shadow: 5px 5px $purple;
+}
+
+/* || Project */
+.project{
+    margin: 0px 0px $section-pad 0px;
+    padding: 15px 0px;
+    background-color: $purple;
+}
+
+.project-1{
+    @extend .project;
+    flex-direction: column-reverse;
+}
+
+.project-2{
+    @extend .project;
+    flex-direction: column;
+}
+
+.project-info{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+}
+
+.project-description-box{
+    position: relative;
+    height: fit-content;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    z-index: 2;
+
+    h3{
+        font-family: VCR; 
+        line-height: 1;
+    }
+}
+
+.description-row{
+    display: flex;
+    align-items: baseline;
+    margin-top: 20px;
+}
+
+.visit-link{
+    color: $red;
+    margin-left: 10px;
+
+    a:hover{
+        color: $pink;
+    }
+
+    i{
+        margin-left: 5px;
+    }
+}
+
+.skills-row{
+    li{
+        display: inline-block;
+        padding-right: 10px;
+    }
+    font-family: VCR;
+    color: $pink;
+    margin: 10px 0px;
+}
+
+.link-span{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+    z-index: 1;
+}
+
+.project-cover{
+    height: fit-content;
+    position: relative;
+    object-fit: contain;
+    z-index: 0;
+}
+
+.project-cover-video {
+    @extend .project-cover;
+    /* This shows the image by default, unless the screen is large */
+    video{
+        display: none;
+        max-width: 100%;
+    }
+    img{display: block;}
+}
+
+.project-cover-img{
+    @extend .project-cover;
+
+    img, picture{
+        @extend .rounded-img;
+        max-width: 100%;
+        vertical-align: top;
+    }
+}
+
+.project-cover::after, .project-cover::before{
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.project-cover::after {
+    content: '\A';
+    width: 100%; height:100%;
+    top: 0; left:0;
+    background:rgba(0,0,0,0.4);
+}
+
+.project-cover::before {
+    content: "View Project >>";
+    @extend h3;
+    text-decoration: underline;
+    color: white;
+    z-index: 1;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 10px;
+    text-align: center;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+}
+
+.project-cover:hover:after, .project-cover:hover:before {
+    opacity: 1;
+}
+
+.portfolio-section-content {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.carousel img{
+    width: auto;
+    height: 400px;
+    max-height: 500px;
+}
+
+/*-----------------------
+  FOOTER
+------------------------*/
+
+#footer{
+    position: relative;
+    width: 100%;
+    background-color: $red;
+    overflow: hidden;
+}
+
+#glitchcactus{
+    width: 100px;
+    position: relative;
+    margin-top: 50px;
+    z-index: 30;
+    max-width: 100%;
+    max-height: 30vh;
+}
+
+.static-background{
+    filter:opacity(5%);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: auto;
+    z-index: 0;
+}
+
+#footer-icon-row{
+    a{
+        margin: 8px;
+        color: $pink;
+        :hover{
+            color: $purple;
+        }
+    }
+    :first-child{
+        margin-left: 0;
+    }
+    :last-child{
+        margin-right: 0;
+    }
+}
+
+/*-----------------------
+  RESPONSIVE LAYOUT
+-------------------------*/
+
+/* MEDIUM and up LAYOUT */
+
+@media screen and (min-width: 768px)
+{
+    #tagline{
+        width: 70%;
+    }
+    #kevin-portrait{
+        display: block;
+    }
+    #vertical-bar{
+        display: block;
+    }
+    #header-icons{
+        display: flex;
+    }
+    #portfolio{
+        background-image: url("../img/home/Film Grain/AU_FG_Texture-1.jpg");
+    }
+    .container{
+        max-width: 1200px;
+    }
+    .section-header{
+        text-align: left;
+    }
+    .project{
+        flex-direction: row;
+        margin-bottom: 20vh;
+        background-color: transparent;
+    }
+    .project-2{
+        .project-info{
+            justify-content: end;
+            text-align: right;
+        }
+        .description-row{
+            justify-content: flex-end;
+        }
+        .project-description-box{
+            right: 12vw;
+        }
+    }
+    .project-cover-img{
+        video{
+            display: block;
+        }
+    }
+    .project-cover-video{
+        video{display: block;}
+        img{display: none;}
+    }
+    .project-description-box{
+        background-color: $purple;
+        -webkit-box-shadow: 3px 5px 6px -3px #0000009f; 
+        box-shadow: 3px 5px 6px -3px #0000009f;
+        align-items: center;
+        margin-top: 20px;
+        padding: 30px 30px;
+        min-height: 100px;
+        width: 35vw;
+        z-index: 3;
+    }
+    .red{background-color: $red;}
+    .purple{background-color: $purple;}
+    .project-divider{display:none;}
+    .skill-box{padding: 10px 20px;}
+
+    #archcity-cover-img{top: -50px;}
+}
+
+/* LARGE and UP devices */
+@media screen and (min-width: 992px)
+{
+    .project-description-box{
+        width: 600px;
+    }
+    .carousel img{
+        width: auto;
+        height: 500px;
+        max-height: 500px;
+    }
+
+}
