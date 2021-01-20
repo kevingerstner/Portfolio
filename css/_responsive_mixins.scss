@@ -1,10 +1,21 @@
+@mixin responsive_mobile(){
+    @media screen and (max-width: 768px){
+        @content;
+    }
+}
 @mixin responsive_tablet(){
     @media screen and (min-width: 768px) and (max-width: 992px){
         @content;
     }
 }
 
-@mixin responsive_desktop(){
+@mixin breakpoint_medium(){
+    @media screen and (min-width: 768px){
+        @content;
+    }
+}
+
+@mixin breakpoint_large(){
     @media screen and (min-width: 992px){
         @content;
     }
