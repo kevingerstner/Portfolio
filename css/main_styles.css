@@ -348,7 +348,7 @@ nav {
   }
 }
 
-.rounded-img, .project-cover-img img, .project-cover-img picture {
+.rounded-img, .project-cover-video video, .project-cover-img img, .project-cover-img picture {
   border-radius: 25px;
 }
 
@@ -460,6 +460,12 @@ nav {
 #tagline {
   font-weight: normal;
   color: #eacdc2;
+}
+
+@media screen and (min-width: 768px) {
+  #tagline {
+    width: 50%;
+  }
 }
 
 #header-icons {
@@ -734,9 +740,6 @@ section {
 -------------------------*/
 /* MEDIUM and up LAYOUT */
 @media screen and (min-width: 768px) {
-  #tagline {
-    width: 50%;
-  }
   #kevin-portrait {
     display: block;
   }

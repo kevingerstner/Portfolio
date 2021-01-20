@@ -278,6 +278,9 @@ nav{
 #tagline{
     font-weight: normal;
     color: $pink;
+    @include breakpoint_medium(){
+        width: 50%;
+    }
 }
 
 #header-icons{
@@ -422,6 +425,7 @@ section{
     @extend .project-cover;
     /* This shows the image by default, unless the screen is large */
     video{
+        @extend .rounded-img;
         display: none;
         max-width: 100%;
     }
@@ -537,9 +541,6 @@ section{
 
 @media screen and (min-width: 768px)
 {
-    #tagline{
-        width: 50%;
-    }
     #kevin-portrait{
         display: block;
     }
