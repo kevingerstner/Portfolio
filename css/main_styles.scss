@@ -16,6 +16,15 @@ $navbar-height: 80px;
     background-size: cover;
     position: relative;
     z-index: 0;
+    overflow: hidden;
+
+    video{
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 .overlay{
@@ -100,6 +109,10 @@ img{
     max-width: 100%;
     object-fit: contain;
     height: auto;
+}
+
+video{
+    max-width: 100%;
 }
 
 ul{
@@ -320,7 +333,7 @@ nav{
 }
 
 /* || Section */
-section{
+#portfolio > section{
     margin-bottom: $section-pad;
 }
 
