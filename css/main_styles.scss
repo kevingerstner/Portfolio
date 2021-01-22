@@ -127,9 +127,12 @@ ul{
 }
 
 hr{
-    margin: 10px 50px 5px 0px;
     border-top: 2px solid $red;
     opacity: 1;
+
+    @include breakpoint_medium(){
+        margin: 10px 50px 5px 0px;
+    }
 }
 
 .red-text{ color: $red;}
@@ -209,7 +212,9 @@ nav{
 }
 
 .caption{
-    margin-top: 30px;
+    @include breakpoint_medium(){
+        margin-top: 30px;
+    }
     padding: 20px;
 }
 
@@ -338,12 +343,14 @@ nav{
 }
 
 .section-header{
-    font-family: Barbieri;
-    font-weight: normal;
     text-align: center;
     color: $red;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     text-shadow: 5px 5px $purple;
+
+    @include breakpoint_medium(){
+        padding-bottom: 30px;
+    }
 }
 
 /* || Project */
@@ -367,6 +374,12 @@ nav{
     display: flex;
     flex-direction: column;
     padding: 0px 20px;
+}
+
+.project-divider{
+    @include breakpoint_medium(){
+        display: none;
+    }
 }
 
 .project-description-box{
@@ -404,13 +417,18 @@ nav{
 }
 
 .skills-row{
+    margin-top: 20px;
+    font-family: VCR;
+    color: $green;
+
+    @include breakpoint_medium(){
+        margin: 30px 0px 0px 0px;
+    }
+
     li{
         display: inline-block;
         padding-right: 10px;
     }
-    margin-top: 20px;
-    font-family: VCR;
-    color: $green;
 }
 
 .link-span{
@@ -492,12 +510,6 @@ nav{
 .portfolio-section-content {
     margin-top: 10px;
     margin-bottom: 50px;
-}
-
-.carousel img{
-    width: auto;
-    height: 400px;
-    max-height: 500px;
 }
 
 /*-----------------------
@@ -613,7 +625,7 @@ nav{
     }
     .project-description-box{
         background-color: $purple;
-        -webkit-box-shadow: 3px 5px 6px -3px #0000009f; 
+        -webkit-box-shadow: 3px 5px 6px -3px #0000009f;
         box-shadow: 3px 5px 6px -3px #0000009f;
         align-items: center;
         margin-top: 20px;
@@ -624,8 +636,6 @@ nav{
     }
     .red{background-color: $red;}
     .purple{background-color: $purple;}
-    .project-divider{display:none;}
-    .skills-row{margin: 30px 0px 0px 20px;}
     .skill-box{padding: 10px 20px;}
 
     #archcity-cover-img{top: -50px;}
@@ -637,10 +647,6 @@ nav{
     .project-description-box{
         width: 600px;
     }
-    .carousel img{
-        width: auto;
-        height: 500px;
-        max-height: 500px;
-    }
+
 
 }
