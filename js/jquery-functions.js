@@ -6,4 +6,16 @@ $(document).ready(function(){
     $(".tog").click(function(){
         $("i", this).toggle();
     });
- });
+
+    $("#header-icons > a").hover(function(){
+        $(this).children("i").animate({
+            bottom: '3px',
+            left: '5px'
+        }, "fast");
+    }, function(){
+        $(this).children("i").animate({
+            bottom: '0',
+            left: '0'
+        }, "fast")
+    });
+});

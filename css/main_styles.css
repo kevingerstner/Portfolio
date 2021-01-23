@@ -152,7 +152,7 @@ h6 {
 
 .hero-image {
   height: 200px;
-  max-width: 100%;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -161,7 +161,7 @@ h6 {
   overflow: hidden;
 }
 
-.hero-image video {
+.hero-image img, .hero-image video {
   position: absolute;
   width: 100%;
   top: 50%;
@@ -185,6 +185,24 @@ h6 {
   /* Black background with opacity */
   z-index: 1;
   /* Specify a stack order in case you're using a different order for other elements */
+}
+
+.cursor {
+  border-right: .1em solid;
+  -webkit-animation: caret 1s steps(1) infinite;
+          animation: caret 1s steps(1) infinite;
+}
+
+@-webkit-keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
 }
 
 .paragraph {
@@ -373,12 +391,13 @@ nav {
 }
 
 .caption {
-  padding: 20px;
+  color: #A2E0A9;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
   .caption {
-    margin-top: 30px;
+    margin-top: 20px;
   }
 }
 
@@ -495,6 +514,10 @@ nav {
 
 #header-icons {
   display: none;
+}
+
+#header-icons a > i {
+  position: relative;
 }
 
 #vertical-bar {

@@ -10,7 +10,7 @@ $navbar-height: 80px;
 
 .hero-image{
     height: 200px;
-    max-width: 100%;
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -18,7 +18,7 @@ $navbar-height: 80px;
     z-index: 0;
     overflow: hidden;
 
-    video{
+    img, video{
         position: absolute;
         width: 100%;
         top: 50%;
@@ -37,6 +37,16 @@ $navbar-height: 80px;
     bottom: 0;
     background-color: rgba(0,0,0,0.5); /* Black background with opacity */
     z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+.cursor{
+    border-right: .1em solid;
+    animation: caret 1s steps(1) infinite;
+}
+@keyframes caret {
+    50% {
+      border-color: transparent;
+    }
 }
 
 .paragraph{
@@ -213,9 +223,10 @@ nav{
 
 .caption{
     @include breakpoint_medium(){
-        margin-top: 30px;
+        margin-top: 20px;
     }
-    padding: 20px;
+    color: $green;
+    text-align: center;
 }
 
 .btn{
@@ -303,6 +314,7 @@ nav{
 
 #header-icons{
     display: none; // hide by default on mobile
+    a > i{position: relative};
 }
 
 #vertical-bar{

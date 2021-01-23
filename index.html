@@ -37,7 +37,7 @@
             <div id="greeting-content" class="container-md">
                 <div class="row">
                     <div class="col-sm-8 offset-md-2">
-                        <h5 id="heythere">Hey there! My name is</h5>
+                        <h5 class="typewriter" id="heythere" waitTime="1000">Hey there! My name is</h5>
                         <h2 id="itsme">Kevin Gerstner.</h2>
                         <p id="tagline">
                             I’m a game developer and designer from St. Louis, MO who is looking for a career that utilizes my experience creating original and ambitious projects.
@@ -371,7 +371,7 @@
                                 </ol>
                             </div>
                         </div>
-                        <div class="caption col-12 col-sm-6 col-lg-4 offset-md-1">
+                        <div class="col-12 col-sm-6 col-lg-4 offset-md-1">
                             <h3><b>BOOK COVERS</b></h3>
                             <p>I designed two book covers for Philip K. Dick's "Do Androids Dream of Electric Sheep".</p>
                             <ul class="skills-row">
@@ -380,11 +380,44 @@
                             </ul>
                         </div>
                     </div>
+
+                    <div class="project-1 row">
+                        <div class="project-info col-sm-5">
+                            <div class="description-row">
+                                <h6 class="project-year">2019</h6>
+                            </div>
+                            <h3>University of Tulsa Robotics Sponsorship Packet</h3>
+                            <hr class="project-divider">
+                            <div class="project-description-box red">
+                                <p>
+                                    This 14-page Sponsorship Packet was created for showing to donors to raise money for the Robotics Program.
+                                    The team ended up raising several thousand dollars from sponsors.
+                                </p>
+                                <a class="visit-link" href="img/robotics/TURMCSponsorBooklet_DIGITAL.pdf" target="_blank"><i class="fas fa-external-link-alt"></i>Read More</a>
+                            </div>
+                            <ul class="skills-row">
+                                <li>InDesign</li>
+                            </ul>
+                        </div>
+                        <div class="project-cover-img col-sm-7">
+                            <div id="robotics-slides" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="img/robotics/TURMCSponsorBooklet_Spread_1913x1238.jpg" alt="University of Tulsa Robotics Sponsorship Packet">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/robotics/TURMCSponsorBooklet_SPREAD_2.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="underconstruction.html"><span class="link-span"></span></a>
+                        </div>
+                    </div>
     
                     <div class="project-2 row">
                         <div class="project-cover-img col-sm-7">
                             <img src="img/citymuseum/transformation.jpg" alt="City Museum Logo Redesign">
-                            <a href="underconstruction.html"><span class="link-span"></span></a>
+                            <a href="citymuseum.html"><span class="link-span"></span></a>
                         </div>
                         <div class="project-info col-md-4 offset-md-1">
                             <div class="description-row">
@@ -396,7 +429,7 @@
                                 <p>This is an unofficial brand redesign for the City Museum, which is my favorite attraction in St. Louis. 
                                     I created several brand elements and logo variations, and followed principles of design to create this 
                                     fun, modern redesign.</p>
-                                <a class="visit-link" href="underconstruction.html"><i class="fas fa-external-link-alt"></i>Read More</a>
+                                <a class="visit-link" href="citymuseum.html"><i class="fas fa-external-link-alt"></i>Read More</a>
                             </div>
                             <ul class="skills-row">
                                 <li>Illustrator</li>
@@ -405,33 +438,12 @@
                     </div>
     
                     <div class="project-2 row">
-                        <div class="col-sm-4 offset-md-1 caption">
+                        <div class="col-sm-4">
                             <h3><b>CHAMELEON COFFEE</b></h3>
                             <p>A logo I created for a coffee shop. I also created advertisements for print and web.</p>
                         </div>
-                        <div class="col-sm-7">
+                        <div class="col-sm-7 offset-md-1">
                             <img class="rounded-img" src="img/chameleon_coffee/OLD/ChameleonCoffee-01.jpg" alt="chameleon coffee">
-                        </div>
-                    </div>
-    
-                    <div class="project-2 row">
-                        <div class="project-cover-img col-sm-7">
-                            <img src="img/robotics/TURMCSponsorBooklet_Spread_1913x1238.jpg" University of Tulsa Robotics Sponsorship Packet">
-                            <a href="underconstruction.html"><span class="link-span"></span></a>
-                        </div>
-                        <div class="project-info col-sm-4 offset-md-1">
-                            <div class="description-row">
-                                <h6 class="project-year">2019</h6>
-                            </div>
-                            <h3>University of Tulsa Robotics Sponsorship Packet</h3>
-                            <hr class="project-divider">
-                            <div class="project-description-box">
-                                <p>At the University of Tulsa, I created a 14-page Sponsorship Packet to help raise money for the Robotics Program.</p>
-                                <a class="visit-link" href="underconstruction.html"><i class="fas fa-external-link-alt"></i>Read More</a>
-                            </div>
-                            <ul class="skills-row">
-                                <li>InDesign</li>
-                            </ul>
                         </div>
                     </div>
                 </section>
@@ -480,6 +492,7 @@
                 </video>
             </div>
         </footer>
+        <script src="js/js-functions.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     </body>
 </html>
