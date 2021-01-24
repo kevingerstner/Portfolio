@@ -1,3 +1,16 @@
+function menutoggle(){
+    var icons = document.getElementsByClassName("menutoggle");
+    for(i = 0; i < icons.length; i++){
+        console.log(icons[i].style.display);
+        if(icons[i].style.display === "none"){
+            icons[i].style.display = "block";
+        }
+        else{
+            icons[i].style.display = "none";
+        }
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function(){
     document.getElementById("heythere").style.visibility = "hidden";
     setTimeout(TypeWriter, 1000);

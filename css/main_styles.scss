@@ -25,6 +25,17 @@ $navbar-height: 80px;
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
+    @include breakpoint_medium(){
+        height: 400px;
+    }
+}
+
+.carousel{
+    margin-bottom: 20px;
+    @include breakpoint_medium(){
+        margin: 0px;
+    }
 }
 
 .overlay{
@@ -37,16 +48,6 @@ $navbar-height: 80px;
     bottom: 0;
     background-color: rgba(0,0,0,0.5); /* Black background with opacity */
     z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
-}
-
-.cursor{
-    border-right: .1em solid;
-    animation: caret 1s steps(1) infinite;
-}
-@keyframes caret {
-    50% {
-      border-color: transparent;
-    }
 }
 
 .paragraph{
@@ -76,29 +77,8 @@ section{
     font-size: 1.5em;
 }
 
-#figma-iframe{
-    width: 100%;
-    height: 720px;
-}
-
 .inline-img{
     padding: 20px 0px;
-}
-
-/* MEDIUM and up */
-@media screen and (min-width: 768px)
-{
-    .hero-text{
-        
-    }
-    .hero-image{    
-        height: 400px;
-    }
-
-    #figma-iframe{
-        width: 400px;
-        height: 720px;
-    }
 }
 
 body{
@@ -145,12 +125,10 @@ hr{
     }
 }
 
-.red-text{ color: $red;}
-.bold{font-weight: bold;}
-
 /* NAVBAR */
 nav{
     max-width: 100%;
+    position: relative;
     height: $mobile-navbar-height;
     background-color: $red;
 
@@ -161,7 +139,6 @@ nav{
 }
 
 .navbar-collapse{
-
     @include responsive_mobile(){
         background-color: $red;
         width: 60vw;
@@ -173,9 +150,7 @@ nav{
 }
 
 .navbar-nav > li{
-
     margin: 0px 25px;
-
     i{color: $green;}
 
     a{
@@ -277,6 +252,16 @@ nav{
     padding: 25px;
 }
 
+.cursor{
+    border-right: .1em solid;
+    animation: caret 1s steps(1) infinite;
+}
+@keyframes caret {
+    50% {
+      border-color: transparent;
+    }
+}
+
 #greeting-content{
     padding-top: 150px;
 }
@@ -288,6 +273,9 @@ nav{
     right: 2vw;
     width: 600px;
     height: auto;
+    @include breakpoint_medium{
+        display: block;
+    }
 }
 
 #heythere{
@@ -314,7 +302,23 @@ nav{
 
 #header-icons{
     display: none; // hide by default on mobile
-    a > i{position: relative};
+    @include breakpoint_medium(){
+        display: flex;
+        position: absolute;
+        left: 75px;
+        top: 70px;
+        padding-top: 25px; 
+        background-color: $purple;
+        flex-direction: column;
+        a{
+            margin-bottom: 25px;
+            color: $red;
+            :hover{
+                color: $green;
+            }
+        }
+        a > i{position: relative};
+    }
 }
 
 #vertical-bar{
@@ -330,8 +334,6 @@ nav{
 /*-----------------------
   ABOUT ME
 ------------------------*/
-#aboutme{
-}
 
 .skill-box{
     border: 5px solid $purple;
@@ -347,6 +349,7 @@ nav{
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: $black;
+    overflow: hidden;
 }
 
 /* || Section */
@@ -462,6 +465,39 @@ nav{
     position: relative;
     object-fit: contain;
     z-index: 0;
+
+    &::after, &::before{
+        position: absolute;
+        opacity: 0;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+    }
+
+    &::after{
+        content: '\A';
+        width: 100%; height:100%;
+        top: 0; left:0;
+        background:rgba(0,0,0,0.4);
+    }
+
+    &::before{
+        content: "View Project >>";
+        @extend h3;
+        text-decoration: underline;
+        color: white;
+        z-index: 1;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px 10px;
+        text-align: center;
+        box-sizing: border-box;
+        -moz-box-sizing:border-box;
+    }
+    &:hover::after, &:hover::before{
+        opacity: 1;
+    }
 }
 
 .project-cover-video {
@@ -483,40 +519,6 @@ nav{
         max-width: 100%;
         vertical-align: top;
     }
-}
-
-.project-cover::after, .project-cover::before{
-    position: absolute;
-    opacity: 0;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-}
-
-.project-cover::after {
-    content: '\A';
-    width: 100%; height:100%;
-    top: 0; left:0;
-    background:rgba(0,0,0,0.4);
-}
-
-.project-cover::before {
-    content: "View Project >>";
-    @extend h3;
-    text-decoration: underline;
-    color: white;
-    z-index: 1;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px 10px;
-    text-align: center;
-    box-sizing: border-box;
-    -moz-box-sizing:border-box;
-}
-
-.project-cover:hover:after, .project-cover:hover:before {
-    opacity: 1;
 }
 
 .portfolio-section-content {
@@ -555,18 +557,48 @@ nav{
 }
 
 #footer-icon-row{
+    margin: 20px 0px;
     a{
         margin: 8px;
         color: $pink;
         :hover{
-            color: $purple;
+            color: $green;
         }
     }
-    :first-child{
-        margin-left: 0;
+    a > i{position: relative};
+}
+
+/*-----------------------
+  ANIMATION
+-------------------------*/
+.fadein{
+    opacity: 0;
+}
+
+.fadeinup{
+    @include breakpoint_medium(){
+        opacity: 0;
+        position: relative;
+        bottom: -50px;
+        max-width: 100%;
     }
-    :last-child{
-        margin-right: 0;
+}
+
+.fadeinleft{
+    @include breakpoint_medium(){
+        opacity: 0;
+        position: relative;
+        left: -50px;
+        max-width: 100%;
+    }
+}
+
+.fadeinright{
+    @include breakpoint_medium(){
+        opacity: 0;
+        position: relative;
+        right: -50px;
+        max-width: 100%;
     }
 }
 
@@ -578,28 +610,10 @@ nav{
 
 @media screen and (min-width: 768px)
 {
-    #kevin-portrait{
-        display: block;
-    }
     #vertical-bar{
         display: block;
     }
-    #header-icons{
-        display: flex;
-        position: absolute;
-        left: 75px;
-        top: 70px;
-        padding-top: 25px; 
-        background-color: $purple;
-        flex-direction: column;
-        a{
-            margin-bottom: 25px;
-            color: $red;
-            :hover{
-                color: $green;
-            }
-        }
-    }
+    
     #portfolio{
         background-image: url("../img/home/Film Grain/AU_FG_Texture-1.jpg");
     }
@@ -659,6 +673,4 @@ nav{
     .project-description-box{
         width: 600px;
     }
-
-
 }

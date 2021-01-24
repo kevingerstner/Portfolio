@@ -150,6 +150,14 @@ h6 {
   font-weight: 900;
 }
 
+.red-text {
+  color: #bd4242;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 .hero-image {
   height: 200px;
   width: 100%;
@@ -170,6 +178,22 @@ h6 {
           transform: translate(-50%, -50%);
 }
 
+@media screen and (min-width: 768px) {
+  .hero-image {
+    height: 400px;
+  }
+}
+
+.carousel {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .carousel {
+    margin: 0px;
+  }
+}
+
 .overlay {
   position: absolute;
   /* Sit on top of the page content */
@@ -185,24 +209,6 @@ h6 {
   /* Black background with opacity */
   z-index: 1;
   /* Specify a stack order in case you're using a different order for other elements */
-}
-
-.cursor {
-  border-right: .1em solid;
-  -webkit-animation: caret 1s steps(1) infinite;
-          animation: caret 1s steps(1) infinite;
-}
-
-@-webkit-keyframes caret {
-  50% {
-    border-color: transparent;
-  }
-}
-
-@keyframes caret {
-  50% {
-    border-color: transparent;
-  }
 }
 
 .paragraph {
@@ -233,24 +239,8 @@ section {
   font-size: 1.5em;
 }
 
-#figma-iframe {
-  width: 100%;
-  height: 720px;
-}
-
 .inline-img {
   padding: 20px 0px;
-}
-
-/* MEDIUM and up */
-@media screen and (min-width: 768px) {
-  .hero-image {
-    height: 400px;
-  }
-  #figma-iframe {
-    width: 400px;
-    height: 720px;
-  }
 }
 
 body {
@@ -303,17 +293,10 @@ hr {
   }
 }
 
-.red-text {
-  color: #bd4242;
-}
-
-.bold {
-  font-weight: bold;
-}
-
 /* NAVBAR */
 nav {
   max-width: 100%;
+  position: relative;
   height: 60px;
   background-color: #bd4242;
 }
@@ -474,6 +457,24 @@ nav {
   padding: 25px;
 }
 
+.cursor {
+  border-right: .1em solid;
+  -webkit-animation: caret 1s steps(1) infinite;
+          animation: caret 1s steps(1) infinite;
+}
+
+@-webkit-keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
 #greeting-content {
   padding-top: 150px;
 }
@@ -485,6 +486,12 @@ nav {
   right: 2vw;
   width: 600px;
   height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  #kevin-portrait {
+    display: block;
+  }
 }
 
 #heythere {
@@ -516,8 +523,31 @@ nav {
   display: none;
 }
 
-#header-icons a > i {
-  position: relative;
+@media screen and (min-width: 768px) {
+  #header-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    left: 75px;
+    top: 70px;
+    padding-top: 25px;
+    background-color: #372549;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #header-icons a {
+    margin-bottom: 25px;
+    color: #bd4242;
+  }
+  #header-icons a :hover {
+    color: #A2E0A9;
+  }
+  #header-icons a > i {
+    position: relative;
+  }
 }
 
 #vertical-bar {
@@ -547,6 +577,7 @@ nav {
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: #1a1423;
+  overflow: hidden;
 }
 
 /* || Section */
@@ -686,24 +717,6 @@ nav {
   z-index: 0;
 }
 
-.project-cover-video {
-  /* This shows the image by default, unless the screen is large */
-}
-
-.project-cover-video video {
-  display: none;
-  max-width: 100%;
-}
-
-.project-cover-video img {
-  display: block;
-}
-
-.project-cover-img img, .project-cover-img picture {
-  max-width: 100%;
-  vertical-align: top;
-}
-
 .project-cover::after, .project-cover-video::after, .project-cover-img::after, .project-cover::before, .project-cover-video::before, .project-cover-img::before {
   position: absolute;
   opacity: 0;
@@ -737,8 +750,26 @@ nav {
   -moz-box-sizing: border-box;
 }
 
-.project-cover:hover:after, .project-cover-video:hover:after, .project-cover-img:hover:after, .project-cover:hover:before, .project-cover-video:hover:before, .project-cover-img:hover:before {
+.project-cover:hover::after, .project-cover-video:hover::after, .project-cover-img:hover::after, .project-cover:hover::before, .project-cover-video:hover::before, .project-cover-img:hover::before {
   opacity: 1;
+}
+
+.project-cover-video {
+  /* This shows the image by default, unless the screen is large */
+}
+
+.project-cover-video video {
+  display: none;
+  max-width: 100%;
+}
+
+.project-cover-video img {
+  display: block;
+}
+
+.project-cover-img img, .project-cover-img picture {
+  max-width: 100%;
+  vertical-align: top;
 }
 
 .portfolio-section-content {
@@ -776,21 +807,55 @@ nav {
   z-index: 0;
 }
 
+#footer-icon-row {
+  margin: 20px 0px;
+}
+
 #footer-icon-row a {
   margin: 8px;
   color: #eacdc2;
 }
 
 #footer-icon-row a :hover {
-  color: #372549;
+  color: #A2E0A9;
 }
 
-#footer-icon-row :first-child {
-  margin-left: 0;
+#footer-icon-row a > i {
+  position: relative;
 }
 
-#footer-icon-row :last-child {
-  margin-right: 0;
+/*-----------------------
+  ANIMATION
+-------------------------*/
+.fadein {
+  opacity: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .fadeinup {
+    opacity: 0;
+    position: relative;
+    bottom: -50px;
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .fadeinleft {
+    opacity: 0;
+    position: relative;
+    left: -50px;
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .fadeinright {
+    opacity: 0;
+    position: relative;
+    right: -50px;
+    max-width: 100%;
+  }
 }
 
 /*-----------------------
@@ -798,32 +863,8 @@ nav {
 -------------------------*/
 /* MEDIUM and up LAYOUT */
 @media screen and (min-width: 768px) {
-  #kevin-portrait {
-    display: block;
-  }
   #vertical-bar {
     display: block;
-  }
-  #header-icons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: absolute;
-    left: 75px;
-    top: 70px;
-    padding-top: 25px;
-    background-color: #372549;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  #header-icons a {
-    margin-bottom: 25px;
-    color: #bd4242;
-  }
-  #header-icons a :hover {
-    color: #A2E0A9;
   }
   #portfolio {
     background-image: url("../img/home/Film Grain/AU_FG_Texture-1.jpg");

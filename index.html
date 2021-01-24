@@ -21,7 +21,47 @@
     </head>
     
     <body>
-        <div class="nav-container"></div>
+        <nav id="navbar" class="navbar navbar-expand-md fixed-top" style="max-width: 100%;">
+            <!-- Brand -->
+            <div class="navbar-brand">
+                <a href="/">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="img/logo/personal-logo-3.png">
+                        <source media="(min-width: 768px)" srcset="img/logo/personal-logo.png">
+                        <img class="personal-logo" src="img/logo/personal-logo.png" alt="kevin-gerstner-logo">
+                    </picture>
+                </a>
+            </div>
+        
+              <!-- Toggler/collapsible Button -->
+            <button id="collapse-menu-toggle" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsible-nav" onclick="menutoggle()">
+                <span id="tog"></span>
+                    <i class="menutoggle fas fa-toggle-on fa-2x"></i>
+                    <i class="menutoggle fas fa-toggle-off fa-2x" style="display: none;"></i>
+                 </span>
+            </button>
+        
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="collapsible-nav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#web-anchor"><span><i class="fas fa-keyboard"></i></span>Websites</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#games-anchor"><span><i class="fas fa-gamepad"></i></span>Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ui-ux-anchor"><span><i class="fas fa-user-friends"></i></span>UI/UX</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#art-design-anchor"><span><i class="fas fa-palette"></i></span>Art & Design</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="2021 Portfolio.pdf" target="_blank"><button class="btn-slim btn-white">Resume</button></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
         <div id="greeting">
             <div id="vertical-bar"></div>
@@ -42,10 +82,10 @@
                         <p id="tagline">
                             I’m a game developer and designer from St. Louis, MO who is looking for a career that utilizes my experience creating original and ambitious projects.
                         </p>
-                        <button style="margin-top: 50px" type="button" class="btn btn-red"><a href="mailto:sirkevinicus@gmail.com" target="_blank">Let's Talk!</a></button>
+                        <button style="margin-top: 50px" type="button" class="btn btn-red"><a href="mailto:sirkevinicus@gmail.com" target="_blank">Get In Touch</a></button>
                     </div>
                 </div>
-                </div>
+            </div>
         </div>
 
         <!-- PORTFOLIO BEGIN -->
@@ -56,7 +96,8 @@
                     <div id="aboutme">
                         <h2 class="section-header">About Me</h2>
                         <a class="anchor" id="about-me-anchor"></a>
-                        <div class="project-1 row">
+
+                        <div class="project-1 row fadeinup">
                             <div class="content-container col-sm-5">
                                 <p><span class="red-text bold">Welcome to my website!</span><br> I'm Kevin Gerstner, designer and developer.</p>
 
@@ -99,7 +140,8 @@
                 <section>
                     <h2 class="section-header">Web Development</h2>
                     <a class="anchor" id="web-anchor"></a>
-                    <div class="project-2 row align-items-center">
+
+                    <div class="project-2 row align-items-center fadeinright">
                         <div class="project-cover-image col-md-7">
                             <img src="img/home/homepage.jpg" alt="this website">
                         </div>
@@ -111,7 +153,7 @@
                             <hr class="project-divider">
                             <div class="project-description-box red">
                                 <p>
-                                    This website was designed and coded using HTML, CSS, SASS, Bootstrap 5, and jQuery.
+                                    This website was designed and coded using HTML, CSS, SASS, Bootstrap 5, JS ES6, and jQuery.
                                     By making this website from scratch, I gained experience with more advanced techniques such as Responsive Design and
                                     page performance with Google Lighthouse.
                                 </p>
@@ -132,7 +174,7 @@
                     <h2 class="section-header">Games</h2>
                     <a class="anchor" id="games-anchor"></a>
 
-                    <div id="song-pong" class="project-1 row align-items-center">
+                    <div id="song-pong" class="project-1 row align-items-center fadeinleft">
                         <a class="anchor" id="song-pong-anchor"></a>
                         <div class="project-info col-md-4">
                             <div class="description-row">
@@ -163,7 +205,7 @@
                         </div>
                     </div>
         
-                    <div id="tomb-of-khaibit" class="project-1 row align-items-center">
+                    <div id="tomb-of-khaibit" class="project-1 row align-items-center fadeinleft">
                         <a class="anchor" id="tomb-of-khaibit-anchor"></a>
                         <div class="project-info col-md-4">
                             <div class="description-row">
@@ -196,7 +238,7 @@
                         </div>
                     </div>
     
-                    <div id="knock-out" class="project-1 row">
+                    <div id="knock-out" class="project-1 row fadeinleft">
                         <a class="anchor" id="knockout-anchor"></a>
                         <div class="project-info col-md-5">
                             <div class="description-row">
@@ -239,7 +281,7 @@
                 <section>
                     <h2 class="section-header">UI/UX</h2>
 
-                    <div id="frontier" class="project-2 row">
+                    <div id="frontier" class="project-2 row fadeinright">
                         <a class="anchor" id="ui-ux-anchor"></a>
                         <div class="project-cover-img col-sm-7">
                             <picture>
@@ -270,7 +312,7 @@
                         </div>
                     </div>
     
-                    <div id="vlhcc" class="project-1 row">
+                    <div id="vlhcc" class="project-1 row fadeinleft">
                         <a class="anchor" id="vlhcc-anchor"></a>
                         <div class="project-info col-md-5">
                             <div class="description-row">
@@ -306,7 +348,7 @@
                     <h2 class="section-header">Art & Design</h2>
                     <a class="anchor" id="art-design-anchor"></a>
                     
-                    <div class="project-1 row">
+                    <div class="project-1 row fadeinleft">
                         <div class="project-info col-md-5">
                             <div class="description-row">
                                 <h6 class="project-year">2019</h6>
@@ -335,7 +377,7 @@
                         </div>
                     </div>
 
-                    <div id="androids" class="project-2 row">
+                    <div id="androids" class="project-2 row fadein">
                         <div class="col-sm-5">
                             <div id="androids-slides" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
                                 <!-- The Slideshow -->
@@ -381,7 +423,7 @@
                         </div>
                     </div>
 
-                    <div class="project-1 row">
+                    <div class="project-1 row fadeinleft">
                         <div class="project-info col-sm-5">
                             <div class="description-row">
                                 <h6 class="project-year">2019</h6>
@@ -414,7 +456,7 @@
                         </div>
                     </div>
     
-                    <div class="project-2 row">
+                    <div class="project-2 row fadeinright">
                         <div class="project-cover-img col-sm-7">
                             <img src="img/citymuseum/transformation.jpg" alt="City Museum Logo Redesign">
                             <a href="citymuseum.html"><span class="link-span"></span></a>
@@ -437,7 +479,7 @@
                         </div>
                     </div>
     
-                    <div class="project-2 row">
+                    <div class="project-2 row fadein">
                         <div class="col-sm-4">
                             <h3><b>CHAMELEON COFFEE</b></h3>
                             <p>A logo I created for a coffee shop. I also created advertisements for print and web.</p>
@@ -454,23 +496,19 @@
             <div id="footer">
                 <div class='container' style="text-align: center;">
                     <div class="slim-container">
-                        <div class="row">
+                        <div class="row pb-3">
                             <h3>Next Step? Let's Talk!</h3>
                             <hr>
                         </div>
                         <div class="row">
-                            <p style="font-weight: bold;">
-                                I'm currently looking for work, so if you think we'd be a good fit, send me an email or check out my LinkedIn profile.</p>
-                        </div>
-                        <div class="row pt-3">
-                            <div class="d-flex justify-content-center">
-                                <a href="mailto:sirkevinicus@gmail.com" target="_blank">
-                                    <button type="button" class="btn btn-white">Say Hello</button>
-                                </a>
+                            <div class="col-12">
+                                <p>I'm currently looking for work in a <b>Game Developer</b>, <b>Web Developer</b>, or <b>Software Engineer</b> position.
+                                    If you think I'd be a good addition to your team, check out my LinkedIn or send me an email!
+                                </p>
                             </div>
                         </div>
                         <div class="row">
-                            <div id="footer-icon-row" style="margin-top: 60px;">
+                            <div id="footer-icon-row">
                                 <a href="https://www.linkedin.com/in/kevin-gerstner/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
                                 <a href="mailto:sirkevinicus@gmail.com" target="_blank"><i class="far fa-envelope fa-2x"></i></a>
                                 <a href="https://www.instagram.com/kevin.gerstner/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
@@ -483,7 +521,7 @@
                             </video>
                         </div>
                         <div>
-                            <h6>Website Designed and Built by Kevin Gerstner</h6>
+                            <h6 class="pb-3">Website Designed and Built by Kevin Gerstner</h6>
                         </div>
                     </div>
                 </div>
@@ -493,6 +531,7 @@
             </div>
         </footer>
         <script src="js/js-functions.js"></script>
+        <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     </body>
 </html>
