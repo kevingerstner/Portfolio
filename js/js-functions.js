@@ -12,14 +12,15 @@ function menutoggle(){
 }
 
 document.addEventListener("DOMContentLoaded", function(){
+    var delay = 3000;
     document.getElementById("heythere").style.visibility = "hidden";
-    setTimeout(TypeWriter, 1000);
+    setTimeout(TypeWriter, delay);
 });
 
 function TypeWriter(){
     var dataText = ["Hey there! My name is"];
     const timeBetweenChars = 150;
-    const timeToRestart = 20000;
+    const timeToRestart = 10000;
     
     // text: the text to put into the string
     // i: the character iterator
