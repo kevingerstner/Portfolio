@@ -146,8 +146,8 @@ h5 {
 }
 
 h6 {
-  font-size: 1.2em;
-  font-weight: 900;
+  font-size: 0.8em;
+  font-weight: 500;
 }
 
 .red-text {
@@ -369,7 +369,7 @@ nav {
   }
 }
 
-.rounded-img, .project-cover-video video, .project-cover-img img, .project-cover-img picture {
+.rounded, .project-cover::after, .project-cover-video::after, .project-cover-img::after, .project-cover-video video, .project-cover-img img, .project-cover-img picture {
   border-radius: 25px;
 }
 
@@ -475,6 +475,10 @@ nav {
   }
 }
 
+.fa-play {
+  font-size: 10px;
+}
+
 #greeting-content {
   padding-top: 150px;
 }
@@ -564,8 +568,187 @@ nav {
   ABOUT ME
 ------------------------*/
 .skill-box {
-  border: 5px solid #372549;
-  border-radius: 5px;
+  padding: 0;
+}
+
+@-webkit-keyframes cutewiggle {
+  0% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  10% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  10.1% {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+  }
+  20% {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+  }
+  20.1% {
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
+  }
+  30% {
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
+  }
+  30.1% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  40% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  40.1% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+  50% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+  50.1% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  60% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  60.1% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  70% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  70.1% {
+    -webkit-transform: rotate(-6deg);
+            transform: rotate(-6deg);
+  }
+  80% {
+    -webkit-transform: rotate(-6deg);
+            transform: rotate(-6deg);
+  }
+  80.1% {
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
+  }
+  90% {
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
+  }
+  90.1% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  100% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+}
+
+@keyframes cutewiggle {
+  0% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  10% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  10.1% {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+  }
+  20% {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+  }
+  20.1% {
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
+  }
+  30% {
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
+  }
+  30.1% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  40% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  40.1% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+  50% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+  50.1% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  60% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  60.1% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  70% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  70.1% {
+    -webkit-transform: rotate(-6deg);
+            transform: rotate(-6deg);
+  }
+  80% {
+    -webkit-transform: rotate(-6deg);
+            transform: rotate(-6deg);
+  }
+  80.1% {
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
+  }
+  90% {
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
+  }
+  90.1% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  100% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+}
+
+#about-me-pic {
+  position: relative;
+  top: -50px;
+  -webkit-transition: top 2s;
+  transition: top 2s;
+  -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.1));
+}
+
+#about-me-pic:hover {
+  top: 0px;
+  -webkit-animation: cutewiggle 8s linear 0s infinite alternate;
+          animation: cutewiggle 8s linear 0s infinite alternate;
 }
 
 /*-----------------------
@@ -714,6 +897,7 @@ nav {
   position: relative;
   -o-object-fit: contain;
      object-fit: contain;
+  padding: 0;
   z-index: 0;
 }
 
@@ -866,9 +1050,6 @@ nav {
   #vertical-bar {
     display: block;
   }
-  #portfolio {
-    background-image: url("../img/home/Film Grain/AU_FG_Texture-1.jpg");
-  }
   .container {
     max-width: 1200px;
   }
@@ -926,7 +1107,7 @@ nav {
     background-color: #372549;
   }
   .skill-box {
-    padding: 10px 20px;
+    padding: 10px 0px;
   }
   #archcity-cover-img {
     top: -50px;

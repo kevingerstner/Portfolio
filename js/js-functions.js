@@ -12,7 +12,7 @@ function menutoggle(){
 }
 
 document.addEventListener("DOMContentLoaded", function(){
-    var delay = 3000;
+    var delay = 1000;
     document.getElementById("heythere").style.visibility = "hidden";
     setTimeout(TypeWriter, delay);
 });

@@ -192,7 +192,7 @@ nav{
     }
 }
 
-.rounded-img{
+.rounded{
     border-radius: 25px;
 }
 
@@ -260,6 +260,10 @@ nav{
     50% {
       border-color: transparent;
     }
+}
+
+.fa-play{
+    font-size: 10px;
 }
 
 #greeting-content{
@@ -336,8 +340,44 @@ nav{
 ------------------------*/
 
 .skill-box{
-    border: 5px solid $purple;
-    border-radius: 5px;
+    //border: 5px solid $purple;
+    //border-radius: 5px;
+    padding: 0;
+}
+
+@keyframes cutewiggle{
+    0%{transform: rotate(5deg);}
+    10%{transform: rotate(5deg);}
+    10.1%{transform: rotate(-3deg);}
+    20%{transform: rotate(-3deg);}
+    20.1%{transform: rotate(6deg);}
+    30%{transform: rotate(6deg);}
+    30.1%{transform: rotate(-5deg);}
+    40%{transform: rotate(-5deg);}
+    40.1%{transform: rotate(3deg);}
+    50%{transform: rotate(3deg);}
+    50.1%{transform: rotate(-4deg);}
+    60%{transform: rotate(-4deg);}
+    60.1%{transform: rotate(5deg);}
+    70%{transform: rotate(5deg);}
+    70.1%{transform: rotate(-6deg);}
+    80%{transform: rotate(-6deg);}
+    80.1%{transform: rotate(6deg);}
+    90%{transform: rotate(6deg);}
+    90.1%{transform: rotate(-4deg);}
+    100%{transform:rotate(-4deg);}
+}
+
+#about-me-pic{
+    position: relative;
+    top: -50px;
+    transition: top 2s;
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.02), rgba(0,0,0,0.1));
+}
+
+#about-me-pic:hover{
+    top: 0px;
+    animation: cutewiggle 8s linear 0s infinite alternate;
 }
 
 /*-----------------------
@@ -464,6 +504,7 @@ nav{
     height: fit-content;
     position: relative;
     object-fit: contain;
+    padding: 0;
     z-index: 0;
 
     &::after, &::before{
@@ -477,6 +518,7 @@ nav{
         content: '\A';
         width: 100%; height:100%;
         top: 0; left:0;
+        @extend .rounded;
         background:rgba(0,0,0,0.4);
     }
 
@@ -504,7 +546,7 @@ nav{
     @extend .project-cover;
     /* This shows the image by default, unless the screen is large */
     video{
-        @extend .rounded-img;
+        @extend .rounded;
         display: none;
         max-width: 100%;
     }
@@ -515,7 +557,7 @@ nav{
     @extend .project-cover;
 
     img, picture{
-        @extend .rounded-img;
+        @extend .rounded;
         max-width: 100%;
         vertical-align: top;
     }
@@ -615,7 +657,7 @@ nav{
     }
     
     #portfolio{
-        background-image: url("../img/home/Film Grain/AU_FG_Texture-1.jpg");
+        //background-image: url("../img/home/Film Grain/AU_FG_Texture-1.jpg");
     }
     .container{
         max-width: 1200px;
@@ -662,7 +704,7 @@ nav{
     }
     .red{background-color: $red;}
     .purple{background-color: $purple;}
-    .skill-box{padding: 10px 20px;}
+    .skill-box{padding: 10px 0px;}
 
     #archcity-cover-img{top: -50px;}
 }

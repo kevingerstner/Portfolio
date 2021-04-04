@@ -84,10 +84,10 @@
                     <div class="col-sm-8 offset-md-2">
                         <h5 class="typewriter" id="heythere" waitTime="1000">Hey there! My name is</h5>
                         <h2 id="itsme">Kevin Gerstner.</h2>
-                        <p id="tagline">
+                        <p class="fadeinup" id="tagline">
                             I’m a game developer and designer from St. Louis, MO who is looking for a career that utilizes my experience creating original and ambitious projects.
                         </p>
-                        <button style="margin-top: 50px" type="button" class="btn btn-red"><a href="mailto:sirkevinicus@gmail.com" target="_blank">Get In Touch</a></button>
+                        <button style="margin-top: 50px" type="button" class="btn btn-red fadeinup"><a href="mailto:sirkevinicus@gmail.com" target="_blank">Get In Touch</a></button>
                     </div>
                 </div>
             </div>
@@ -98,43 +98,45 @@
         <div id="portfolio">
             <div class="container-sm">
                 <section>
-                    <div id="aboutme">
-                        <h2 class="section-header">About Me</h2>
-                        <a class="anchor" id="about-me-anchor"></a>
+                    <div id="aboutme" class="row mt-5">
+                        <div class="col-sm-9 offset-md-2">
+                            <a class="anchor" id="about-me-anchor"></a>
 
-                        <div class="project-1 row fadeinup">
-                            <div class="content-container col-sm-5">
-                                <p><span class="red-text bold">Welcome to my website!</span><br> I'm Kevin Gerstner, designer and developer.</p>
+                            <div class="project-1 row fadeinup">
+                                <h2 class="section-header mb-3">About Me</h2>
+                                <div class="col-sm-7">
+                                    <p>I'm Kevin Gerstner, and I enjoy creating all sorts of things. My previous endeavors 
+                                        include board games, websites, and video games. 
+                                        My goal is to create products that are user-friendly with a big personality.</p>
 
-                                <p>I have worked extensively on a variety of projects, including board games, websites, and video games. 
-                                My goal is to create products that are user-friendly with a big personality.</p>
+                                    <p>In May 2021, I will graduate from <a href="https://utulsa.edu" target="_blank">The University of Tulsa</a> with a B.S. in Computer Science, a 
+                                        B.S. in Computer Simulation & Gaming and minors in Art and Math. I'm currently looking for work as a developer.</p>
 
-                                <p>In May 2021, I will graduate from <a href="https://utulsa.edu" target="_blank">The University of Tulsa</a> with a B.S. in Computer Science, a 
-                                    B.S. in Computer Simulation & Gaming and minors in Art and Math.</p>
+                                    <p>Here are a few technologies I've been working with:</p>
 
-                                <p>I am a wannabe coffee connoisseur, music enthusiast, and captain of University of Tulsa’s Overwatch Team.</p>
-
-                                <p>Here are a few technologies I've been working with:</p>
-
-                                <div class="skill-box">
-                                    <div class="row">
-                                        <ul class="skill-list col">
-                                            <li><i class="fas fa-play"></i>Unity (C#)</li>
-                                            <li><i class="fas fa-play"></i>Illustrator</li>
-                                            <li><i class="fas fa-play"></i>Photoshop</li>
-                                            <li><i class="fas fa-play"></i>OpenGL</li>
-                                        </ul>
-                                        <ul class="skill-list col">
-                                            <li><i class="fas fa-play"></i>HTML, SASS</li>
-                                            <li><i class="fas fa-play"></i>Bootstrap 5</li>
-                                            <li><i class="fas fa-play"></i>Java</li>
-                                            <li><i class="fas fa-play"></i>Figma</li>
-                                        </ul>
+                                    <div class="skill-box">
+                                        <div class="row">
+                                            <ul class="skill-list col-sm-4">
+                                                <li><i class="fas fa-play"></i>Unity (C#)</li>
+                                                <li><i class="fas fa-play"></i>Illustrator</li>
+                                                <li><i class="fas fa-play"></i>Photoshop</li>
+                                                <li><i class="fas fa-play"></i>C++</li>
+                                            </ul>
+                                            <ul class="skill-list col-sm-4">
+                                                <li><i class="fas fa-play"></i>HTML, SASS</li>
+                                                <li><i class="fas fa-play"></i>Bootstrap 5</li>
+                                                <li><i class="fas fa-play"></i>Java</li>
+                                                <li><i class="fas fa-play"></i>Adobe XD, Figma</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="offset-md-1 col-sm-6">
-                                <img class="rounded-img" src="img/home/IMG_0469@1x.jpg" alt="kevin-picture">
+                                <div class="offset-md-1 col-sm-4">
+                                    <picture>
+                                        <source srcset="img/home/about-me-pic.webp" type="img/webp">
+                                        <img id="about-me-pic" src="img/home/about-me-pic.png" alt="kevin-picture">
+                                    </picture>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -158,9 +160,9 @@
                             <hr class="project-divider">
                             <div class="project-description-box red">
                                 <p>
-                                    This website was designed and coded using HTML, CSS, SASS, Bootstrap 5, JS ES6, and jQuery.
-                                    By making this website from scratch, I gained experience with more advanced techniques such as Responsive Design and
-                                    page performance with Google Lighthouse.
+                                    This website was designed and coded using HTML, CSS, SASS, Bootstrap 5, JavaScript ES6, and jQuery.
+                                    By making this website from scratch, I gained experience with more advanced techniques such as Animation,
+                                    Responsive Design and Page Performance.
                                 </p>
                             </div>
                             <ul class="skills-row">
@@ -178,6 +180,38 @@
                 <section>
                     <h2 class="section-header">Games</h2>
                     <a class="anchor" id="games-anchor"></a>
+
+                    <div id="tomb-of-khaibit" class="project-1 row align-items-center fadeinleft">
+                        <a class="anchor" id="tomb-of-khaibit-anchor"></a>
+                        <div class="project-info col-md-4">
+                            <div class="description-row">
+                                <h6 class="project-year">Work In Progress</h6>
+                            </div>
+                            <h3 class="project-name">Tomb of Khaibit</h3>
+                            <hr class="project-divider">
+                            <div class="project-description-box">
+                                <p>
+                                    A co-op horror game where archaeologists are trying to escape a deadly Egyptian tomb.
+                                    I created a procedural generation algorithm to make tombs, coded a flexible UI system, and worked as a gameplay designer.
+                                    The project will be completed by May 2021.
+                                </p>
+                                <a class="visit-link" href="tombofkhaibit.html"><i class="fas fa-external-link-alt"></i>Read More</a>
+                            </div>
+                            <ul class="skills-row">
+                                <li>Unity</li>
+                                <li>C#</li>
+                                <li>Aseprite</li>
+                            </ul>
+                        </div>
+                        <div class="project-cover-video col-sm-7 offset-md-1">
+                            <video autoplay loop muted playsinline>
+                                <source src="img/Tomb of Khaibit/tombofkhaibit.webm" type="video/webm">
+                                <source src="img/Tomb of Khaibit/tombofkhaibit.mp4" type="video/mp4">
+                            </video>
+                            <img src="img/Tomb of Khaibit/coverimg.jpg">
+                            <a href="tombofkhaibit.html"><span class="link-span"></span></a>
+                        </div>
+                    </div>
 
                     <div id="song-pong" class="project-1 row align-items-center fadeinleft">
                         <a class="anchor" id="song-pong-anchor"></a>
@@ -207,38 +241,6 @@
                             </video>
                             <img src="img/songpong/coverimg.jpg" alt="song pong">
                             <a href="songpong.html"><span class="link-span"></span></a>
-                        </div>
-                    </div>
-        
-                    <div id="tomb-of-khaibit" class="project-1 row align-items-center fadeinleft">
-                        <a class="anchor" id="tomb-of-khaibit-anchor"></a>
-                        <div class="project-info col-md-4">
-                            <div class="description-row">
-                                <h6 class="project-year">Work In Progress</h6>
-                            </div>
-                            <h3 class="project-name">Tomb of Khaibit</h3>
-                            <hr class="project-divider">
-                            <div class="project-description-box">
-                                <p>
-                                    A co-op horror game where archaeologists are trying to escape a deadly Egyptian tomb. 
-                                    With procedurally generated tombs, a deep spell system, and puzzles, this tomb is easy to get lost in. 
-                                    The project will be completed by May 2021.
-                                </p>
-                                <a class="visit-link" href="tombofkhaibit.html"><i class="fas fa-external-link-alt"></i>Read More</a>
-                            </div>
-                            <ul class="skills-row">
-                                <li>Unity</li>
-                                <li>C#</li>
-                                <li>Aseprite</li>
-                            </ul>
-                        </div>
-                        <div class="project-cover-video col-sm-7 offset-md-1">
-                            <video autoplay loop muted playsinline>
-                                <source src="img/Tomb of Khaibit/tombofkhaibit.webm" type="video/webm">
-                                <source src="img/Tomb of Khaibit/tombofkhaibit.mp4" type="video/mp4">
-                            </video>
-                            <img src="img/Tomb of Khaibit/coverimg.jpg">
-                            <a href="tombofkhaibit.html"><span class="link-span"></span></a>
                         </div>
                     </div>
     
