@@ -738,11 +738,17 @@ nav {
 }
 
 #about-me-pic {
-  position: relative;
-  top: -50px;
+  margin-bottom: 20px;
   -webkit-transition: top 2s;
   transition: top 2s;
   -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.1));
+}
+
+@media screen and (min-width: 768px) {
+  #about-me-pic {
+    position: relative;
+    top: -50px;
+  }
 }
 
 #about-me-pic:hover {
