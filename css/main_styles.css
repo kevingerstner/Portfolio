@@ -808,6 +808,52 @@ nav {
           flex-direction: column;
 }
 
+.project-name {
+  position: relative;
+  display: inline-block;
+}
+
+.project-name h3, .project-name .project-cover::before, .project-name .project-cover-video::before, .project-name .project-cover-img::before {
+  position: relative;
+  z-index: 3;
+}
+
+.project-name h3::before, .project-name .project-cover::before, .project-name .project-cover-video::before, .project-name .project-cover-img::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  z-index: 0;
+  bottom: -2px;
+  left: 0;
+  visibility: hidden;
+  background-color: #eacdc2;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.project-name h3:hover::before, .project-name .project-cover:hover::before, .project-name .project-cover-video:hover::before, .project-name .project-cover-img:hover::before {
+  visibility: visible;
+  width: 100%;
+}
+
+.project-name a {
+  color: #eacdc2;
+  z-index: 3;
+}
+
+.project-name a :hover {
+  color: #A2E0A9;
+}
+
+.project-1 > .project-name ::before {
+  left: 4px;
+}
+
+.project-2 > .project-name ::before {
+  right: 4px;
+}
+
 .project-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -920,7 +966,7 @@ nav {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(26, 20, 35, 0.4);
 }
 
 .project-cover::before, .project-cover-video::before, .project-cover-img::before {
