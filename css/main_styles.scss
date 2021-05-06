@@ -416,6 +416,7 @@ nav{
     margin: 0px 0px $section-pad 0px;
     padding: 15px 0px;
     background-color: $purple;
+    justify-content: right;
 }
 
 .project-1{
@@ -426,12 +427,33 @@ nav{
 .project-2{
     @extend .project;
     flex-direction: column;
+
+    @include breakpoint_medium {
+        .project-info{
+            justify-content: end;
+            text-align: right;
+        }
+        .description-row{
+            justify-content: flex-end;
+        }
+        .project-description-box{
+            right: 12vw;
+        }
+    }
+}
+
+/* All of the information for a project, including date, name, description, skills */
+.project-info{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: right;
+    align-items: right;
+    padding: 0px 20px;
 }
 
 .project-name {
     position: relative;
-    display: inline-block;
-
+    
     h3{
         position: relative;
         z-index: 3;
@@ -441,10 +463,9 @@ nav{
         content: "";
         position: absolute;
         width: 0%;
-        height: 1px;
+        height: 5px;
         z-index: 0;
-        bottom: -2px;
-        left: 0;
+        bottom: -4px;
         //border-radius: 5px;
         visibility: hidden;
         background-color: $pink;
@@ -465,22 +486,19 @@ nav{
     }
 }
 
-.project-1 > .project-name {
-    ::before{        
+.project-1 .project-name {
+    width: max-content;
+    max-width: 100%;
+
+    h3::before{
         left: 4px;
     }
 }
 
-.project-2 > .project-name{
+.project-2 .project-name{
     ::before{
         right: 4px;
     }
-}
-
-.project-info{
-    display: flex;
-    flex-direction: column;
-    padding: 0px 20px;
 }
 
 .project-divider{
@@ -556,7 +574,7 @@ nav{
     height: fit-content;
     position: relative;
     object-fit: contain;
-    padding: 0;
+    padding: 10px;
     z-index: 0;
 
     &::after, &::before{
@@ -602,7 +620,10 @@ nav{
         display: none;
         max-width: 100%;
     }
-    img{display: block;}
+    img{
+        @extend .rounded;
+        display: block;
+    }
 }
 
 .project-cover-img{
@@ -721,18 +742,6 @@ nav{
         flex-direction: row;
         margin-bottom: 20vh;
         background-color: transparent;
-    }
-    .project-2{
-        .project-info{
-            justify-content: end;
-            text-align: right;
-        }
-        .description-row{
-            justify-content: flex-end;
-        }
-        .project-description-box{
-            right: 12vw;
-        }
     }
     .project-cover-img{
         video{
