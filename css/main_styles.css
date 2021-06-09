@@ -150,6 +150,11 @@ h6 {
   font-weight: 500;
 }
 
+.description {
+  font-size: calc(clamp(10px, 1vw, 14px));
+  font-style: italic;
+}
+
 .red-text {
   color: #bd4242;
 }
@@ -268,18 +273,6 @@ img {
 
 video {
   max-width: 100%;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-}
-
-ul li i {
-  padding-right: 10px;
-  color: #bd4242;
 }
 
 hr {
@@ -569,6 +562,18 @@ nav {
 ------------------------*/
 .skill-box {
   padding: 0;
+}
+
+.skill-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.skill-list li i {
+  padding-right: 10px;
+  color: #bd4242;
 }
 
 @-webkit-keyframes cutewiggle {

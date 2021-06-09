@@ -50,5 +50,11 @@ h6{
     font-weight: 500;
 }
 
+// a tinier and italic version of a paragraph
+.description{
+    font-size: calc(clamp(10px, 1vw, 14px));
+    font-style: italic;
+}
+
 .red-text{ color: $red;}
 .bold{font-weight: bold;}

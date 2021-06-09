@@ -2,7 +2,7 @@
 <html>
     <head lang = "en-US">
         <meta charset="UTF-8">
-        <title>Tomb of Khaibit</title>
+        <title>Kevin Gerstner - Tomb of Khaibit</title>
         <!-- CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/main_styles.css">
@@ -23,8 +23,8 @@
 
         <div class="hero-image">
             <video autoplay loop muted playsinline style="top: 90%;">
-                <source src="img/Tomb of Khaibit/tombofkhaibit.webm" type="video/webm">
-                <source src="img/Tomb of Khaibit/tombofkhaibit.mp4" type="video/mp4">
+                <source src="img/Tomb of Khaibit/Tomb of Khaibit Preview.webm" type="video/webm">
+                <source src="img/Tomb of Khaibit/Tomb of Khaibit Preview.mp4" type="video/mp4">
             </video>
             <div class="overlay"></div>
             <div class="hero-text">
@@ -45,23 +45,27 @@
                         <video class="inline-img" autoplay loop muted playsinline>
                             <source src="img/Tomb of Khaibit/tombofkhaibit.webm" type="video/webm">
                             <source src="img/Tomb of Khaibit/tombofkhaibit.mp4" type="video/mp4">
-                        </video>                        <p>
+                        </video>                        
+                        <p>
                             The tomb is procedurally generated and the puzzles you'll need to escape are randomized, meaning each tomb will be a new experience.
                         </p>
+                        <h4 class="section-header">The BLU3_J3LL0 Team</h4>
+                        <img class="inline-img" src="img/Tomb of Khaibit/blu3j3ll0_team.jpg" alt="BLU3_J3LL0 Team">
                         <p>
-                            This project is for Senior Software Project with my group Blu3 J3ll0. You can see our group members below (we're pretty cool.)
+                            I developed this project for my Senior Software Project with the group known as Blu3_J3ll0. The team included
+                            Chloe Flores, Joseph Mellor, Tim Flavin, James Hale, Spencer Stith, John Dickey, Kate Kwasny, and myself.
                         </p>
-                        <img class="inline-img" src="img/Tomb of Khaibit/blu3j3ll0.jpg" alt="Blu3 J3ll0">
                     </div>
                     <div class="col offset-md-1">
                         <div class="content-container purple-background">
                             <h4 class="section-header">Skills</h4>
                             <hr class="project-divider">
                             <p>
-                                I am the <strong>Environment Artist</strong> and a <strong>Programmer</strong> for this project. I created an Editor Tool
-                                called <strong>Texo</strong> that is responsible for procedural generation. I also made the pixel art for the environment.
+                                My roles for this project are <strong>Project Manager</strong>, <strong>Programmer</strong>, and <strong>Artist</strong>. 
+                                My largest task was designing and coding a Procedural Generation tool codenamed <strong>Texo</strong> that creates random dungeons. 
+                                I also made the pixel art for the environment, and worked on several features such as flexible UI and inventory.
                             </p>
-                            <ul>
+                            <ul class="skill-list">
                                 <li><i class="fas fa-play"></i>C#</li>
                                 <li><i class="fas fa-play"></i>Unity</li>
                                 <li><i class="fas fa-play"></i>Aseprite</li>
@@ -72,25 +76,125 @@
             </section>
 
             <section>
-                <h4 class="section-header">Texo Editor</h4>
+                <h4 class="section-header">Procedural Generation - Texo</h4>
                 <div class="row">
                     <div class="col-sm-6">
-                        <img id="texo-editor" class="inline-img" src="img/Tomb of Khaibit/texoeditor.png">
                         <p>
-                            The Texo editor is what I am most proud of developing for this game. I spent around 60 hours creating it.
+                            Procedural Generation was our most ambitious goal from the start, so I looked for a solution for Unity. 
+                            Unfortunately, Unity doesn't have any built-in Tools and the Asset Store has no free solutions for a rogue-like game.
+                            The Texo editor is my solution to this problem and is what I am most proud of developing for this game. I spent around 80 hours creating it.
                         </p>
-                        <p>
-                            We needed a solution for Unity that let us procedurally generate our tomb. Unfortunately, Unity doesn't have any built-in Tools
-                            and the Asset Store has no solutions for a roguelike game. There was a package called <strong>Strata</strong>, which has 
-                            since been removed from the Asset Store that provided a good basis. However, it was very limited in scope: 
-                            (1) Rooms all needed to be the same size and (2) Exits needed to be located in certain places.
+                        <video class="inline-img" autoplay loop muted>
+                            <source src="img/Tomb of Khaibit/TexoTimelapse.webm" type="video/webm">
+                            <source src="img/Tomb of Khaibit/TexoTimelapse.mp4" type="video/mp4">
+                        </video>
+                        <h5>Texo Algorithm and Solution Overview</h5>
+                        <p class="description">
+                            If you're curious about how Texo works, read on! I'll explain in brief how the solution and algorithm works. Note:
+                            lots of this may not make sense to people unfamiliar with Unity, as it uses lots of Unity-specific terms.
                         </p>
-                        <img class="inline-img" style="max-width: 200px; float: left; padding-right: 20px;" src="img/Tomb of Khaibit/texoarrows.png">
+                        <img class="inline-img" style="max-width: 200px; float: right; padding-left: 20px;" src="img/Tomb of Khaibit/texoarrows.png">
 
+                        <ol>
+                            <li>
+                                Level designers create <strong>Rooms</strong> in prefabs using the Tilemap system already in Unity. Rooms can be any size.
+                                They place small arrow tiles on a special "Connectors" Tilemap to indicate where the room should connect to hallways.
+                                Other GameObjects can be placed anywhere in the prefab and will be spawned in as well.
+                                Rooms are put into special <strong>RoomLists</strong> which group rooms into folders.
+                            </li>
+                            <li>
+                                <strong>Generate Rooms: </strong>
+                                Rooms are randomly given placements in a "PlacedGrid", which has padding and predetermined dimensions and cellSize.
+                                Rooms in the Required Room List are all placed first. Special rooms like the entrance, exit, and altar rooms go in this list.
+                                Placement continues until a target "density" of rooms is reached, for example, 55% filled.
+                            </li>
+                            <li>
+                                <strong>Pre-Connect: </strong> A Room is selected at random to be the "root" room. Find the closest N (typically N = 2) rooms to this room and select
+                                a random connector from each room to connect to. The selected rooms are added to the tree, and become root nodes. The algorithm 
+                                continues until all rooms are in the tree, guaranteeing connectivity between all placed rooms. At the end of this step, we have
+                                a list of connections to make.
+                            </li>
+                            <li>
+                                <strong>Hallway Connect: </strong> Using the A* Algorithm, find the shortest path for each connection, using the cells in the PlacedGrid
+                                as units. At the end of this step, we have a bunch of lists of cells that make up a path from Room A's connector to B's connector.
+                            </li>
+                            <li>
+                                <strong>Hallway Post-Process: </strong> A subtle but important step. Hallways adjacent to a connector will check to see if a perpendicular
+                                hallway exists across from the connector (for example, an east connector should run into a vertical hallway).
+                                If there is not, hallways are extended in that direction.
+                            </li>
+                            <li>
+                                <strong>Writing: </strong>Last, Rooms and Hallways are drawn to the Grid, combining tiles from tilemaps of identical names into a singular tilemap. This flattens
+                                complexity of the level, and allows RuleTiles to connect to tiles from other rooms. GameObjects are spawned in relative to the room's position.
+                                All empty spaces in the grid are filled with "blank" tiles.
+                            </li>
+                        </ol>
+                        <br><br>
                         <p>
-                            So I decided to expand on Strata and make my own editor called <strong>Texo</strong>. Texo uses arrows as connectors which allows
-                            for lots of flexibility, including rooms of various sizes and allowing exits to be placed anywhere. It allows us to generate
-                            tombs in many different formats.
+                            <strong>Benefits of the Texo Solution:</strong>
+                            <ul>
+                                <li>
+                                    Level Designers can have nearly unlimited freedom developing rooms inside prefabs instead of editing an entire level.
+                                </li>
+                                <li>
+                                    Developers can place GameObjects inside Rooms and they will be spawned in with the room.
+                                </li>
+                                <li>
+                                    Rooms connect to each other using a spanning tree, guaranteeing connectivity between rooms.
+                                </li>
+                                <li>
+                                    Hallways between rooms take the shortest path to the other room with the A* algorithm.
+                                </li>
+                                <li>
+                                    Certain Rooms can be guaranteed to spawn, such as entrances, exits, or save rooms.
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h4 class="section-header">UI System</h4>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="description">
+                            Insert image / video of journal here.
+                        </p>
+                        <p>
+                            Tomb of Khaibit is very UI-heavy for a 2D game. Each player has a Journal with many pages of different information, including
+                            <strong>Inventory</strong>, <strong>Spells</strong>, a <strong>Map</strong>, and more. Players also have a HUD that shows their
+                            actively equipped items, health, mana, and joystick for movement. Of course, there are also menus, multiplayer lobbies and so much more.
+                        </p>
+                        <p>
+                            With so much complexity, I wanted to create a simple solution that made creating UI elements easy and communicating between them a breeze.
+                            I also wanted to use the Observable/Observer pattern so that GameObjects would never need to know anything about the UI.
+                        </p>
+                        <p>
+                            With these goals in mind, I created a flexible solution which I will outline in overview. I got inspiration for this solution from
+                            <a href="https://www.gamasutra.com/blogs/YankoOliveira/20180108/312617/A_UI_System_Architecture_and_Workflow_for_Unity.php" target="_blank"> this Gamasutra article</a>
+                            by Yanko Oliveira. He breaks UI down into elements of the following types: Layers, Panels, Dialogs, or Widgets.
+                        </p>
+
+                        <h5>Layer</h5>
+                        <p>
+                            A Layer is like a folder for UI. It groups a bunch of different elements together. For instance, in our project we have Mobile Ingame,
+                            Mobile Main Menu, and Journal Layers. A Layer carries the important task of turning various Screens (which are Layers, Panels, or Dialogs)
+                            on and off. Layers can also be nested, which helps with sub-management (our Journal Layer is nested inside the Mobile Ingame Layer).
+                        </p>
+
+                        <h5>Panels and Dialogs</h5>
+                        <p>
+                            Panels and Dialogs are functionally similar but semantically different. Dialogs are full-attention UI components, meaning that other
+                            dialogs must be hidden. Each page in the Journal, like the Inventory or Spells page is a Dialog, since only one page can be shown at a time.
+                            Panels, on the other hand, can be shown simultaneously or even on top of dialogs. An example of a panel is the Player's Equip Slots, which
+                            are shown for all pages in the Journal.
+                        </p>
+
+                        <h5>Widgets</h5>
+                        <p>
+                            Widgets are the smallest UI element, and are generally a self-contained singular element, like player's Health for example.
+                            These can be turned on and off using the Dialog or Panel that they are contained in.
                         </p>
                     </div>
                 </div>
