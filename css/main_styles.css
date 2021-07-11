@@ -129,7 +129,7 @@ h2 {
 
 h3, .project-cover::before, .project-cover-video::before, .project-cover-img::before {
   font-family: VCR;
-  font-size: 2.5em;
+  font-size: 2.4em;
   line-height: 1;
 }
 
@@ -174,7 +174,8 @@ h6 {
   overflow: hidden;
 }
 
-.hero-image img, .hero-image video {
+.hero-image img,
+.hero-image video {
   position: absolute;
   width: 100%;
   top: 50%;
@@ -362,7 +363,8 @@ nav {
   }
 }
 
-.rounded, .project-cover::after, .project-cover-video::after, .project-cover-img::after, .project-cover-video video, .project-cover-video img, .project-cover-img img, .project-cover-img picture {
+.rounded, .project-cover::after, .project-cover-video::after, .project-cover-img::after, .project-cover-video video, .project-cover-video img, .project-cover-img img,
+.project-cover-img picture {
   border-radius: 25px;
 }
 
@@ -387,13 +389,13 @@ nav {
   background-color: transparent;
   border: 2px solid grey;
   border-radius: 5px;
-  padding: .75rem 1.75rem;
+  padding: 0.75rem 1.75rem;
   max-width: 300px;
 }
 
 .btn-slim {
   height: 40px;
-  padding: .75rem 1rem;
+  padding: 0.75rem 1rem;
 }
 
 .btn-red {
@@ -451,7 +453,7 @@ nav {
 }
 
 .cursor {
-  border-right: .1em solid;
+  border-right: 0.1em solid;
   -webkit-animation: caret 1s steps(1) infinite;
           animation: caret 1s steps(1) infinite;
 }
@@ -998,7 +1000,7 @@ nav {
 }
 
 .project-cover::after, .project-cover-video::after, .project-cover-img::after {
-  content: '\A';
+  content: "\A";
   width: 100%;
   height: 100%;
   top: 0;
@@ -1040,7 +1042,8 @@ nav {
   display: block;
 }
 
-.project-cover-img img, .project-cover-img picture {
+.project-cover-img img,
+.project-cover-img picture {
   max-width: 100%;
   vertical-align: top;
 }
