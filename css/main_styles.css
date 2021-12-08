@@ -124,7 +124,7 @@ h2 {
   font-family: Barbieri;
   font-size: calc(clamp(40px, 8vw, 72px));
   line-height: 1;
-  word-spacing: 15px;
+  word-spacing: 10px;
 }
 
 h3, .project-cover::before, .project-cover-video::before, .project-cover-img::before {
@@ -136,7 +136,7 @@ h3, .project-cover::before, .project-cover-video::before, .project-cover-img::be
 h4 {
   font-family: Public Sans;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1em;
 }
 
 h5 {
@@ -146,7 +146,7 @@ h5 {
 }
 
 h6 {
-  font-size: 0.8em;
+  font-size: 0.9em;
   font-weight: 500;
 }
 
